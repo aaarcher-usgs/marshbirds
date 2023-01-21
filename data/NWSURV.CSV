@@ -1,0 +1,322 @@
+SurveyID,Year,Date,Round,Time1,Obs1,Obs2,RouteName,SunTime,SiteName,PointOrder,PointID,Treatment,WindSpeed,WindDir,Temp,SkyCode,NoiseLevel,NoiseCode,NoiseNotes,StartTime,SpeciesTargetWetland,SpeciesinArea,Notes,ImageID,DataCheckDate,DataEntryNotes
+1,2015,5/20/2015,1,PM,NH,SS,East Park,21:01,East Park,1,EPC1,Control,2.4,NA,NA,1,42,1,frogs,18:32," RWBL, YHBL, COYE",none,DEA on survey; SS used wrong recording? Two AMBI flew overhead exiting target wetland,No ID,11/21/2015,NONE
+2,2015,5/20/2015,1,PM,NH,SS,East Park,21:01,East Park,2,EPC2,Control,5.4,NA,70.2,0,44,0,NA,19:18,"RWBL, YHBL, COLO, AMRE, WIWA, Sparrow (white belly, pink bill, brown cheek, white eyestripe)",MODO,DEA on survey,No ID,11/21/2015,NONE
+3,2015,5/20/2015,1,PM,NH,SS,East Park,21:01,East Park,3,EPS4,Spray,3.4,NA,68.4,0,37,0,RWBL,19:55,"HOME, RNDU, 2 COLO, NSHO, YEWA, RWBL, YHBL, COYE",RUGR?,DEA on survey,No ID,11/21/2015,NONE
+4,2015,5/20/2015,1,PM,NH,SS,East Park,21:01,East Park,4,EPS5,Spray,6.5,NA,66.5,0,37,1,frogs behind to North,20:14,"TRES, YEWA, RNDU, BUFF, RWBL, YHBL","CAGO, BARS",DEA on survey,No ID,11/21/2015,NONE
+5,2015,5/20/2015,1,PM,NH,SS,East Park,21:01,East Park,5,EPC6,Control,3.7,NA,64.4,0,NA,1,frogs to North,20:33,"NOFL, COYE, AMRO, RWBL, YHBL, TRES, BARS",MODO,DEA on survey,No ID,11/21/2015,NONE
+6,2015,5/21/2015,1,PM,NH,0,Eckvoll,21:05,Eckvoll,1,EVS1,Spray,5.2,NW,65.1,1,35,0,NA,19:23,"AMRO, BWTE, RWBL, BARS?, COYE, TRES, MALL",MODO,"none, site very quiet, points not great - on the other side of channel about 20m from edge with willows in between",No ID,11/21/2015,NONE
+7,2015,5/21/2015,1,PM,NH,0,Eckvoll,21:05,Eckvoll,2,EVS2,Spray,5,NW,65.2,1,33,0,NA,19:42,"YEWA, MALL, BWTE","CAGE, AMRO",points not great - on the other side of channel about 20m from edge with willows in between,No ID,11/21/2015,NONE
+8,2015,5/21/2015,1,PM,NH,0,Eckvoll,21:05,Eckvoll,3,EVS3,Spray,4.2,NW,64.2,0,50,2,frogs to NW!,20:04,"RWBL, GRYE, BARS, YPWA",none,points not great - on the other side of channel about 20m from edge with willows in between,No ID,11/21/2015,NONE
+9,2015,5/21/2015,1,PM,NH,0,Eckvoll,21:05,Eckvoll,4,EVS4,Spray,2.4,W,64.2,0,41,1,frogs,20:21,"YEWA, RWBL, BUFF, BAEA, YPWA",NOFL,"Drumming to N during whole survey, whole site very quiet, points not great - on the other side of channel about 20m from edge with willows in between",No ID,11/21/2015,NONE
+10,2015,5/21/2015,1,PM,NH,0,Eckvoll,21:05,Eckvoll,5,EVC5,Control,3,NA,60.2,NA,NA,1,stupid CAGO,20:38,"TRES, RWBL, MAWR","CAGO, BUFF, TRES, RNDU, GADW","CAGO loud, points not great - on the other side of channel about 20m from edge with willows in between",No ID,11/21/2015,NONE
+11,2015,5/21/2015,1,PM,NH,0,Eckvoll,21:05,Eckvoll,6,EVC6,Control,NA,NW,NA,0,35,1,frogs,20:57,"RWBL, YEWA, COYE",none,none,No ID,11/21/2015,NONE
+12,2015,5/21/2015,1,PM,SS,0,Elm Lake,NA,Elm Lake,1,ELC1,Control,7.4,NW,65.2,0,70,1,wind,18:49,"BWTE, TRES, SOSP, NOHA","MODO, CAGO",Frogs; maybe point too far from marsh?,Image 3978,11/22/2015,NONE
+13,2015,5/21/2015,1,PM,SS,0,Elm Lake,NA,Elm Lake,2,ELC2,Control,8.4,NW,64.5,0,77,1,wind,19:10,"NOHA, CAGO, RWBL, SOSP, COYE, BWTE, EAKI",MODO,Lots of dry areas throughout this survey point,Image 3979,11/22/2015,NONE
+14,2015,5/21/2015,1,PM,SS,0,Elm Lake,NA,Elm Lake,3,ELS3,Spray,5.4,NW,65,0,LO,0,NA,19:39,"RWBL, COYE, Sparrow  (Image 3981)","MODO, RUGR",Frogs,Image 3980,11/22/2015,NONE
+15,2015,5/21/2015,1,PM,SS,0,Elm Lake,NA,Elm Lake,4,ELS4,Spray,4.5,NW,63.3,0,69,0,NA,20:01,"TRES, RWBL, COYE",CAGO,none,Image 3983,11/22/2015,NONE
+16,2015,5/21/2015,1,PM,SS,0,Elm Lake,NA,Elm Lake,5,ELS5,Spray,3,NW,61.9,0,LO,0,NA,20:24,"RWBL, COYE, NOHA","MODO, 2 TRUS, CAGO",A little overwhelmed during survey,Image 3984,11/22/2015,NONE
+17,2015,5/21/2015,1,PM,SS,0,Elm Lake,NA,Elm Lake,6,ELS6,Spray,3,W,60.8,0,LO,0,NA,20:43,"RWBL, SOSP","MODO, CAGO, RUGR",Beaver,Image 3985,11/22/2015,NONE
+18,2015,5/21/2015,1,PM,SS,0,Elm Lake,NA,Elm Lake,7,ELC7,Control,2.2,W,58.5,0,LO,0,frogs,21:05,"RWBL, COYE",MODO,Frogs,Image 3986,11/22/2015,NONE
+19,2015,5/21/2015,1,PM,SS,0,Elm Lake,NA,Elm Lake,8,ELC8,Control,1.5,W,54.5,0,LO,2,CAGO loud for 2nd half of survey,21:24,"COYE, CAGO","CAGO, Owl","CAGO flew over during second half of survey, hard to hear; angry beaver! Point is far from target wetland",Image 3987,11/22/2015,NONE
+20,2015,5/22/2015,1,AM,SS,NH,Twin Lakes,NA,Twin Lakes,1,TLS1,Spray,0,0,43.6,0,LO,2,"cows, cars",5:23,"COYE, RWBL, CAGO, RUGR, BWTE",none,Cows and cars,Image 3989,10/22/2015,NONE
+21,2015,5/22/2015,1,AM,SS,NH,Twin Lakes,NA,Twin Lakes,2,TLS2,Spray,0,0,42.6,0,LO,2,"cows, cars consistently loud in min 1, 2, 3, 4",5:51,"COYE, RWBL, CAGO, SOSP",MODO,"Frogs, cows and cars loud",Image 3990,10/22/2015,NONE
+22,2015,5/22/2015,1,AM,SS,NH,Twin Lakes,NA,Twin Lakes,3,TLC3,Control,0,0,44.2,0,52,2,"cows, cars, CAGO",6:19,RWBL,"RUGR, MODO, CAGO","Cows, cars and geese loud",Image 3991,10/22/2015,NONE
+23,2015,5/22/2015,1,AM,SS,NH,Twin Lakes,NA,Twin Lakes,4,TLS4,Spray,0.8,0,47.1,0,50,2,"cars, CAGO",6:45,"CAGO, RWBL, SOSP, COYE, BWTE, woodpecker","RUGR, BAEA + nest","CAGO landed min 3-4 honking very loudly, cars loud; too far from spray area-to be dropped R2",Image 3995,10/22/2015,NONE
+24,2015,5/22/2015,1,AM,SS,NH,Twin Lakes,NA,Twin Lakes,5,TLC5,Control,2,E,56,0,59,2,cars,7:11,"COYE, RWBL, AMRO, CAGO, SACR, TRES",RBGR,Cars loud,"Image 3996 (E), 3999 (W)",10/22/2015,NONE
+25,2015,5/22/2015,1,AM,SS,NH,Twin Lakes,NA,Twin Lakes,6,TLC7,Control,3.8,NA,62.5,0,70,1,NA,8:43,"COYE, RWBL, CAGO, TRES",AMRE,none,Image 4000,10/22/2015,NONE
+26,2015,5/22/2015,1,PM,SS,NH,Thief Lake,21:07,Thief Lake,1,THS8,Spray,3.8,W,74,0,61,2,frogs loud,19:04,"CAGO, TRES, GADW, AWPE, FOTE",none,Frogs loud,Image 4007,10/21/2015,NONE
+27,2015,5/22/2015,1,PM,SS,NH,Thief Lake,21:07,Thief Lake,2,THC6,Control,4.7,W,71.6,0,61,1,CAGO loud min 1-3,19:29,"CAGO, FOTE, RWBL, BWTE",none,CAGO loud; many PBGR calling throughout most of survey within this range,Image 4008,10/21/2015,NONE
+28,2015,5/22/2015,1,PM,SS,NH,Thief Lake,21:07,Thief Lake,3,THS4,Spray,2.7,W,70.2,0,68,1,frogs loud,19:59,"RWBL, COYE, CAGO",none,Frogs loud,"Image 4010 (N), 4009 (S)",10/21/2015,NONE
+29,2015,5/22/2015,1,PM,SS,NH,Thief Lake,21:07,Thief Lake,4,THC3,Control,0,0,72.4,0,54,1,frogs,20:16,"MODO, CAGO, RUGR, COYE",none,Frogs loud,"Image 4012 (S), 4011 (N)",10/21/2015,NONE
+30,2015,5/22/2015,1,PM,SS,NH,Thief Lake,21:07,Thief Lake,5,THC2,Control,0.6,0,65,0,61,3,frogs,20:36,"MODO, CAGO",none,Frogs loud,"Image 4015 (S), 4014 (N)",10/21/2015,NONE
+31,2015,5/22/2015,1,PM,SS,NH,Thief Lake,21:07,Thief Lake,6,THS1,Spray,0,0,60.4,0,63,1,NA,21:00,"SACR, COLO, YHBL, RWBL, CAGO",none,none,"Image 4020 (E), 4019 (W)",10/21/2015,NONE
+32,2015,5/23/2015,1,PM,NH,0,Beaches Lake,21:11,Beaches Lake,1,BLS1,Spray,1.5,W,80.2,0,42,1,some frogs,19:09,"RWBL, YEWA",none,Sharp tailed grouse flushed from road side on drive here. could hear drumming nearby (grouse or RNEP?),No ID,10/22/2015,NONE
+33,2015,5/23/2015,1,PM,NH,0,Beaches Lake,21:11,Beaches Lake,2,BLS2,Spray,0,0,78.7,0,47,0,frogs,19:54,"RWBL, MODO, CAGO, YEWA, AMRO","NOFL, Flycatcher",none,No ID,10/22/2015,NONE
+34,2015,5/23/2015,1,PM,NH,0,Beaches Lake,21:11,Beaches Lake,3,BLC3,Control,0,0,70.7,0,43,0,NA,20:46,"TRES, RWBL, BWTE, MODO, YEWA, MAWR, AMRO, Woodpecker",SACR,none,No ID,10/22/2015,NONE
+35,2015,5/23/2015,1,PM,NH,0,Beaches Lake,21:11,Beaches Lake,4,BLC4,Control,1.2,NA,71.7,0,46,1,frogs,21:07,"YEWA, RWBL, MAWR, RWBL","NOHA, SACR","Faint AMBI sounds from NW, not distinct enough for direction; woody veg mix, wetland site to the south of road",No ID,10/22/2015,NONE
+36,2015,5/24/2015,1,AM,NH,0,Roseau River East,NA,Roseau River East,1,RES1,Spray,0,0,57.6,0,41,0,NA,5:13,"YHBL, CAGO, MAWR, BWTE, RWBL, WODU, SACR",none,NONE,NONE,11/11/2015,NONE
+37,2015,5/24/2015,1,AM,NH,0,Roseau River East,NA,Roseau River East,2,RES2,Spray,1.7,NA,46.6,0,42,1,NA,5:34,"RWBL, YHBL, MALL, RNDU, GADW, NSHO, COGR, BWTE (nesting), SACR, COYE, BUFF, REDH",none,NONE,NONE,11/11/2015,NONE
+38,2015,5/24/2015,1,AM,NH,0,Roseau River East,NA,Roseau River East,3,RES3,Spray,0,E,52.4,0,42,1,CAGO loud,6:03,"TRES, CAGO, COYE, KILL, RWBL, YHBL, MAWR",none,"AMBI hard to determine how many, at least 3 more likely I could hear 5 all in general NW direction from point",NONE,11/11/2015,NONE
+39,2015,5/24/2015,1,AM,NH,0,Roseau River East,NA,Roseau River East,4,RES4,Spray,1.8,E,56.7,0,38,1,NA,NA,"RWBL, MAWR, CAGO, SACR",none,NONE,NONE,11/11/2015,NONE
+40,2015,5/24/2015,1,AM,NH,0,Roseau River East,NA,Roseau River East,5,REC5,Control,1.1,E,57.7,0,42,1,NA,NA,"CAGO, RWBL, YEWA, RNDU, COYE, NSHO",SACR,"so many AMBI, soft and difficult to tell how many probably at least 8",NONE,11/11/2015,NONE
+41,2015,5/24/2015,1,AM,NH,0,Roseau River East,NA,Roseau River East,6,REC6,Control,1.2,E,60.2,0,38,0,NA,7:00,"TRES, CAGO, KILL, BARS, GBHE, RWBL, YEWA",SACR,so many AMBI calling softly,NONE,11/11/2015,NONE
+42,2015,5/24/2015,1,AM,NH,0,Roseau River East,NA,Roseau River East,7,REC7,Control,0,0,67.6,0,38,0,NA,7:20,"CAGO family, COYE, RNDU, BWTE, 3 WISN",none,NONE,NONE,11/11/2015,NONE
+43,2015,5/24/2015,1,AM,NH,0,Roseau River East,NA,Roseau River East,8,REC8,Control,0,0,72.2,0,35,0,NA,7:36,"WISN 11, SACR, BWTE, CAGO, GADW",none,WISN to west and overhead,NONE,11/11/2015,NONE
+44,2015,5/24/2015,1,PM,NH,0,Pembina,21:07,Pembina,1,PBS8,Spray,5.6,SW,74.6,2,38,0,NA,19:21,"YHBL, SACR, PBGR, MAWR, RWBL, BWTE, CAGO",none,NONE,NONE,10/20/2015,NONE
+45,2015,5/24/2015,1,PM,NH,0,Pembina,21:07,Pembina,2,PBS7,Spray,4.5,SW,75.5,2,48,1,NA,19:37,"RWBL, YHBL, CAGO, RNDU",none,NONE,NONE,10/20/2015,NONE
+46,2015,5/24/2015,1,PM,NH,0,Pembina,21:07,Pembina,3,PBS6,Spray,2,SW,71.6,2,42,1,NA,20:01,"BWTE, SACR, EAKI, RWBL, TRES, MODO, MAWR",none,NONE,NONE,10/20/2015,NONE
+47,2015,5/24/2015,1,PM,NH,0,Pembina,21:07,Pembina,4,PBS5,Spray,2.5,SW,68.8,2,36,0,NA,20:19,"RWBL, MALL, WODU, MAWR, SOSP, MODO, YEWA",none,NONE,NONE,10/20/2015,NONE
+48,2015,5/24/2015,1,PM,NH,0,Pembina,21:07,Pembina,5,PBC4,Control,1.9,SW,68,2,42,1,NA,20:50,"SACR, CAGO, RWBL",TRSW,NONE,NONE,10/20/2015,NONE
+49,2015,5/24/2015,1,PM,NH,0,Pembina,21:07,Pembina,6,PBC3,Control,NA,NA,72.5,0,47,1,NA,21:09,"AMWO, RWBL, MODO, SOSP",none,NONE,NONE,10/20/2015,NONE
+50,2015,5/24/2015,1,PM,NH,0,Pembina,21:07,Pembina,7,PBC2,Control,NA,NA,70.4,0,42,1,NA,20:22,"CAGO, MAWR, MALL, YEWA",none,pointed speakers to E,NONE,10/20/2015,NONE
+51,2015,5/24/2015,1,PM,NH,0,Pembina,21:07,Pembina,8,PBC1,Control,NA,NA,70.5,2,42,1,NA,20:46,"CAGO, AMWO",none,"pointed speakers to S, late?",NONE,10/20/2015,NONE
+52,2015,5/24/2015,1,PM,SS,0,Roseau River West,NA,Roseau River West,1,RWS12,Spray,0,0,50,0,LO,1,birds,5:44,"CAGO, RWBL",MODO,none,Image 4029,11/22/2015,NONE
+53,2015,5/24/2015,1,PM,SS,0,Roseau River West,NA,Roseau River West,2,RWS11,Spray,0.8,E,51,0,LO,1,birds,6:02,"CAGO, RWBL, TRES",MODO,none,Image 4034,11/22/2015,NONE
+54,2015,5/24/2015,1,PM,SS,0,Roseau River West,NA,Roseau River West,3,RWC10,Control,0.6,E,54,0,LO,0,NA,6:21,"CAGO, RWBL, RNDU, COYE",none,none,Image 4035,11/22/2015,NONE
+55,2015,5/24/2015,1,PM,SS,0,Roseau River West,NA,Roseau River West,4,RWC9,Control,0,E,57.3,0,51,1,CAGO,6:45,"CAGO, BUFF, TRUS, TRES, RWBL",MODO,CAGO loud,Image 4036,11/22/2015,NONE
+56,2015,5/26/2015,1,PM,NH,0,Manston,5:19,Manston,1,MNS2,Spray,1.7,SSE,74.1,2,50,1,oud frogs to west,19:36,"RWBL, MALL, YHBL, MAWR, COYE, WODU, BARS","CAGO, MODO, EAKI, SWSP","Loud frogs to west, speakers to south",No ID,10/22/2015,NONE
+57,2015,5/26/2015,1,PM,NH,0,Manston,5:19,Manston,2,MNS4,Spray,0.7,SE,72.5,2,50,1,frogs,20:24,"BWTE, MAWR, TRES, RWBL, COYE, BARS, CAGO","MODO, SACR, WITU, RNEP",none,No ID,10/22/2015,NONE
+58,2015,5/26/2015,1,PM,NH,0,Manston,5:19,Manston,3,MNC5,Control,0.9,NE,67.8,2,43,1,frogs,20:57,"RWBL, TRES, MAWR, BOBO",RNEP,VIRA responds to YERA call,No ID,10/22/2015,NONE
+59,2015,5/26/2015,1,PM,NH,0,Manston,5:19,Manston,4,MNC6,Control,1.7,NA,66.7,2,53,1,frogs,21:16,"NSHO, BWTE, MAWR, RWBL, COYE","CAGO, RNEP, KILL","Shoulder soft, park and walk down",No ID,10/22/2015,NONE
+60,2015,6/8/2015,2,AM,SS,0,Elm Lake,5:24,Elm Lake,1,ELC1,Control,2.2,SW,58.8,2,53,1,traffic,5:24,"COYE, RWBL, SOSP, SACR","CAGO, MODO, MALL, Woodpecker",Frogs,Image 4194,11/22/2015,NONE
+61,2015,6/8/2015,2,AM,SS,0,Elm Lake,5:24,Elm Lake,2,ELC2,Control,0,0,58.9,2,52,1,traffic,5:41,"NSHO, BWTE, SOSP, COYE, SACR, RWBL","MODO, RUGR",Frogs,Image 4195,11/22/2015,NONE
+62,2015,6/8/2015,2,AM,SS,0,Elm Lake,5:24,Elm Lake,3,ELS3,Spray,2.2,NW,56.6,2,52,0,NA,6:04,"RWBL, TRES, CAGO, COYE",MODO,none,"Image 4196, 4197 (other side of levee)",11/22/2015,NONE
+63,2015,6/8/2015,2,AM,SS,0,Elm Lake,5:24,Elm Lake,4,ELS4,Spray,2.4,W,58.8,2,57,0,NA,6:30,"RWBL, SOSP, CAGO, TRUS, Black blackbird",MODO,none,Image 4198,11/22/2015,NONE
+64,2015,6/8/2015,2,AM,SS,0,Elm Lake,5:24,Elm Lake,5,ELS5,Spray,2.1,W,59.6,2,57,0,NA,6:48,"COYE, RWBL, CAGO, TRES",none,none,Image 4199,11/22/2015,NONE
+65,2015,6/8/2015,2,AM,SS,0,Elm Lake,5:24,Elm Lake,6,ELS6,Spray,3,W,60.4,1,65,0,NA,7:05,"TRUS, RWBL, COYE, CAGO","MODO, RNEP",none,Image 4200,11/22/2015,NONE
+66,2015,6/8/2015,2,AM,SS,0,Elm Lake,5:24,Elm Lake,7,ELC7,Control,1.7,NW,60.6,1,LO,0,NA,7:27,"RWBL, CAGO, COYE",MODO,Frogs,Image 4201,11/22/2015,NONE
+67,2015,6/8/2015,2,AM,SS,0,Elm Lake,5:24,Elm Lake,8,ELC8,Control,5.1,W,61.3,1,62,0,NA,7:44,"TRUS, COYE, RWBL, TRES","BLJA, EAKI",none,Image 4202,11/22/2015,NONE
+68,2015,6/8/2015,2,PM,SS,0,Twin Lakes,21:24,Twin Lakes,1,TLC7,Control,1.3,NA,76.9,2,LO,1,bugs,18:24,"RWBL, COYE, TRSW",MODO,none,Image 4209,10/22/2015,NONE
+69,2015,6/8/2015,2,PM,SS,0,Twin Lakes,21:24,Twin Lakes,2,TLC5,Control,0,0,76.3,2,LO,1,traffic,19:12,"RWBL, COYE, SOSP",MODO,"Frogs, Beaver",Image 4211,10/22/2015,NONE
+70,2015,6/8/2015,2,PM,SS,0,Twin Lakes,21:24,Twin Lakes,3,TLC3,Control,0,0,77.5,2,LO,2,"traffic, bugs, frogs",19:34,"RWBL, COYE, SACR",MODO,"Deer, Frogs",Image 4212,10/22/2015,NONE
+71,2015,6/8/2015,2,PM,SS,0,Twin Lakes,21:24,Twin Lakes,4,TLS2,Spray,0,0,74.3,2,52,1,"bugs, traffic",19:55,"MALL, RWBL, AMRO, COYE, TRES, CEDW","BARS, RBWO",none,Image 4215,10/22/2015,NONE
+72,2015,6/8/2015,2,PM,SS,0,Twin Lakes,21:24,Twin Lakes,5,TLS1,Spray,0,0,72.8,2,LO,1,bugs,20:14,"NOFL, COYE, RWBL",none,Frogs,Image 4216,10/22/2015,NONE
+73,2015,6/9/2015,2,AM,NH,0,Eckvoll,5:25,Eckvoll,1,EVS1,Spray,0,0,60,2,40,0,NA,5:30,"BWTE, COYE, BARS, MAWR, RWBL",none,none,No ID,11/22/2015,NONE
+74,2015,6/9/2015,2,AM,NH,0,Eckvoll,5:25,Eckvoll,2,EVS2,Spray,0.6,S,60.3,2,42,0,frogs,5:54,"MAWR, AMRO, COYE, YEWA, BARS, RWBL",none,"Cows looing off to west - Agassiz, check location of call from RI",No ID,11/22/2015,NONE
+75,2015,6/9/2015,2,AM,NH,0,Eckvoll,5:25,Eckvoll,3,EVS3,Spray,1.3,S,60.6,2,38,0,frogs,6:07,"SOSP, COYE",CORA,"drizzle started min 8, sky code from 2 to 5 during survey period",No ID,11/22/2015,NONE
+76,2015,6/9/2015,2,AM,NH,0,Eckvoll,5:25,Eckvoll,4,EVS4,Spray,3.8,SW,62.3,5,36,0,frogs,6:25,"Flycatcher, RWBL",none,none,No ID,11/22/2015,NONE
+77,2015,6/9/2015,2,AM,NH,0,Eckvoll,5:25,Eckvoll,5,EVC5,Control,1.3,SW,63.9,5,40,0,NA,6:42,"RWBL, COYE, MAWR, YEWA, AMRO, Oriole?",none,none,No ID,11/22/2015,NONE
+78,2015,6/9/2015,2,AM,NH,0,Eckvoll,5:25,Eckvoll,6,EVC6,Control,2.3,N,61.5,2,34,0,NA,6:59,"MAWR, RWBL, YEWA, COYE","MODO, CORA","possibly more than one SORA calling, difficult to tell far away",No ID,11/22/2015,NONE
+79,2015,6/10/2015,2,AM,NH,0,East Park,5:23,East Park,1,EPC1,Control,0,0,53.4,1,38,0,NA,5:30,"RWBL, YHBL, MAWR, BWTE","MODO, SACR, COLO",Resaved point - not updated on R1,No ID,11/20/2015,NONE
+80,2015,6/10/2015,2,AM,NH,0,East Park,5:23,East Park,2,EPC2,Control,0,0,56.7,0,38,0,NA,6:42,"EAKI, RWBL, COYE","COLO, MALL, BAOR",Resaved point - not updated on R1,No ID,11/20/2015,NONE
+81,2015,6/10/2015,2,AM,NH,0,East Park,5:23,East Park,3,EPC3,Control,3.7,NW,56,0,36,0,NA,7:16,"COLO, CAGO, COYE, RWBL, YEWA, TRES, BWTE, NOFL, AGWT, MODO, YHBL",MODO,"Extra point, to N",No ID,11/20/2015,NONE
+82,2015,6/10/2015,2,AM,NH,0,East Park,5:23,East Park,4,EPS4,Spray,1,NE,62.3,0,33,0,NA,7:33,"BAEA, RWBL, COLO, YHBL, COYE, RBGR, TRES",none,none,No ID,11/20/2015,NONE
+83,2015,6/10/2015,2,AM,NH,0,East Park,5:23,East Park,5,EPS5,Spray,1.8,NW,65.5,0,33,0,NA,7:51,"TRES, TRSW, RNDU, RWBL, BWTE, YEWA",SACR,none,No ID,11/20/2015,NONE
+84,2015,6/10/2015,2,AM,NH,0,East Park,5:23,East Park,6,EPC6,Control,3,NA,67.2,0,35,0,NA,8:07,"BWTE, RWBL, COYE, TRES","MODO, SOSP",none,No ID,11/20/2015,NONE
+85,2015,6/10/2015,2,AM,SS,0,Thief Lake,NA,Thief Lake,1,THS8,Spray,1.5,NA,52.7,1,60,0,NA,5:07,"CAGO, COYE, BWTE, RWBL",COLO,none,Image 4217,10/21/2015,NONE
+86,2015,6/10/2015,2,AM,SS,0,Thief Lake,NA,Thief Lake,2,THC6,Control,0.7,0,52.5,0,LO,0,NA,5:40,"COLO, SACR, RWBL, CAGO, Gulls, FOTE",none,none,Image 4218,10/21/2015,NONE
+87,2015,6/10/2015,2,AM,SS,0,Thief Lake,NA,Thief Lake,3,THS4,Spray,1.8,E,52.7,0,56,0,NA,6:02,"MALL, COYE, RWBL, SOSP, CHSP","MODO, COLO",Cows; Projected speaker to S,"Image 4220 (N), 4219 (S)",10/21/2015,NONE
+88,2015,6/10/2015,2,AM,SS,0,Thief Lake,NA,Thief Lake,4,THC3,Control,3.1,N,53.5,0,55,0,NA,6:22,"NOHA, COYE, AMGO, SOSP, Flycatcher, SACR","RUGR, MODO, COLO, Owls",Cows,"Image 4222 (N), 4221 (S)",10/21/2015,NONE
+89,2015,6/10/2015,2,AM,SS,0,Thief Lake,NA,Thief Lake,5,THC2,Control,4.4,N,55.1,0,66,1,NA,6:46,"COYE, RWBL, NSHO, BARS, EAKI, MALL, SWSP","MODO, SACR, RNEP, Owls",Cows,"Image 4224 (S), 4223 (N)",10/21/2015,NONE
+90,2015,6/10/2015,2,AM,SS,0,Thief Lake,NA,Thief Lake,6,THS1,Spray,3.9,N,56.8,0,62,0,NA,7:20,"RWBL, YHBL, COYE, Gull",CAGO,none,"Image 4225 (W), 4226 (E)",10/21/2015,NONE
+91,2015,6/10/2015,2,PM,NH,0,Roseau River East,21:23,Roseau River East,1,RES1,Spray,5.7,W,70.9,1,32,0,NA,19:13,"KILL, CAGO, BARS, YEWA, MAWR, MALL, WODU, RWBL, COYE",none,none,No ID,11/11/2015,NONE
+92,2015,6/10/2015,2,PM,NH,0,Roseau River East,21:23,Roseau River East,2,RES2,Spray,3.1,W,72.5,1,35,0,NA,19:32,"BWTE, CAGO, YHBL, MAWR, RWBL",TRES,Muskrat?,No ID,11/11/2015,NONE
+93,2015,6/10/2015,2,PM,NH,0,Roseau River East,21:23,Roseau River East,3,RES3,Spray,4.5,W,70,1,38,0,NA,19:55,"BWTE, RNDU, BARS, RWBL, YHBL, MAWR, GWTE","EAKI, MODO",Drumming to south - Grouse?,No ID,11/11/2015,NONE
+94,2015,6/10/2015,2,PM,NH,0,Roseau River East,21:23,Roseau River East,4,RES4,Spray,2,W,69.9,1,35,0,NA,20:10,"RWBL, MALL, KILL, YHBL, MAWR, COYE","MODO, NOFL, GBHE, COLO",Drumming to south - Grouse?,No ID,11/11/2015,NONE
+95,2015,6/10/2015,2,PM,NH,0,Roseau River East,21:23,Roseau River East,5,REC5,Control,2.3,W,69.4,1,33,0,NA,20:33,"AWPE, MAWR, RWBL","SACR, CAGO, GBHE, COLO (pr.)",none,No ID,11/11/2015,NONE
+96,2015,6/10/2015,2,PM,NH,0,Roseau River East,21:23,Roseau River East,6,REC6,Control,1.4,W,67,1,34,0,NA,20:48,"RWBL, MAWR","GBHE, KILL, RNDU, DCCO",none,No ID,11/11/2015,NONE
+97,2015,6/10/2015,2,PM,NH,0,Roseau River East,21:23,Roseau River East,7,REC7,Control,1.3,W,67,1,34,1,mosquitos :(,21:11,"AWPE, COYE, RWBL, MAWR","MODO, COLO (pr.)",none,No ID,11/11/2015,NONE
+98,2015,6/10/2015,2,PM,NH,0,Roseau River East,21:23,Roseau River East,8,REC8,Control,2.3,W,64.5,1,34,1,mosquitos :(,21:28,"RWBL, MAWR, COYE, YEWA, YHBL",none,Beaver,No ID,11/11/2015,NONE
+99,2015,6/10/2015,2,PM,SS,0,Roseau River West,21:26,Roseau River West,1,RWS12,Spray,0,0,70.3,0,51,0,NA,20:16,"TRES, RWBL, COYE, AMRO, SACR",none,Frogs,Image 4227,10/21/2015,NONE
+100,2015,6/10/2015,2,PM,SS,0,Roseau River West,21:26,Roseau River West,2,RWS11,Spray,0,0,68.6,0,59,0,NA,20:33,"TRES, RWBL, COYE, RNDU",MODO,none,Image 4228,10/21/2015,NONE
+101,2015,6/10/2015,2,PM,SS,0,Roseau River West,21:26,Roseau River West,3,RWC10,Control,0,0,67.6,0,LO,0,NA,20:53,"RWBL, SACR, RNDU",MODO,"Angry beaver, MODO",Image 4229,10/21/2015,NONE
+102,2015,6/10/2015,2,PM,SS,0,Roseau River West,21:26,Roseau River West,4,RWC9,Control,0,0,67.6,0,LO,0,NA,21:16,"COLO, COYE, SACR, RWBL, TRES, CAGO, BWTE","MODO, RNEP",none,Image 4230,10/21/2015,NONE
+103,2015,6/11/2015,2,AM,NH,SS,Beaches Lake,5:20,Beaches Lake,1,BLS1,Spray,NA,NA,NA,1,36,1,NA,5:13,"RWBL, COYE, MAWR, YEWA","RNEP, MODO","Beaver, 2 SORA on my way out wh",No ID,11/22/2015,NONE
+104,2015,6/11/2015,2,AM,NH,SS,Beaches Lake,5:20,Beaches Lake,2,BLS2,Spray,NA,NA,NA,1,38,1,NA,5:52,"MAWR, CAGO, COYE, RWBL, MODO",none,none,No ID,11/22/2015,NONE
+105,2015,6/11/2015,2,AM,NH,SS,Beaches Lake,5:20,Beaches Lake,3,BLC3,Control,1.3,NA,58.5,0,36,0,NA,6:43,"VEER, RWBL, BARS, YEWA, COYE, MAWR, EAKI",SACR,none,No ID,11/22/2015,NONE
+106,2015,6/11/2015,2,AM,NH,SS,Beaches Lake,5:20,Beaches Lake,4,BLC4,Control,1.5,S,60.2,1,34,0,NA,7:12,"MAWR, COYE, RWBL, YEWA",SACR,none,No ID,11/22/2015,NONE
+107,2015,6/12/2015,2,AM,NH,0,Pembina,5:26,Pembina,1,PBS8,Spray,1.6,SE,57.2,1,38,1,NA,5:23,"RWBL, YHBL, MAWR, CAGO, SACR",none,none,No ID,10/20/2015,NONE
+108,2015,6/12/2015,2,AM,NH,0,Pembina,5:26,Pembina,2,PBS7,Spray,1.4,SE,60.4,0,36,0,NA,5:45,"RWBL, BWTE, MODO, MAWR, COYE","SACR, AMCR",none,No ID,10/20/2015,NONE
+110,2015,6/12/2015,2,AM,NH,0,Pembina,5:26,Pembina,4,PBS6,Spray,4.5,SE,59.6,0,35,0,NA,6:27,"TRES, MAWR, YEWA, MALL, CAGO, SACR, RWBL, COYE",BOBO,none,No ID,10/20/2015,NONE
+111,2015,6/12/2015,2,AM,NH,0,Pembina,5:26,Pembina,5,PBS5,Spray,4,S,60.5,1,37,0,NA,6:51,"RWBL, COYE, YEWA","BOBO, VEER, MODO, SACR",none,No ID,10/20/2015,NONE
+112,2015,6/12/2015,2,AM,NH,0,Pembina,5:26,Pembina,6,PBC4,Control,3.8,SW,62.4,0,33,0,NA,7:22,"RWBL, YEWA, MAWR, COYE, KILL",SACR,none,No ID,10/20/2015,NONE
+113,2015,6/12/2015,2,AM,NH,0,Pembina,5:26,Pembina,7,PBC3,Control,2.8,SE,64.7,1,36,0,NA,7:45,"MAWR, RNDU, RUDU, COYE, RWBL, HOME",SACR,none,No ID,10/20/2015,NONE
+114,2015,6/12/2015,2,AM,NH,0,Pembina,5:26,Pembina,8,PBC2,Control,0.6,S,72.6,0,34,0,NA,8:09,"MAWR, RWBL, COYE, YEWA","MODO, SACR","Likely serveral more SORA and VIRA than recorded. Heard ""ticket"" on way out.",No ID,10/20/2015,NONE
+115,2015,6/12/2015,2,AM,NH,0,Pembina,5:26,Pembina,9,PBC1,Control,2.7,SW,69.3,0,38,0,NA,8:32,"SACR, RWBL, MAWR, COYE, Flycatcher",MODO,none,No ID,10/20/2015,NONE
+116,2015,6/13/2015,2,AM,NH,SS,Manston,5:19,Manston,1,MNS2,Spray,2.6,S,55.6,0,38,0,NA,5:54,"MAWR, COYE, CAGO, KILL, RWBL, YHBL, WODU, YEWA","RNEP, SACR, MODO, BOBO, EAKI, Flycatcher","Area to south of point burned after R1. Typha regeneration, and low spots/depressions still with residual veg",No ID,10/22/2015,NONE
+117,2015,6/13/2015,2,AM,NH,SS,Manston,5:19,Manston,2,MNS4,Spray,2.2,SE,62.3,0,38,1,mosquitos :(,6:40,"MAWR, YEWA, large owl, COYE","RNEP, MODO",none,No ID,10/22/2015,NONE
+118,2015,6/13/2015,2,AM,NH,SS,Manston,5:19,Manston,3,MNC5,Control,4.9,SE,67.6,0,35,0,NA,7:16,"RWBL, TRES, NOHA, MAWR, YEWA","CCSP, CHSP, SACR, RNEP, BOBO",none,No ID,10/22/2015,NONE
+119,2015,6/13/2015,2,AM,NH,SS,Manston,5:19,Manston,4,MNC6,Control,6.4,SE,68.9,2,38,1,occasional car,7:43,"RWBL, NSHO, MAWR, KILL, WODU","MODO, BOBO","Broadcast to the south. nice mix of plants here at little pond - surrounded by Typha. saw WIPH and SPSA on way out of site, east on 11 in roadside ditch",No ID,10/22/2015,NONE
+750,2016,5/15/2016,1,AM,NH,PR,East Park,544,East Park,1,EPC1,Control,0,0,39.6,2,NA,0,NA,526,"RUGR (drumming), CAGO, COLO, RWBL, SACR, SWSP, SEWR",NONE,on drive into site I noticed DNR cleared parking area. Also who cleared brush along ditch? DNR contractors harvesting aspen (NH per conversation with RuthAnne Franke). Large areas of aspen cleared further to east,NONE,NONE,NONE
+751,2016,5/15/2016,1,AM,NH,PR,East Park,544,East Park,2,EPC2,Control,0,W,40.2,2,NA,0,NA,615,"CAGO, RWBL, CCSP, RNDU, YEWA, waterfowl sp.","SACR, CAGO, NOFL, MODO, BLJA, AMRO, GWTE, NSHO",NA,NONE,NONE,NONE
+752,2016,5/15/2016,1,AM,NH,PR,East Park,544,East Park,3,EPC3,Control,2.5,W,43.5,2,NA,0,NA,643,"CAGO, RNDU, RWBL, COLO, SWSP, AWPE, YEWA, sp clean white streak breast yellow face?","SACR, TRSW",NA,NONE,NONE,NONE
+753,2016,5/15/2016,1,AM,NH,PR,East Park,544,East Park,4,EPS4,Spray,2.8,W,41,2,NA,0,NA,700,"COLO, BWTE, RWBL, CAGO, RNDU, SWSP","NSHO, NOHA, RUGR (drum far away to N)",NA,NONE,NONE,NONE
+754,2016,5/15/2016,1,AM,NH,PR,East Park,544,East Park,5,EPS5,Spray,NA,0,NA,2,NA,0,NA,723,"TRSW, SWSP, BWTE, CAGO, RWBL","SACR, BLJA",NA,NONE,NONE,NONE
+755,2016,5/15/2016,1,AM,NH,PR,East Park,544,East Park,6,EPC6,Control,3,W,43.5,2,NA,0,NA,737,"CAGO, RWBL, AMRO, SWSP","MODO, RUGR",NA,NONE,NONE,NONE
+756,2016,5/16/2016,1,AM,NH,0,Roseau River East,545,Roseau River East,1,RES1,Spray,1.2,W,36.7,0,NA,0,NA,521,"CAGO, RWBL, MALL, BWTE, COYE, MAWR, NSHO",SACR,NA,NONE,NONE,NONE
+757,2016,5/16/2016,1,AM,NH,0,Roseau River East,545,Roseau River East,2,RES2,Spray,1.6,W,34.7,0,NA,1,NA,541,"RWBL, MAWR","CAGO, RUDU, BWTE, SPSA, NSHO, RNDU, HOME, YHBL, AMCO 2, RNGR, RUGR (drum), CAGO, SACR",mashed down from snow more than control areas. Weird poodpecker noise from marsh? What is that?,NONE,NONE,NONE
+758,2016,5/16/2016,1,AM,NH,0,Roseau River East,545,Roseau River East,3,RES3,Spray,1,W,10.2,0,NA,2,NA,607,"BWTE, RWBL, MAWR, CAGO, COGR","CAGO, SACR, RUGR (drum)",NA,NONE,NONE,NONE
+759,2016,5/16/2016,1,AM,NH,0,Roseau River East,545,Roseau River East,4,RES4,Spray,1.5,W,37,0,NA,1,YHBL and CAGO distracting difficult to tell how many AMBI and distance/direction,628,"RWBL, RNDU, CAGO, MAWR",SACR,NA,NONE,NONE,NONE
+760,2016,5/16/2016,1,AM,NH,0,Roseau River East,545,Roseau River East,5,REC5,Control,2,W,38.9,0,NA,0,difficult to tell AMBI,645,"SACR, BWTE, MAWR, SOSP, CAGO, RWBL, COYE",NONE,NA,NONE,NONE,NONE
+761,2016,5/16/2016,1,AM,NH,0,Roseau River East,545,Roseau River East,6,REC6,Control,1,W,47,0,NA,1,"again, prob underestimated # AMBI, difficult to tell how many, direction, distance",706,"SACR, RWBL, MAWR",SOSP,NA,NONE,NONE,NONE
+762,2016,5/16/2016,1,AM,NH,0,Roseau River East,545,Roseau River East,7,REC7,Control,2,W,44,0,NA,1,prob more AMBI,731,"MAWR, CAGO, SWSP, YEWA, SEWR",SACR,NA,NONE,NONE,NONE
+763,2016,5/16/2016,1,AM,NH,0,Roseau River East,545,Roseau River East,8,REC8,Control,1.7,W,46.7,0,NA,0,NA,747,"CAGO, SWSP, RWBL, MAWR","SACR, NOHA",NA,NONE,NONE,NONE
+764,2016,5/17/2016,1,PM,PR,0,Twin Lakes,2101,Twin Lakes,1,TLS1,Spray,0,0,73.4,0,35,0,NA,1815,"RWBL, SWSP, CCSP, TRES","RWBL, SWSP, YEWA, COYE, COGR, CCSP, TRES, YBSA, GRCA",NA,NONE,NH 2/17/17,NONE
+765,2016,5/17/2016,1,PM,PR,0,Twin Lakes,2101,Twin Lakes,2,TLS2,Spray,1.9,E,67.6,0,34,1,point along highway,1838,"RWBL, MAWR, AMRO, YEWA","TRUS, COLO, KILL, SOSP, RIDU, TRES",NA,NONE,NH 2/17/17,NONE
+766,2016,5/17/2016,1,PM,PR,0,Twin Lakes,2101,Twin Lakes,3,TLC3,Control,1.5,E,66.9,0,33,1,moved ~15m east,1904,"HOWR, LEFL, TRES, YEWA, RWBL",NONE,"Point in the middle of transitional forested zone, probably affected hearing. ",NONE,NH 2/17/17,NONE
+767,2016,5/17/2016,1,PM,PR,0,Twin Lakes,2101,Twin Lakes,4,TLS4,Spray,0,0,73.2,0,38,1,NA,1930,"BAEA, RWBL, PAWA, SOSP, BBMA, BAOR, BLJA","TRES, CAGO, TRUS, RUGR, MODO",Bald eagle nest and babies!,NONE,NH 2/17/17,NONE
+768,2016,5/17/2016,1,PM,PR,0,Twin Lakes,2101,Twin Lakes,5,TLC5,Control,1.8,E,65.3,0,42,1,NA,2002,"YEWA, RWBL, CAGO, MAWR, COYE",SACR,NA,NONE,NH 2/17/17,NONE
+769,2016,5/17/2016,1,PM,PR,0,Twin Lakes,2101,Twin Lakes,6,TLC7,Control,0,0,63.6,0,34,0,NA,2105,"YEWA, CAGO, RWBL, SWSP, SEWR",NONE,probably more bittern than 1 I could differentiate,NONE,NH 2/17/17,NONE
+770,2016,5/17/2016,1,AM,NH,0,Eckvoll,NA,Eckvoll,1,EVS1,Spray,0,0,38.3,0,NA,1,"SACR, CAGO",528,"TRUS, BWTE, MAWR, CAGO, MALL, RWBL, SACR, beaver",woodpecker sp.,NA,NONE,NH 2/18/17,NONE
+771,2016,5/17/2016,1,AM,NH,0,Eckvoll,NA,Eckvoll,2,EVS2,Spray,0,0,36.3,0,NA,2,"SACR in min 7,8",547,"BWTE, MALL, COYE, SWSP, RWBL, BEKI","TRUS, CAGO, MODO, RUGR, SACR, woodpecker",NA,NONE,NH 2/18/17,NONE
+772,2016,5/17/2016,1,AM,NH,0,Eckvoll,NA,Eckvoll,3,EVS3,Spray,0,0,42.3,0,NA,1,CAGO,608,"YEWA, MAWR, RWBL, COGR","CAGO, SACR, BWTE, 2 BCNH flushed on my way to EVS4",NA,NONE,NH 2/18/17,NONE
+773,2016,5/17/2016,1,AM,NH,0,Eckvoll,NA,Eckvoll,4,EVS4,Spray,0,0,50,0,NA,1,CAGO in distance,630,"BWTE, SOSP, RWBL","SACR, CAGO",NA,NONE,NH 2/18/17,NONE
+774,2016,5/17/2016,1,AM,NH,0,Eckvoll,NA,Eckvoll,5,EVC5,Control,0,0,51,0,NA,1,NA,650,"CAGO, RWBL, COGR, MAWR, BOBO","SACR, RUGR (audio), MODO, TRUS",NA,NONE,NH 2/18/17,NONE
+775,2016,5/17/2016,1,AM,NH,0,Eckvoll,NA,Eckvoll,6,EVC6,Control,0,0,55.1,0,NA,0,NA,708,"COYE, BWTE, MALL, SWSP, RWBL, RNDU, YEWA","BUFF, RUGR (audio), RNDU, BWTE, TRUS, woodpecker sp., beaver",NA,NONE,NH 2/18/17,NONE
+776,2016,5/15/2016,1,AM,PR,0,Thief Lake,544,Thief Lake,1,THS1,Spray,3.5,E,37.9,0,32,0,NA,515,"CAGO, NSHO, BWTE, MALL","SOSP, SWSP, RWBL, MAWR, SACR",NA,NONE,NH 2/17/17,NONE
+777,2016,5/15/2016,1,AM,PR,0,Thief Lake,544,Thief Lake,2,THC2,Control,4.5,E,39.3,0,31,0,NA,600,"SWSP, RWBL, SEWR, BWTE, SASP","CAGO, RNDU, SACR, FRGU",NA,NONE,NH 2/17/17,NONE
+778,2016,5/15/2016,1,AM,PR,0,Thief Lake,544,Thief Lake,3,THC3,Control,3,W,39.8,0,33,0,NA,627,"YEWA, RWBL, CCSP, SEWR","SWSP, CAGO, MALL, gull sp.",NA,NONE,NH 2/17/17,NONE
+779,2016,5/15/2016,1,AM,PR,0,Thief Lake,544,Thief Lake,4,THS4,Spray,1.5,W,46.7,0,35,0,NA,739,"FRGU, GRYE, SOSA, CAGO, BWTE, RWBL, NSHO, AMWI, WIPH","RUGR, AMRO",NA,NONE,NH 2/17/17,NONE
+780,2016,5/15/2016,1,AM,PR,0,Thief Lake,544,Thief Lake,5,THC6,Control,6.3,W,45,0,34,0,NA,804,"BWTE, RWBL, REDH, CAGO, YEWA, SWSP, YRWA, MAWR",NONE,NA,NONE,NH 2/17/17,NONE
+781,2016,5/15/2016,1,AM,PR,0,Thief Lake,544,Thief Lake,6,THS8,Spray,8.3,W,46,0,37,0,NA,831,"RNDU, CAGO, YEWA, MAWR, TRSW, CCSP",NONE,NA,NONE,NH 2/17/17,NONE
+782,2016,5/16/2016,1,AM,PR,0,Roseau River West,545,Roseau River West,1,RWC9,Control,2.8,W,33,0,34,0,NA,537,"MAWR, RWBL, CAGO, BWTE",MALL,NA,NONE,NH 2/18/17,NONE
+783,2016,5/16/2016,1,AM,PR,0,Roseau River West,545,Roseau River West,2,RWC10,Control,3.2,W,31.7,0,33,0,NA,605,"TRES, RWBL, CAGO, SWSP, SACR, HOME, RNDU",NONE,NA,NONE,NH 2/18/17,NONE
+784,2016,5/16/2016,1,AM,PR,0,Roseau River West,545,Roseau River West,3,RWS11,Spray,3.87,W,36.7,0,34,0,NA,629,"TRES, TRUS, RWBL, BWTE, CCSP, MAWR, CAGO, CCSP, SWSP, SEWR, BUFF",SACR,NA,NONE,NH 2/18/17,NONE
+785,2016,5/16/2016,1,AM,PR,0,Roseau River West,545,Roseau River West,4,RWS12,Spray,4,W,37,0,32,0,NA,653,"TRES, MAWR, CAGO, SWSP, RWBL","SWSP, BHCO, HAWO, SACR",NA,NONE,NH 2/18/17,NONE
+786,2016,5/16/2016,1,PM,NH,PR,Beaches Lake,2103,Beaches Lake,1,BLS1,Spray,3.3,W,61.7,0,NA,1,water spillage from beaver dam,1911,"RWBL, YEWA, COGR, MODO, SOSP","RUGR (drumming), MODO (flushed juv bird on way in to site), TRES",NA,NONE,NH 2/20/17,NONE
+787,2016,5/16/2016,1,PM,NH,PR,Beaches Lake,2103,Beaches Lake,2,BLS2,Spray,0.7,W,65.6,0,35,0,very quiet,2005,"RWBL, COGR, MAWR, BOBO",RUGR (drumming),NA,NONE,NH 2/20/17,NONE
+788,2016,5/16/2016,1,PM,NH,PR,Beaches Lake,2103,Beaches Lake,3,BLC3,Control,NA,0,NA,0,NA,0,NA,2058,"RWBL, SWSP, MODO, YEWA","KILL, RUGR","so many birds, not enough time to write direction/bearing. Recorded location by circle w tick mark",NONE,NH 2/20/17,NONE
+789,2016,5/16/2016,1,PM,NH,PR,Beaches Lake,2103,Beaches Lake,4,BLC4,Control,NA,0,NA,0,NA,0,NA,2131,"SWSP, RWBL, SEWR, BWTE, SASP","CAGO, SACR, CCSP, MODO, RUGR (drumming)","so many birds, not enough time to write direction/bearing. Recorded location by circle w tick mark",NONE,NH 2/20/17,NONE
+794,2016,5/17/2016,1,PM,NH,0,Pembina,2100,Pembina,1,PBC1,Control,1,E,69.5,0,NA,0,so quiet!! Too hot?,1812,"RWBL, flycather sp., YEWA, SOSP, SWSP (came to check out recording, very close!), AMCR",NONE,"frogs, someone drove 4x4 through marsh: see pics",NONE,NONE,NONE
+795,2016,5/17/2016,1,PM,NH,0,Pembina,2100,Pembina,2,PBC2,Control,3,E,67.5,0,NA,1,occassional wind in face,1832,"RWBL, SWSP, CCSP, COYE, BOBO, TRES",NONE,"upland between point and road looks maybe burnt last fall little thatch, crusty surface, maybe just wetter?",NONE,NONE,NONE
+796,2016,5/17/2016,1,PM,NH,0,Pembina,2100,Pembina,3,PBC3,Control,0.5,S,72,0,NA,0,NA,1904,"CCSP, MAWR, BARS, RWBL, MALL",NONE,NA,NONE,NONE,NONE
+797,2016,5/17/2016,1,PM,NH,0,Pembina,2100,Pembina,4,PBC4,Control,0.5,E,70.1,0,NA,1,CAGO in distance. Plane at min 2-3,1927,"RWBL, CAGO, NSHO, SWSP, MAWR, RNDU, CCSP",COLO (between pts 4 and 5),"2 AMBI flushed and flew far away, landed back in marsh",NONE,NONE,NONE
+798,2016,5/17/2016,1,PM,NH,0,Pembina,2100,Pembina,5,PBS5,Spray,0,0,66.7,0,NA,0,super quiet and still,2003,"RWBL, BARS, SWSP, MALL, MAWR, TRES, beaver",NONE,sooo quiet! Spray site doesn't look any different than control,NONE,NONE,NONE
+799,2016,5/17/2016,1,PM,NH,0,Pembina,2100,Pembina,6,PBS6,Spray,0,0,66.2,0,NA,0,NA,2025,"RWBL, BWTE, MAWR, CAGO, PAWA, beaver",SACR,NA,NONE,NONE,NONE
+800,2016,5/17/2016,1,PM,NH,0,Pembina,2100,Pembina,7,PBS7,Spray,1.5,E,58.6,0,NA,1,RWBL and frogs,2048,RWBL,NONE,"south of road burned, see pictures",NONE,NONE,NONE
+801,2016,5/17/2016,1,PM,NH,0,Pembina,2100,Pembina,8,PBS8,Spray,0,0,62.1,0,NA,0,still,2105,"MALL, KILL, BARS, RWBL, LEYE, MODO","SACR, CAGO","both sides of road burned, frogs distant",NONE,NONE,NONE
+802,2016,5/17/2016,1,AM,PR,0,Elm Lake,NA,Elm Lake,1,ELC1,Control,0.6,0,62.4,0,37,0,NA,520,"BWTE, NSHO, YEWA",NONE,NA,NONE,NH 2/17/17,NONE
+803,2016,5/17/2016,1,AM,PR,0,Elm Lake,NA,Elm Lake,2,ELC2,Control,0.7,0,39.6,0,35,0,NA,543,"WTSP, NSHO, BWTE, CAGO, GRYE, RWBL, YEWA","SACR, RUGR",NA,NONE,NH 2/17/17,NONE
+804,2016,5/17/2016,1,AM,PR,0,Elm Lake,NA,Elm Lake,3,ELS3,Spray,0.6,0,45.1,0,32,0,NA,622,"MAWR, RWBL, SWSP, COYE, TRUS, BWTE","CAGO, NSHO, CCSP",NA,NONE,NH 2/17/17,NONE
+805,2016,5/17/2016,1,AM,PR,0,Elm Lake,NA,Elm Lake,4,ELS4,Spray,1.1,0,42.6,0,39,0,NA,650,"TRUS, CAGO, MAWR, RWBL, SWSP, YEWA, COYE",NONE,NA,NONE,NH 2/17/17,NONE
+806,2016,5/17/2016,1,AM,PR,0,Elm Lake,NA,Elm Lake,5,ELS5,Spray,0,0,49,0,36,0,NA,711,"TRES, RWBL, SWSP",NONE,NA,NONE,NH 2/17/17,NONE
+807,2016,5/17/2016,1,AM,PR,0,Elm Lake,NA,Elm Lake,6,ELS6,Spray,0.7,E,63,0,38,0,NA,732,"RWBL, CAGO, SOSP, SWSP",SACR,NA,NONE,NH 2/17/17,NONE
+808,2016,5/17/2016,1,AM,PR,0,Elm Lake,NA,Elm Lake,7,ELC7,Control,0.8,E,67.8,0,33,0,NA,800,"YEWA, SWSP, AMRO, CCSP, SEWR, RWBL","CAGO, PAWA, WIWA",NA,NONE,NH 2/17/17,NONE
+809,2016,5/17/2016,1,AM,PR,0,Elm Lake,NA,Elm Lake,8,ELC8,Control,2,E,66.8,0,42,0,NA,829,"BWTE, YEWA, RWBL, CAGO, BARS","MALL, GADW",NA,NONE,NH 2/17/17,NONE
+810,2016,6/2/2016,2,PM,NH,0,East Park,2119,East Park,1,EPC1,Control,0.5,W,72.1,0,NA,1,Frogs,1834,"RWBL, EAKI, BAOR, YEWA, COGR, MODO","VEER, MODO, RUGR, RBGR BAOR, BOFL, frogs",NA,NONE,NONE,NONE
+811,2016,6/2/2016,2,PM,NH,0,East Park,2119,East Park,2,EPC2,Control,0,0,73.8,0,NA,1,bugs on my face,1926,"COLO, RWBL, AMRO, YEWA, COYE, MAWR","MODO, LEFL, AWPE, RUGR, EWPE, VEER","ditches really high, spillway roaring. Lots of rain lately. Skunk near gate cute!",NONE,NONE,NONE
+812,2016,6/2/2016,2,PM,NH,0,East Park,2119,East Park,3,EPC3,Control,0,0,75.2,0,NA,1,frogs,1959,"RWBL, AWPE, COLO, COYE, TRES, YEWA, MAWR, SEWR, RBDU, SOSP",MODO,NA,NONE,NONE,NONE
+813,2016,6/2/2016,2,PM,NH,0,East Park,2119,East Park,4,EPS4,Spray,0,0,65.5,1,NA,2,frogs,2019,"RWBL, RNDU, CAGO, MAWR","RUGR, MALL, YEWA",NA,NONE,NONE,NONE
+814,2016,6/2/2016,2,PM,NH,0,East Park,2119,East Park,5,EPS5,Spray,1,E,63.5,1,NA,2,Frogs,2040,"COYE, BUFF, BARS, YEWA, MAWR",CAGO,NA,NONE,NONE,NONE
+815,2016,6/2/2016,2,PM,NH,0,East Park,2119,East Park,6,EPC6,Control,0,0,63.5,2,NA,1,Frogs,2106,"VEER, RWBL, TRSW, MAWR, MODO, COGR, YEWA","RUGR, AMRO, CAGO",NA,NONE,NONE,NONE
+816,2016,5/26/2016,2,AM,PR,0,Twin Lakes,525,Twin Lakes,1,TLS1,Spray,0,0,43.3,0,40,0,NA,507,RWBL,"CAGO, CCSP, SOSP, COYE, WIFL, YBSA, CEWA",NA,NONE,NH 2/17/17,NONE
+817,2016,5/26/2016,2,AM,PR,0,Twin Lakes,525,Twin Lakes,2,TLS2,Spray,1.7,N,43.1,0,41,1,COWS,537,NONE,"YEWA, RWBL, COYE, SOSP, EAKI, AMRO",NA,NONE,NH 2/17/17,NONE
+818,2016,5/26/2016,2,AM,PR,0,Twin Lakes,525,Twin Lakes,3,TLC3,Control,1.3,E,45.2,0,43,2,"CARS, UP TO 57M",607,"HOWR, YEWA, LEFL, MODO, COYE, CAGO, COLO, VEER, BAOR",NONE,NA,NONE,NH 2/17/17,NONE
+819,2016,5/26/2016,2,AM,PR,0,Twin Lakes,525,Twin Lakes,4,TLS4,Spray,0,0,58.2,0,44,2,NA,632,NONE,"CCSP, WODU, VEER, AMRO, YEWA, TRES, BAOR, COLO, BAEA",NA,NONE,NH 2/17/17,NONE
+820,2016,5/26/2016,2,AM,PR,0,Twin Lakes,525,Twin Lakes,5,TLC5,Control,1.8,N,48.3,0,41,0,NA,658,"BWTE, HOME, RWBL, CAGO, MODO, COGR, AMRO, AMGO, MAWR, WIFL, YEWA, COHA","COLO, CAGO, SACR",NA,NONE,NH 2/17/17,NONE
+821,2016,5/26/2016,2,AM,PR,0,Twin Lakes,525,Twin Lakes,6,TLC7,Control,2.9,N,52.5,0,32,0,NA,756,"RWBL, YEWA, COYE, WIFL, COGR, TRES, MODO, GRCA, AMRE",CAGO,NA,NONE,NH 2/17/17,NONE
+822,2016,6/4/2016,2,AM,NH,PR,Beaches Lake,522,Beaches Lake,1,BLS1,Spray,0,0,55.2,0,42,2,water from beaver dam,509,"GRCA, RWBL, MAWR, YEWA, BWTE, swallow (BARS?)",NONE,NA,NONE,NONE,NONE
+823,2016,6/4/2016,2,AM,NH,PR,Beaches Lake,522,Beaches Lake,2,BLS2,Spray,0,0,57.4,1,42,2,MOSQUITOS,558,"RWBL, YEWA, MAWR, COYE, ","MODO, CAGO, VEER",YELLOW LADYSLIPPER AT 30M W. ENTRY PATH VERY WET,NONE,NONE,NONE
+824,2016,6/4/2016,2,AM,NH,PR,Beaches Lake,522,Beaches Lake,3,BLC3,Control,4.6,W,58.5,0,40,2,WIND,707,"CAGO, COYE, RWBL, TRES, BAOR, COGR, MAWR, MODO, CEWA, MALL, LEFL",NONE,NA,NONE,NONE,NONE
+825,2016,6/4/2016,2,AM,NH,PR,Beaches Lake,522,Beaches Lake,4,BLC4,Control,1.5,W,63,0,39,NA,NA,731,"LEFL, MODO, COYE, YEWA, TRES, BHCO, BBCU?","TRES IN DISTANCE, VEER",NA,NONE,NONE,NONE
+826,2016,6/3/2016,2,PM,NH,0,Roseau River East,2121,Roseau River East,1,RES1,Spray,7,W,69.1,1,NA,2,"FROGS, WIND",1839,"MAWR, SEWR, RWBL, COYE, BWTE",NONE,"spray point regrowth of typha along edges of open water, but overall dead! Compare with other side of pool 2",NONE,NONE,NONE
+827,2016,6/3/2016,2,PM,NH,0,Roseau River East,2121,Roseau River East,2,RES2,Spray,7.5,W,70.5,1,NA,3,WIND IN MY FACE,1859,"TRSW, MAWR, CAGO, SEWR",CAGO,"WINDY, PROBABLY MISSED BIRDS :(; SPRAY POINT. REGROWTH AT EDGE OF WATER, BUT OTHERWISE TYPHA MASHED DOWN AND DEAD",NONE,NONE,NONE
+828,2016,6/3/2016,2,PM,NH,0,Roseau River East,2121,Roseau River East,3,RES3,Spray,7.8,W,69.2,0,NA,3,wind,1921,"MAWR, TRSW, COGR, CAGO, RWBL, RNDU",AMRO,BOTH SPRAY - BAD POISITIONING NH,NONE,NONE,NONE
+829,2016,6/3/2016,2,PM,NH,0,Roseau River East,2121,Roseau River East,4,RES4,Spray,6.5,W,71.1,0,NA,2,1 angry CAGO. Wind,1941,"MAWR, RWBL, SEWR, EAKI, COGR, COYE","AMRO, MODO","spray point, dead as a doornail",NONE,NONE,NONE
+830,2016,6/3/2016,2,PM,NH,0,Roseau River East,2121,Roseau River East,5,REC5,Control,4.5,W,70,0,NA,2,WIND IN MY FACE,2001,"MAWR, RWBL, SEWR","AWPE 3, BWTE, CAGO",broadcasted to the west of levee control point. Some green regrowth but not much different than spray except last year's growth doesn't look all mashed down,NONE,NONE,NONE
+831,2016,6/3/2016,2,PM,NH,0,Roseau River East,2121,Roseau River East,6,REC6,Control,3.5,,71.1,0,NA,2,NA,2021,"MAWR, RWBL, SEWR, COYE, BWTE","CAGO, KILL",RAINY EARLIER TODAY IN AREA,NONE,NONE,NONE
+832,2016,6/3/2016,2,PM,NH,0,Roseau River East,2121,Roseau River East,7,REC7,Control,2,W,64.5,0,NA,2,NA,2048,"COYE, YEWA, YEWA, RWBL, COGR, MAWR, SEWR","MODO, AMGO",broadcast to east,NONE,NONE,NONE
+833,2016,6/3/2016,2,PM,NH,0,Roseau River East,2121,Roseau River East,8,REC8,Control,1.2,W,60.2,0,NA,1,MOSQUITOS,2126,"RWBL, COYE, MAWR, SEWR, muskrat","VEER, YEWA, MAWR, MODO, AWPE 3",NA,NONE,NONE,NONE
+834,2016,6/7/2016,2,AM,NH,0,Pembina,527,Pembina,1,PBC1,Control,0,0,50.9,0,NA,1,distant cars,500,"LEFL, MODO, EAPH, YEWA, RWBL, BAOR, COGR, CCSP, VEER",NONE,bear tracks!,NONE,NONE,NONE
+835,2016,6/7/2016,2,AM,NH,0,Pembina,527,Pembina,2,PBC2,Control,0,0,51.8,0,NA,1,distant cars,535,"CCSP, VEER, RWBL, YEWA, MAWR, SEWR","MODO, AMCR",NA,NONE,NONE,NONE
+836,2016,6/7/2016,2,AM,NH,0,Pembina,527,Pembina,3,PBC3,Control,1.7,N,45,0,NA,2,distant trucks,603,"VEER, MAWR, COYE, RWBL, MODO",NONE,NA,NONE,NONE,NONE
+837,2016,6/7/2016,2,AM,NH,0,Pembina,527,Pembina,4,PBC4,Control,1.8,N,46.3,0,NA,1,distant trucks,634,"CCSP, YEWA, CAGO, RWBL, MAWR, SEWR","BOBO, COLO, MODO",what is calling frequency of AMBI? 1 or 2x per minute? Or =>1 AMBI?,NONE,NONE,NONE
+838,2016,6/7/2016,2,AM,NH,0,Pembina,527,Pembina,5,PBS5,Spray,2.1,N,48,0,NA,2,distant trucks,709,"MAWR, RWBL, YEWA, CCSP, COYE","VEER, EAPH",yellow ladyslippers,NONE,NONE,NONE
+839,2016,6/7/2016,2,AM,NH,0,Pembina,527,Pembina,6,PBS6,Spray,1.6,N,56.8,0,NA,1,distant cars,733,"RWBL, MAWR, SEWR, MODO, SWSP, COYE, BARS, TRES",MALL,NA,NONE,NONE,NONE
+840,2016,6/7/2016,2,AM,NH,0,Pembina,527,Pembina,7,PBS7,Spray,2.7,N,58.2,0,NA,1,distant car. I paused when trucks passed by,752,"KILL, RWBL, COCGR, MAWR, AMGO","BARS, MALL",Broadcast to S. hardly any typha regrowth to S,NONE,NONE,NONE
+841,2016,6/7/2016,2,AM,NH,0,Pembina,527,Pembina,8,PBS8,Spray,5.5,N,53.5,0,NA,1,NA,812,"BWTE, AMGO, KILL, WODU","RNDU, CAGO",Broadcast to N,NONE,NONE,NONE
+842,2016,6/7/2016,2,PM,NH,0,Eckvoll,2122,Eckvoll,1,EVS1,Spray,2.3,W,72,1,NA,2,FROGS,715,"VEER, EAPH, RWBL, COGR, COYE, BARS, MAWR, RNDU, TRES, YEWA","RURG, BWTE",NA,NONE,NH 2/20/17,NONE
+843,2016,6/7/2016,2,PM,NH,0,Eckvoll,2122,Eckvoll,2,EVS2,Spray,1.6,NW,71.3,1,NA,2,FROGS,739,"RWBL, RNDU, GWTE, CCSP, YEWA, COYE, SWSP",MODO,"walked to inner levee, new point ""Inner PT2""",NONE,NH 2/20/17,NONE
+844,2016,6/7/2016,2,PM,NH,0,Eckvoll,2122,Eckvoll,3,EVS3,Spray,3,W,70,1,NA,2,FROGS,800,"RWBL, WIFL, MAWR, COYE, YEWA, BWTE","MODO, RUFG, VEER","bird with yellowish, wing bars, eye ring, w spider web for nest. Flushed BWTE off nest on levee (11 eggs!)",NONE,NH 2/20/17,NONE
+845,2016,6/7/2016,2,PM,NH,0,Eckvoll,2122,Eckvoll,4,EVS4,Spray,1.4,W,71.2,1,NA,3,FROGS,819,"RWBL, MAWR, TRES, RNDU, COYE, YEWA",MODO,we did a PM R2 survey at Eckvoll on 5 June 2016 NH and PR with Andy Forbes and Anna Sidies; it was too windy. These data should be used as official survey,NONE,NH 2/20/17,NONE
+846,2016,6/7/2016,2,PM,NH,0,Eckvoll,2122,Eckvoll,5,EVC5,Control,0,0,63.6,0,NA,2,FROGS,2043,"RWBL, MAWR, BAOR, COGR, YEWA","MODO, CAGO, 5 TRUS flyover",broadcast to S,NONE,NH 2/20/17,NONE
+847,2016,6/7/2016,2,PM,NH,0,Eckvoll,2122,Eckvoll,6,EVC6,Control,0,0,62.7,0,NA,2,FROGS,2112,"YEWA, BWTE, MAWR, RWBL, GRCA",NONE,flushed BWTE hen off nest nearby 12 eggs. Broadcast to N. beaver scaring me! On walk back TRUS pair with 4 (maybee 5) young! BUFF,NONE,NH 2/20/17,NONE
+848,2016,6/3/2016,2,PM,PR,0,Roseau River West,2121,Roseau River West,1,RWC9,Control,6.2,W,67.5,0,38,0,NA,1940,"RWBL, MAWR, RNDU",NONE,NA,NONE,NH 2/18/17,NONE
+849,2016,6/3/2016,2,PM,PR,0,Roseau River West,2121,Roseau River West,2,RWC10,Control,3.6,W,67.1,0,33,0,NA,2020,"RWBL, MAWR, SWSP, RNDU, COYE","EAME, CAGO, VEER, AMRO",NA,NONE,NH 2/18/17,NONE
+850,2016,6/3/2016,2,PM,PR,0,Roseau River West,2121,Roseau River West,3,RWS11,Spray,2.4,W,64.2,0,34,1,MOSQUITOS,2050,"RWBL, COYE, AMPE, TRUS, MAWR, TRES",COYE,difficult to distinguish AMBIs. Most likely more than I could detect. Holy AMBI!,NONE,NH 2/18/17,NONE
+851,2016,6/3/2016,2,PM,PR,0,Roseau River West,2121,Roseau River West,4,RWS12,Spray,1.4,W,59.2,0,38,0,NA,2124,"RWBL, CAGO, MAWR, BWTE, SWSP","SOSP, CAGO, COYE",NA,NONE,NH 2/18/17,NONE
+852,2016,6/2/2016,2,PM,PR,0,Thief Lake,2117,Thief Lake,1,THS1,Spray,5.1,W,68.6,0,44,0,NA,1840,"RWBL, CAGO, BASW, BWTE","COYE, TRSW, MAWR, gull sp.",NA,NONE,NH 2/17/17,NONE
+853,2016,6/2/2016,2,PM,PR,0,Thief Lake,2117,Thief Lake,2,THC2,Control,2.3,W,76.4,0,47,2,frogs directly in front of me calling throughout survey,1917,"COGR, MAWR, COYE, RWBL, NSHO","CAGO, RUGR",NA,NONE,NH 2/17/17,NONE
+854,2016,6/2/2016,2,PM,PR,0,Thief Lake,2117,Thief Lake,3,THC3,Control,0,0,74.4,0,42,1,WISN,1942,"SWSP, COYE, CEWR, WIFL","VEER, YEWA, LEFL, SACR, gull sp.",NA,NONE,NH 2/17/17,NONE
+855,2016,6/2/2016,2,PM,PR,0,Thief Lake,2117,Thief Lake,4,THS4,Spray,0,0,63.9,0,67,3,CAGO and frogs,2005,"CAGO, RWBL, BWTE, BASW, WODU, YEWA, MALL, NSHO, SBDO","BCNH, COYE",NA,NONE,NH 2/17/17,NONE
+856,2016,6/2/2016,2,PM,PR,0,Thief Lake,2117,Thief Lake,5,THC6,Control,0,0,69.5,0,49,0,NA,2038,"RWBL, CAGO, YEWA, MAWR","AMPE, LETE, gull sp.",NA,NONE,NH 2/17/17,NONE
+857,2016,6/2/2016,2,PM,PR,0,Thief Lake,2117,Thief Lake,6,THS8,Spray,0.9,W,62.7,0,65,2,frogs,2120,"RWBL, SEWR, SOSP, BWTE, COYE","CAGO, AWPE",NA,NONE,NH 2/17/17,NONE
+860,2016,6/7/2016,2,PM,PR,0,Elm Lake,2122,Elm Lake,1,ELC1,Control,9.6,W,65.2,0,40,0,NA,1829,"BWTE, CADW, TRSW, YEWA, COYE, WIFL, RWBL, CAGO",NONE,NA,NONE,NONE,NONE
+861,2016,6/7/2016,2,PM,PR,0,Elm Lake,2122,Elm Lake,2,ELC2,Control,7.1,N,64.9,0,42,1,WIND,1858,"NSHO, RWBL, CCSP, MAWR, BWTE, CAGO, SOSP, COYE",NONE,NA,NONE,NONE,NONE
+862,2016,6/7/2016,2,PM,PR,0,Elm Lake,2122,Elm Lake,3,ELS3,Spray,3.6,N,65.2,0,48,1,FROGS,1937,"MAWR, MALL, RWBL","CCSP, COYE, VEER","noticable difference between control points 1,2 and first spray in regards to abundance/diversity of birds!",NONE,NONE,NONE
+863,2016,6/7/2016,2,PM,PR,0,Elm Lake,2122,Elm Lake,4,ELS4,Spray,4.8,W,64.7,0,35,0,NA,2011,"MAWR, RWBL, RUDU",NONE,NA,NONE,NONE,NONE
+864,2016,6/7/2016,2,PM,PR,0,Elm Lake,2122,Elm Lake,5,ELS5,Spray,2.8,W,62.8,0,34,0,NA,2033,NONE,"COYE, MODO, TRES, SOSP, VEER",NA,NONE,NONE,NONE
+865,2016,6/7/2016,2,PM,PR,0,Elm Lake,2122,Elm Lake,6,ELS6,Spray,2.8,W,61.3,0,41,0,NA,2051,"TRES, MAWR, RWBL, COYE, MALL, REDH, ducks","YEWA, MODO",NA,NONE,NONE,NONE
+866,2016,6/7/2016,2,PM,PR,0,Elm Lake,2122,Elm Lake,7,ELC7,Control,1.2,W,58.4,0,40,0,NA,2115,"CCSP, NCHO, RWBL, MODO, COYE, YEWA, VEER, SOSP",NONE,NA,NONE,NONE,NONE
+867,2016,6/7/2016,2,PM,PR,0,Elm Lake,2122,Elm Lake,8,ELC8,Control,0,0,56.3,0,37,0,NA,2137,"COYE, MAWR, MODO, RWBL, SOSP, AWPE, LEFL, CCSP",NONE,NA,NONE,NONE,NONE
+1000,2017,5/31/2017,2,PM,NH,0,Elm Lake,2114,Elm Lake,1,ELC1,Control,5.3,N,72.1,0,46,1,birdy,1832,"CAGO, RWBL, MALL, TRES, BWTE",AWPE,"BLTE, PBGR at Farmes Pool WCS overlook",NONE,,NH 12/10/17
+1001,2017,5/31/2017,2,PM,NH,0,Elm Lake,2114,Elm Lake,2,ELC2,Control,6.3,N,73.4,0,55,1,"wind in my face, frogs",1858,"RWBL, COYE, MAWR, BWTE, CAGO","CAGO, RNGR, TRSW, BUFF, RNDU",frogs calling. Muskrat,,,
+1002,2017,5/31/2017,2,PM,NH,0,Elm Lake,2114,Elm Lake,3,ELS3,Spray,3,NW,73.1,0,37,1,slight wind. Frogs,1938,"MALL, RWBL, BWTE, MAWR, NOHA, TRSW, RWBL, FOTE","TRSW, BUFF","NOHA cruising right in front of me, min 6, then set down in marsh, up again. RWBL swooping at TRSW, as they calmly duck down",,,
+1003,2017,5/31/2017,2,PM,NH,0,Elm Lake,2114,Elm Lake,4,ELS4,Spray,1.4,NW,73.2,0,36,1,breeze,2010,"RNDU, MAWR, COYE",,out to levee,,,
+1004,2017,5/31/2017,2,PM,NH,0,Elm Lake,2114,Elm Lake,5,ELS5,Spray,1.3,,72.6,0,36,0,NA,2043,"BUFF, KILL, MAWR, YEWA, COGR, RWBL","CAGO, MODO",no YHBL. Otter! Walked in to levee,,,
+1005,2017,5/31/2017,2,PM,NH,0,Elm Lake,2114,Elm Lake,6,ELS6,Spray,0,0,67.2,0,35,0,quiet,2111,"CAGO, BWTE, MAWR, RWBL",MODO,2 otters! walked out on levee,,,
+1006,2017,5/31/2017,2,PM,NH,0,Elm Lake,2114,Elm Lake,7,ELC7,Control,0,0,61.1,0,34,0,NA,2131,"MAWR, YEWA, GRCA, VEER",VEER,,,,
+1007,2017,5/31/2017,2,PM,NH,0,Elm Lake,2114,Elm Lake,8,ELC8,Control,0,0,61.9,0,38,0,FROGS,2149,"COYE, RWBL, CONI, MAWR, COLO","CAGO, TRSW",very clear and still. Broadcast sound so loud. Survey from road.,,,
+1008,2017,6/1/2017,2,AM,NH,0,East Park,528,East Park,1,EPC1,Control,0,0,44.8,0,38,1,birdy,517,"EAKI, RNDU, BWTE, CORA, MODO, CAGO, RWBL, MAWR","RUGR, TRSW, SACR, EAPH",very still and quiet,,,NH 1/3/2018
+1009,2017,6/1/2017,2,AM,NH,0,East Park,528,East Park,2,EPC2,Control,0,0,48.2,0,36,0,NA,559,"MAWR, RWBL, MALL, CAGO, YEWA, TRSW","RUGR, GRCA",surveyed from EPC2 (not EPC north) southern 2 of points,,,
+1010,2017,6/1/2017,2,AM,NH,0,East Park,528,East Park,3,EPC3,Control,0.6,W,53.1,0,37,1,CAGO colony start honking facing N @ min 6 - min 8 flying N,627,"RNDU, MAWR, AMRO, YEWA, RWBL, MODO, TRES","MODO, CAGO, TRSW, COLO, VEER",NONE,,,
+1011,2017,6/1/2017,2,AM,NH,0,East Park,528,East Park,4,EPS4,Spray,1.7,W,57.8,0,40,1,CAGO,648,"COLO, RWBL, YEWA, MAWR, SEWR, RNDU, MALL",CAGO,NONE,,,
+1012,2017,6/1/2017,2,AM,NH,0,East Park,528,East Park,5,EPS5,Spray,2.1,W,57.7,0,39,1,CAGO,710,"CAGO, RNDU, RWBL, MAWR","TRSW, AWPE, SACR",cattail all mashed,,,
+1013,2017,6/1/2017,2,AM,NH,0,East Park,528,East Park,6,EPC6,Control,2.5,W,59,0,35,0,NA,730,"YEWA, MAWR, RWBL, SACR","RUGR, AMRO, SACR, CAGO, VEER",NONE,,,
+1014,2017,6/1/2017,2,PM,NH,0,Pembina,2116,Pembina,1,PBC1,Control,6.8,S,80.8,1,42,1,WIND,1840,"NOHA, MAWR, RWBL, YEWA",NONE,facing SOUTH,,,
+1015,2017,6/1/2017,2,PM,NH,0,Pembina,2116,Pembina,2,PBC2,Control,3.1,S,78.3,0,40,1,"SACR, WIND",1906,"MAWR, MALL, TRES, COYE, RWBL",SACR,5+2 SACR in field near point. Upland here burned this spring,,,
+1016,2017,6/1/2017,2,PM,NH,0,Pembina,2116,Pembina,3,PBC3,Control,6.2,S,77.4,0,49,2,WIND,1925,"VEER, YEWA, GRCA, COYE, MAWR, RWBL",WODU,,,,
+1017,2017,6/1/2017,2,PM,NH,0,Pembina,2116,Pembina,4,PBC4,Control,4.4,S,76.1,0,45,1,WIND,1948,"SACR, BOBO, CAGO, MALL, RWBL, COYE, MAWR",NONE,"2 SACR acting nesty, must have young hiding nearby",,,
+1018,2017,6/1/2017,2,PM,NH,0,Pembina,2116,Pembina,5,PBS5,Spray,3.7,S,73,0,47,1,WIND,2018,"SACR, RWBL, YEWA, MAWR, COYE",NONE,definite different in color of residual typha in spray zone. See photos.,,,
+1019,2017,6/1/2017,2,PM,NH,0,Pembina,2116,Pembina,6,PBS6,Spray,3.3,E,70.3,0,45,1,FROGS,2039,"RWBL, MALL, CAGO, YEWA, COYE, MAWR, MODO, MALL",SACR,from point 6 (not 6 ACT),,,
+1020,2017,6/1/2017,2,PM,NH,0,Pembina,2116,Pembina,7,PBS7,Spray,5.1,E,68.2,0,54,2,FROGS,2105,"CAGO, RWBL, KILL",SACR,facing south. Car passed right at SORA wh. VIRA moved so close to me!,,,
+1021,2017,6/1/2017,2,PM,NH,0,Pembina,2116,Pembina,8,PBS8,Spray,5,0,67.8,0,37,1,FROGS,2134,"MAWR, KILL, RWBL",CAGO,facing south. VIRA calling the whole time,,,
+1022,2017,5/31/2017,2,AM,NH,0,Eckvoll,5,Eckvoll,1,EVS1,Spray,1.5,NW,45.1,0,35,1,CAGO,533,"TRSW, RWBL, BARS, MALL, CAGO, SACR, SPSA, COYE","VEER, KILL","late start, detour and navigation error",,,
+1023,2017,5/31/2017,2,AM,NH,0,Eckvoll,5,Eckvoll,2,EVS2,Spray,2.5,NW,42.8,0,36,1,distant CAGO,552,"COYE, CAGO, YEWA, EAPH, RWBL","MODO, SACR, AMGO","this point from road, not levee",,,
+1024,2017,5/31/2017,2,AM,NH,0,Eckvoll,5,Eckvoll,3,EVS3,Spray,3.8,NW,44.6,NA,NA,1 0,NA,622,"REDH, BWTE, RWBL, SACR, BARS, TRSW, GRCA, CAGO",MODO,none,,,
+1025,2017,5/31/2017,2,AM,NH,0,Eckvoll,5,Eckvoll,4,EVS4,Spray,2.5,NW,49.4,0,35,1,NA,645,"HOME, MODO, MALL, SACR, COYE, CAGO, BWTE, EAPH, RWBL, GRCA",NONE,HOME W 8 babies - so cute!,,,
+1026,2017,5/31/2017,2,AM,NH,0,Eckvoll,5,Eckvoll,5,EVC5,Control,,,,,,,,,,,,,,
+1027,2017,5/31/2017,2,AM,NH,0,Eckvoll,5,Eckvoll,6,EVC6,Control,,,,,,,,,,,,,,
+1028,2017,5/30/2017,2,AM,NH,0,Thief Lake,527,Thief Lake,1,THS1,Spray,6,NW,42.9,2 (5),58,2,WIND,527,"SORA, MALL, NSHO, GRYE, FRGU, MAWR, COYE, RWBL, CAGO, BWTE",SACR,"SORA pw before time, waiting for rain to stop. So many FRGU! Floying over. Wind up to 10-11 mph, light sprinkle occassional",,,
+1029,2017,5/30/2017,2,AM,NH,0,Thief Lake,527,Thief Lake,2,THC2,Control,5.2,NW,42.8,2,40,2,WIND,550,"COYE, RWBL, CAGO, MAWR, FRGU","AWPE, MALL, TRSW flyover",wind gusty to 6.2. TLS2 really grown in since last year.,,,
+1030,2017,5/30/2017,2,AM,NH,0,Thief Lake,527,Thief Lake,3,THC3,Control,7.2,NW,42.8,2,48,2,WIND,611,"COYE, FRGU","VEER, AMRO, MALL, BWTE, MODO, TRSW",NONE,,,
+1031,2017,5/30/2017,2,AM,NH,0,Thief Lake,527,Thief Lake,4,THS4,Spray,6.8,NW,43.2,2 (5),35,1,WIND,629,"NSHO, RWBL, REDH, GRYE, CAGO, AMRO, COYE, FRGU, MALL, YELLOWLEGS, AWPE","VEER, SACR",started raining min 10,,,
+1032,2017,5/30/2017,2,AM,NH,0,Thief Lake,527,Thief Lake,5,THC6,Control,6.5,NW,44.1,2,37,1,WIND,700,"GRCA, CAGO, FOTE, RWBL, MAWR, SEWR, BWTE, MALL, AMCR, COYE","VEER, AMGO, barn swallow",NONE,,,
+1033,2017,5/30/2017,2,AM,NH,0,Thief Lake,527,Thief Lake,6,THS8,Spray,7,NW,43.4,2,38,1,WIND,739,"BWTE, KILL, GADW, COYE, MAWR, FOTE, AWPE, CAGO, MALL, RNDU, RWBL",NOFL,waiting for rain to stop. KILL pair acting nesty. Wind in face at this survey point.,,,
+1034,2017,6/3/2017,2,AM,NH,0,Roseau River East,523,Roseau River East,1,RES1,Spray,1.3,E,NA,2,36,1,birdy,606,"MALL, KILL, RWBL, FOTE, SPSA, CAGO, MAWR, COYE, BARS","TRSW, SACR","newly graded raod to RRS1, could not drive on after the rain. Did survey from 1st parking area marked on GPS as RRE1.17, 277m away from original point. Raining this morning, delayed survey til after stop raining. RRS1 and RRS2 cattail dead and mashed down, see photos; some patches of green persist especially on water's edge",,,
+1035,2017,6/3/2017,2,AM,NH,0,Roseau River East,523,Roseau River East,2,RES2,Spray,0.6,E,NA,2,34,1,CAGO in distance,627,"RWBL, FOTE, TRSW, KILL, MAWR, BARS",SACR,"lost the wind meter at Pembina; wind estimated and temp from car. RRS1 and RRS2 cattail dead and mashed down, see photos; some patches of green persist especially on water's edge",,,
+1036,2017,6/3/2017,2,AM,NH,0,Roseau River East,523,Roseau River East,3,RES3,Spray,0.3,E,NA,2,37,0,bird but still,701,"FOTE, MAWR, COLO, COYE, KILL, MALL, BARS, CAGO",SACR,CATTAIL here brown and dead but still standing more than at points 1 and 2,,,
+1037,2017,6/3/2017,2,AM,NH,0,Roseau River East,523,Roseau River East,4,RES4,Spray,1.1,S,NA,2,35,1,birdy,727,"CAGO, RWBL, TRES, BARS, SOSP, COYE, RNDU, MAWR, MALL, MODO",SACR,NONE,,,
+1038,2017,6/3/2017,2,AM,NH,0,Roseau River East,523,Roseau River East,5,REC5,Control,1.5,S,65,2,35,1,distant,747,"TRSW, MAWR, BWTE, RWBL, CAGO, KILL, COYE",AWPE to NW,facing to SE,,,
+1039,2017,6/3/2017,2,AM,NH,0,Roseau River East,523,Roseau River East,6,REC6,Control,2.4,S,NA,1,39,1,wind,805,"RWBL, KILL, RNDU, COYE, MAWR","SACR, TRSW, CAGO, KILL",NONE,,,
+1040,2017,6/3/2017,2,AM,NH,0,Roseau River East,523,Roseau River East,7,REC7,Control,1.8,S,NA,1,37,1,light wind,826,"EAPH, SOSP, RWBL, KILL, AMGO",NONE,facing East. Past survey time,,,
+1041,2017,6/3/2017,2,AM,NH,0,Roseau River East,523,Roseau River East,8,REC8,Control,NA,0,NA,1,39,1,light wind,846,"CAGO, EAPH, RWBL, COYE, MAWR, BARS",NONE,CAGO and 1000 babies! After survey time.,,,
+1042,2017,6/2/2017,2,PM,NH,0,Roseau River West,2120,Roseau River West,1,RWC9,Control,2.5,E,82,2,43,1,WIND,1953,"MAWR, SEWR, COYE, BARS, COGR, RWBL, YEWA, CAGO, TRES","MODO, WODU",overcast and wind picking up rain tonight,,,
+1043,2017,6/2/2017,2,PM,NH,0,Roseau River West,2120,Roseau River West,2,RWC10,Control,2.2,E,81,2,41,1,SLIGHT WIND,2024,"NOFL, MAWR, RNDU, WODU, TRSW, TRES, COYE, RWBL, BARS","EAKI, MODO",very difficult to tell how many and where AMBI- at least 3,,,
+1044,2017,6/2/2017,2,PM,NH,0,Roseau River West,2120,Roseau River West,3,RWS11,Spray,2.3,E,NA,2,34,0,"pretty quiet, little birdy",2051,"WEME, RNDU, TRES, RWBL, COYE","MODO, HOME","MUSKRAT at point, wildlife sanctuary area. Overcast and hazy",,,
+1045,2017,6/2/2017,2,PM,NH,0,Roseau River West,2120,Roseau River West,4,RWS12,Spray,0.2,E,NA,2,39,1 0,"frogs, but quiet and still",2122,"RNDU, YEWA, RWBL, TRES, COYE, MAWR, TRSW, CAGO",NONE,"yeah! I knew it, reponded to quiet call LEBI. In area AMWO, Great horned owl, whipporwill",,,
+1046,2017,6/2/2017,2,AM,NH,0,Twin Lakes,527,Twin Lakes,1,TLS1,Spray,3,SE,60,0,36,1,wind,522,"RWBL, MAWR, YEWA, MALL, TRES, TRSW",none,upland to road burned this spring,,,
+1047,2017,6/2/2017,2,AM,NH,0,Twin Lakes,527,Twin Lakes,2,TLS2,Spray,3.9,SE,59.9,0,42,1,"slight breeze, occasional car, CAGO overhead",543,"RWBL, FRGU, MAWR, COYE","TRSW, AMRO, CAGO, SACR",constant slight breeze more diff for detection than calm/gust intermitten. Upland to road burned this spring,,,
+1048,2017,6/2/2017,2,AM,NH,0,Twin Lakes,527,Twin Lakes,3,TLC3,Control,2.2,E,62,0,38,2,"occ car, otherwise quiet",614,"COYE, MAWR, RWBL, TRSW, COLO, YEWA, LEFL?, CAGO, SACR, WAVI","VEER, GRCA",this is the weird point off the side of road; easier to survey when not knee-deep water. Warbling vireo!,,,
+1049,2017,6/2/2017,2,AM,NH,0,Twin Lakes,527,Twin Lakes,4,TLS4,Spray,2.5,E,62.2,0,42,2,occ car,639,"BAEA, TRSW, RWBL, YEWA, MALL, COYE, COGR","CAGO, VEER, MODO, COLO","BAEA w young in nest, pissed at me and whining the whole survey",,,
+1050,2017,6/2/2017,2,AM,NH,0,Twin Lakes,527,Twin Lakes,5,TLC5,Control,2.7,0,66.7,0,50,2,trucks on road and wind,706,"RWBL, MAWR, YEWA, COYE, CAGO, BARS",SACR,"by DNR shed, facing south",,,
+1051,2017,6/2/2017,2,AM,NH,0,Twin Lakes,527,Twin Lakes,6,TLC7,Control,2.6,SE,73.5,1,45,1,breeze in trees,753,"MAWR, YEWA, COYE",NONE,NONE,,,
+1500,2018,5/28/2018,2,AM,NH,0,Thief Lake,531,Thief Lake,1,THS1,Spray,1.6,NE,61.4,0,45,2,"CAGO, mosquito",509,"SACR 2, CAGO, SEWR, TRSW, BWTE, RWBL, FRGU",none,Mosq bad! Faced speaker toward lake,,,
+1501,2018,5/28/2018,2,AM,NH,0,Thief Lake,531,Thief Lake,2,THC2,Control,4.2,NE,61.7,0,38,1,light breeze,543,"FRGU, RWBL, FOTE, frogs quiet","CAGO, SACR","speaker toward moist soil unit; unit looks dry and lots dead veg, not cattails though",,,
+1502,2018,5/28/2018,2,AM,NH,0,Thief Lake,531,Thief Lake,3,THC3,Control,4.5,NE,62,0,38,1,light breeze,601,"SEWR, MAWR, EAPH, FRGU, FOTE, BWTE","SACR, CAGO, VEER",faced speaker away from lake,,,
+1503,2018,5/28/2018,2,AM,NH,0,Thief Lake,531,Thief Lake,4,THS4,Spray,3.3,0,63.4,0,36,1,"light breeze, frogs",620,"MALL, RWBL, MAWR, BWTE","FRGU, FOTE",water seems low at all these sites,,,
+1504,2018,5/28/2018,2,AM,NH,0,Thief Lake,531,Thief Lake,5,THC6,Control,3.8,NE,64.4,0,36,1,"light breeze, rustle grass",646,"CAGO, BARN SWALLOW, BAOR, YEWA, RWBL, MAWR, COYE, BWTE","FRGU, YHBL, MODO","water low, see pics",,,
+1505,2018,5/28/2018,2,AM,NH,0,Thief Lake,531,Thief Lake,6,THS8,Spray,2.8,NE,67.6,0,39,0,frogs,722,"FRGU, EAKI, YEWA, MALL, FOTE, CAGO, RWBL, CANV, TRSW",NONE,phrag along N ditch btn 6 and 8 by entry road,,,
+1506,2018,5/31/2018,2,PM,NH,0,Roseau River West,2118,Roseau River West,1,RWC9,Control,8.9,E,66,2,44,2,breeze,1957,"RWBL, MAWR, COYE, CANV",,"Randy said drier this year, not seeing as many birds using area as last 2 years. Migrants passing? Cycle, not abnormal. Called on Wednesday (yesterday)",,,
+1507,2018,5/31/2018,2,PM,NH,0,Roseau River West,2118,Roseau River West,2,RWC10,Control,6.1,E,65.2,2,40,1,breeze,2052,"RWBL, COYE, MAWR, MALL, WODU, BWTE, COLO, TRES, GRCA, EAKI, AMRO, 3 BLTE flew over before start",NONE,no broadcast species at target wetland; other side of road burned maybe 2 weeks ago,,,
+1508,2018,5/31/2018,2,PM,NH,0,Roseau River West,2118,Roseau River West,3,RWS11,Spray,10.3,E,63.7,2,NA,2,wind,2115,"KILL, BWTE, RWBL",,"wind picking up, harder to hear gusting up to 12.5 mph",,,
+1509,2018,5/31/2018,2,PM,NH,0,Roseau River West,2118,Roseau River West,4,RWS12,Spray,8.3,E,61.7,2,41,NA,NA,2138,"MAWR, COYE, Trumpeter swan, 3 WISN",,I think I hear sora calling farther. Wind up to 10.6mph. Family of 3 otters on levee as I drove out - so cute!,,,
+1510,2018,6/1/2018,2,AM,NH,0,Roseau River East,5025,Roseau River East,1,RES1,Spray,8.8,E,53,2,52,1,breeze,459,"MAWR, COYE, CAGO, SACR, RNDU, BWTE, KILL, RWBL",,"windy :( typha kill good, mashed down\",,,
+1511,2018,6/1/2018,2,AM,NH,0,Roseau River East,5025,Roseau River East,2,RES2,Spray,11.7,0,52.2,2,48,2,WIND,527,"RWBL, CAGO, BAEA, COYE, WODU, ",,BAEA over field hehaind me acrooss road; Cold! Brrrrr,,,
+1512,2018,6/1/2018,2,AM,NH,0,Roseau River East,5025,Roseau River East,3,RES3,Spray,9.3,E,51.7,2,52,2,wind,550,"mawr, rwbl, veer",,,,,
+1513,2018,6/1/2018,2,AM,NH,0,Roseau River East,5025,Roseau River East,4,RES4,Spray,9.3,E,51.2,2,49,1,wind,607,"WODU, BWTE, TUTI, MALL, RWBL, CAGO",,SKUNK!,,,
+1514,2018,6/1/2018,2,AM,NH,0,Roseau River East,5025,Roseau River East,5,REC5,Control,8.3,E,52.3,2,54,2,WIND,632,"CAGO, RWBL, 2 nesty SACR",,"wolf tracks on levee, small pockets of regenerating typha; looks good, bright green, short in pics",,,
+1515,2018,6/1/2018,2,AM,NH,0,Roseau River East,5025,Roseau River East,6,REC6,Control,10.8,E,513.5,2,42,1,WIND,655,"CAGO, RWBL, MAWR, ETTI, EAPH, SACR, MAGO flyover",,"Phrag along edge, doesn't seem bad. Typha obvious difference from spray sites",,,
+1516,2018,6/1/2018,2,AM,NH,0,Roseau River East,5025,Roseau River East,7,REC7,Control,8.5,E,52.5,2,48,2,WIND,717,"CAGO, MAWR, COYE, RWBL","GREG, DCCO, NSHO between pts 6 and 7","windy but not sustained over 8 mph, gusts up to 12.5 btn points 7-9",,,
+1517,2018,6/1/2018,2,AM,NH,0,Roseau River East,5025,Roseau River East,8,REC8,Control,8.1,E,52.1,2,47,2,WIND,738,"CAGO, MAWR, RWBL, MALL",,"willows have birds, but typha doesn't (except CAGO)",,,
+1518,2018,6/4/2018,2,PM,NH,MG,East Park,2120,East Park,1,EPC1,Control,1.2,NW,70.3,1,40,0,NA,2005,"RWBL, MAWR, LEBI",CAGO,skunk! Cruising along levee stop of wetland. Site burned early in spring? Along south edge,,,
+1519,2018,6/4/2018,2,PM,NH,MG,East Park,2120,East Park,2,EPC2,Control,0,0,68.4,1,40,0,mosquitos coming out,2056,"TRSW, MAWR, COLO, SACR, COYE, CAGO, MODO, RWBL, MALL, MWTE, YEWA",GRCA,,,,
+1520,2018,6/4/2018,2,PM,NH,MG,East Park,2120,East Park,3,EPC3,Control,NA,0,NA,NA,NA,NA,NA,NA,NA,NA,gate broken and we had to drive all the way around the site from the east. Skipped point 3,,,
+1521,2018,6/4/2018,2,PM,NH,MG,East Park,2120,East Park,4,EPS4,Spray,1.6,N,64,1,41,0,mosquitoes,2120,"CAGO, COLO PAIR, KILL, MODO, CONI",na,"gate broken, timing of surveys weird, maybe too late past dark?",,,
+1522,2018,6/4/2018,2,PM,NH,MG,East Park,2120,East Park,5,EPS5,Spray,3.2,0,59.1,1,49,0,mosquitoes,2216,"RWBL, CAGO, KILL, BWTE",TRSW,beaver,,,
+1523,2018,6/2/2018,2,PM,NH,0,Elm Lake,2116,Elm Lake,1,ELC1,Control,5.8,SW,58.2,2,47,1,breeze,1844,"MALL, RWBL, TRES, BANK SWALLOW, CAGO","BAOR, YEWA, COYE, TUTI",survey from road by Farmes Pool,,,
+1524,2018,6/2/2018,2,PM,NH,0,Elm Lake,2116,Elm Lake,2,ELC2,Control,8.5,sw,57.9,2,55,1,WIND,1900,"RWBL, MALL, BWTE, NSHO, YEWA, TRSW ON NEST, CAGO, SACR","REDH, BUFF. 2 RNGR BETWEEN PTS 1 AND 2. 3 FOTE BTN PTS 2 AND 3",survey from road by Farmes Pool,,,
+1525,2018,6/2/2018,2,PM,NH,0,Elm Lake,2116,Elm Lake,3,ELS3,Spray,5.1,SW,57.1,2,45,1,breeze; sky increase from 2 to 5 during survey,1934,"RWBL, MAWR, TRES, BWTE, MALL, COGR",NONE,SPRAY POINT- SEE PICS OF DEAD TYPHA; sky increase from 2 to 5 during survey; survey from grass levee,,,
+1526,2018,6/2/2018,2,PM,NH,0,Elm Lake,2116,Elm Lake,4,ELS4,Spray,5.5,0,53.8,5,46,1,"light breeze, but calming down",2003,"RWBL, TRSW ON NEST, MAWR, NSHO, BWTE, COYE, CAGO, MALL",NONE,VERY LIGHT SPRINKLE RAIN; survey from grass levee,,,
+1527,2018,6/2/2018,2,PM,NH,0,Elm Lake,2116,Elm Lake,5,ELS5,Spray,5.8,sw,53.2,5,33,1,"light breeze, calmer",2032,"BWTE, MAWR, RWBL, FOTE, COGR","KILL, CAGO","DRIZZLY ON AND OFF PT5; FLUSHED WIPH FROM NEST W 4 EGGS, ON GRASS LEVEE (SEE PICS); survey from grass levee",,,
+1528,2018,6/2/2018,2,PM,NH,0,Elm Lake,2116,Elm Lake,6,ELS6,Spray,6.7,sw,52.9,2,40,1,light breeze,2057,"MAWR, RWBL, BWTE, MALL, COYE","SACR, CAGO, BEKI","still spray zone? DRIZZLY ON AND OFF TODAY, CLEARED BY SURVEY. STARTED SPRINKLE MIN 9 AT ELS4; survey from grass levee",,,
+1529,2018,6/2/2018,2,PM,NH,0,Elm Lake,2116,Elm Lake,7,ELC7,Control,2.7,sw,53.6,2,39,1,"light breeze, point behind trees and protected from wind",2118,"CAGO, COYE, VEER, MAWR, YEWA, RWBL","MODO, AWPE IN DITCH BTN 6 AND 7","DRIZZLY ON AND OFF TODAY, CLEARED BY SURVEY. STARTED SPRINKLE MIN 9 AT ELS5; survey from road",,,
+1530,2018,6/2/2018,2,PM,NH,0,Elm Lake,2116,Elm Lake,8,ELC8,Control,5.6,sw,52.7,2,39,1,NA,2137,"CONI, MAWR, MALL","WHIPPORWILL, TRSW, VEER, CAGO, AWPE IN DITCH BTN 7 AND 8","DRIZZLY ON AND OFF TODAY, CLEARED BY SURVEY. STARTED SPRINKLE MIN 9 AT ELS6; survey from road",,,
+1531,2018,6/3/2018,2,PM,NH,MG,Pembina,2118,Pembina,1,PBC1,Control,6.6,NW,71.2,0,40,1,BREEZY,1909,"RWBL, YEWA, MAGO, EAPH, AMGO, COYE",NONE,"breezy, not much marsh bird action",,,
+1532,2018,6/3/2018,2,PM,NH,MG,Pembina,2118,Pembina,2,PBC2,Control,5.6,NW,70.5,0,45,1,WIND,1930,"RWBL, MALL, BWTE",SACR,,,,
+1533,2018,6/3/2018,2,PM,NH,MG,Pembina,2118,Pembina,3,PBC3,Control,2.1,NW,71.3,0,35,1,LIGHT BREEZE,1950,"CAGO, MAWR, COYE, AMGO, RWBL, YEWA","VEER, SACR, AMCR",,,,
+1534,2018,6/3/2018,2,PM,NH,MG,Pembina,2118,Pembina,4,PBC4,Control,0.9,NW,71.9,0,38,0,"FROGS STARTING, BUT NOT LOUD",2012,"RWBL, BOBO, COYE, MALL","SACR, VEER",,,,
+1535,2018,6/3/2018,2,PM,NH,MG,Pembina,2118,Pembina,5,PBS5,Spray,1.3,NW,65.2,0,40,0,NA,2045,"COYE, RWBL, MAWR, FROGS",NONE,,,,
+1536,2018,6/3/2018,2,PM,NH,MG,Pembina,2118,Pembina,6,PBS6,Spray,1,NW,64.9,0,47,1,"TRUCKS ON FAR SIDE, FROGS",2108,"GRCA, SACR, RWBL, CAGO, HOME, YEWA, KILL",VEER,,,,
+1537,2018,6/3/2018,2,PM,NH,MG,Pembina,2118,Pembina,7,PBS7,Spray,X,X,X,X,X,1,TRAFFIC ON ROAD,2128,"SACR, KILL, COYE, BWTE",VEER,,,,
+1538,2018,6/3/2018,2,PM,NH,MG,Pembina,2118,Pembina,8,PBS8,Spray,0.3,NW,64.3,0,45,0,FROGS,2148,"KILL, TRES, MAWR, CAGO, MALL",NONE,,,,
