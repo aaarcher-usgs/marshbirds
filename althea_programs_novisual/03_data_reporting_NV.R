@@ -46,7 +46,12 @@ NWPOINTR2.long$Treatment <- factor(NWPOINTR2.long$TreatmentN,
 #' Summarize counts 
 #' 
 NWPOINTR2.long %>%
-  group_by(Species, Year, Treatment) %>%
+  group_by(Species, Year, fct_rev(Treatment)) %>%
+  summarise(sum = sum(Count)) %>%
+  print.data.frame()
+
+NWPOINTR2.long %>%
+  group_by(Species, fct_rev(Treatment)) %>%
   summarise(sum = sum(Count)) %>%
   print.data.frame()
 
@@ -109,7 +114,13 @@ results.table %>%
 #' Figure 4
 #' 
 #+ NVmodelResultsCombo, fig.height = 5, fig.width = 8
-cowplot::plot_grid(p1, p2, nrow = 2, rel_heights = c(0.6,0.28)) #+
+cowplot::plot_grid(p1, p2, nrow = 2, rel_heights = c(0.6,0.28)) +
+  cowplot::draw_text("DRAFT - not for publication",
+                     x = 0.5,
+                     y = 0.5,
+                     angle = 30,
+                     size = 44,
+                     alpha = 0.2)
   #cowplot::draw_text("*", x = 0.791, y = 0.8) + 
   #cowplot::draw_text("*", x = 0.979, y = 0.8) #+
   #cowplot::draw_text("*", x = 0.791, y = 0.405) + 
