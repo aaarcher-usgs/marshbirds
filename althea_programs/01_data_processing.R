@@ -40,7 +40,6 @@ NWBIRD.SURV <- NWBIRD.ALL %>%
   dplyr::filter(!PointID %in% PTdropped) %>% 
   dplyr::filter(Species %in% bird.broadcast) %>%
   dplyr::filter(is.na(Distance) | Distance <= 400) %>%
-  filter()
   droplevels() %>% # drops unused levels. like AMCO, BLTE from Species list
   dplyr::select(SurveyID, DetectionRecID, Year, Round, PointID, 
                 Species, Distance, OutTimeONLY, OutTarget, Previous, Time)

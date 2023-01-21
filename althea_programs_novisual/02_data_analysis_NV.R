@@ -209,7 +209,7 @@ results.table[results.table$Species == "AMBI",
 diff.results.graph[diff.results.graph$Species == "AMBI" & diff.results.graph$Year == 2015, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   AMBI_diff[AMBI_diff$contrast == "(Herbicide Year2015 - Control Year2015)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 #2016
 results.table[results.table$Species == "AMBI", 
               c("t16ratioEst", "t16ratioSE", "t16t.ratio", "t16p.value")] <- 
@@ -219,7 +219,7 @@ results.table[results.table$Species == "AMBI",
 diff.results.graph[diff.results.graph$Species == "AMBI" & diff.results.graph$Year == 2016, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   AMBI_diff[AMBI_diff$contrast == "(Herbicide Year2016 - Control Year2016)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 #2017
 results.table[results.table$Species == "AMBI", 
               c("t15ratioEst", "t17ratioSE", "t17t.ratio", "t17p.value")] <- 
@@ -229,7 +229,7 @@ results.table[results.table$Species == "AMBI",
 diff.results.graph[diff.results.graph$Species == "AMBI" & diff.results.graph$Year == 2017, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   AMBI_diff[AMBI_diff$contrast == "(Herbicide Year2017 - Control Year2017)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 
 #2018
 results.table[results.table$Species == "AMBI", 
@@ -240,7 +240,7 @@ results.table[results.table$Species == "AMBI",
 diff.results.graph[diff.results.graph$Species == "AMBI" & diff.results.graph$Year == 2018, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   AMBI_diff[AMBI_diff$contrast == "(Herbicide Year2018 - Control Year2018)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 
 
 #' ____________________________________________________________________________
@@ -278,7 +278,7 @@ results.table[results.table$Species == "LEBI",
 diff.results.graph[diff.results.graph$Species == "LEBI" & diff.results.graph$Year == 2015, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   LEBI_diff[LEBI_diff$contrast == "(Herbicide Year2015 - Control Year2015)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 #2016
 results.table[results.table$Species == "LEBI", 
               c("t16ratioEst", "t16ratioSE", "t16t.ratio", "t16p.value")] <- 
@@ -288,7 +288,7 @@ results.table[results.table$Species == "LEBI",
 diff.results.graph[diff.results.graph$Species == "LEBI" & diff.results.graph$Year == 2016, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   LEBI_diff[LEBI_diff$contrast == "(Herbicide Year2016 - Control Year2016)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 #2017
 results.table[results.table$Species == "LEBI", 
               c("t15ratioEst", "t17ratioSE", "t17t.ratio", "t17p.value")] <- 
@@ -298,7 +298,7 @@ results.table[results.table$Species == "LEBI",
 diff.results.graph[diff.results.graph$Species == "LEBI" & diff.results.graph$Year == 2017, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   LEBI_diff[LEBI_diff$contrast == "(Herbicide Year2017 - Control Year2017)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 
 #2018
 results.table[results.table$Species == "LEBI", 
@@ -309,7 +309,7 @@ results.table[results.table$Species == "LEBI",
 diff.results.graph[diff.results.graph$Species == "LEBI" & diff.results.graph$Year == 2018, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   LEBI_diff[LEBI_diff$contrast == "(Herbicide Year2018 - Control Year2018)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 
 
 
@@ -348,7 +348,7 @@ results.table[results.table$Species == "PBGR",
 diff.results.graph[diff.results.graph$Species == "PBGR" & diff.results.graph$Year == 2015, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   PBGR_diff[PBGR_diff$contrast == "(Herbicide Year2015 - Control Year2015)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 #2016
 results.table[results.table$Species == "PBGR", 
               c("t16ratioEst", "t16ratioSE", "t16t.ratio", "t16p.value")] <- 
@@ -358,7 +358,7 @@ results.table[results.table$Species == "PBGR",
 diff.results.graph[diff.results.graph$Species == "PBGR" & diff.results.graph$Year == 2016, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   PBGR_diff[PBGR_diff$contrast == "(Herbicide Year2016 - Control Year2016)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 #2017
 results.table[results.table$Species == "PBGR", 
               c("t15ratioEst", "t17ratioSE", "t17t.ratio", "t17p.value")] <- 
@@ -368,7 +368,7 @@ results.table[results.table$Species == "PBGR",
 diff.results.graph[diff.results.graph$Species == "PBGR" & diff.results.graph$Year == 2017, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   PBGR_diff[PBGR_diff$contrast == "(Herbicide Year2017 - Control Year2017)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 
 #2018
 results.table[results.table$Species == "PBGR", 
@@ -379,7 +379,7 @@ results.table[results.table$Species == "PBGR",
 diff.results.graph[diff.results.graph$Species == "PBGR" & diff.results.graph$Year == 2018, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   PBGR_diff[PBGR_diff$contrast == "(Herbicide Year2018 - Control Year2018)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 
 
 
@@ -419,7 +419,7 @@ results.table[results.table$Species == "SORA",
 diff.results.graph[diff.results.graph$Species == "SORA" & diff.results.graph$Year == 2015, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   SORA_diff[SORA_diff$contrast == "(Herbicide Year2015 - Control Year2015)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 #2016
 results.table[results.table$Species == "SORA", 
               c("t16ratioEst", "t16ratioSE", "t16t.ratio", "t16p.value")] <- 
@@ -429,7 +429,7 @@ results.table[results.table$Species == "SORA",
 diff.results.graph[diff.results.graph$Species == "SORA" & diff.results.graph$Year == 2016, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   SORA_diff[SORA_diff$contrast == "(Herbicide Year2016 - Control Year2016)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 #2017
 results.table[results.table$Species == "SORA", 
               c("t15ratioEst", "t17ratioSE", "t17t.ratio", "t17p.value")] <- 
@@ -439,7 +439,7 @@ results.table[results.table$Species == "SORA",
 diff.results.graph[diff.results.graph$Species == "SORA" & diff.results.graph$Year == 2017, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   SORA_diff[SORA_diff$contrast == "(Herbicide Year2017 - Control Year2017)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 
 #2018
 results.table[results.table$Species == "SORA", 
@@ -450,7 +450,7 @@ results.table[results.table$Species == "SORA",
 diff.results.graph[diff.results.graph$Species == "SORA" & diff.results.graph$Year == 2018, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   SORA_diff[SORA_diff$contrast == "(Herbicide Year2018 - Control Year2018)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 
 
 
@@ -491,7 +491,7 @@ results.table[results.table$Species == "VIRA",
 diff.results.graph[diff.results.graph$Species == "VIRA" & diff.results.graph$Year == 2015, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   VIRA_diff[VIRA_diff$contrast == "(Herbicide Year2015 - Control Year2015)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 #2016
 results.table[results.table$Species == "VIRA", 
               c("t16ratioEst", "t16ratioSE", "t16t.ratio", "t16p.value")] <- 
@@ -501,7 +501,7 @@ results.table[results.table$Species == "VIRA",
 diff.results.graph[diff.results.graph$Species == "VIRA" & diff.results.graph$Year == 2016, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   VIRA_diff[VIRA_diff$contrast == "(Herbicide Year2016 - Control Year2016)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 #2017
 results.table[results.table$Species == "VIRA", 
               c("t15ratioEst", "t17ratioSE", "t17t.ratio", "t17p.value")] <- 
@@ -511,7 +511,7 @@ results.table[results.table$Species == "VIRA",
 diff.results.graph[diff.results.graph$Species == "VIRA" & diff.results.graph$Year == 2017, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   VIRA_diff[VIRA_diff$contrast == "(Herbicide Year2017 - Control Year2017)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 
 #2018
 results.table[results.table$Species == "VIRA", 
@@ -522,7 +522,7 @@ results.table[results.table$Species == "VIRA",
 diff.results.graph[diff.results.graph$Species == "VIRA" & diff.results.graph$Year == 2018, 
                    c("diffEstimate","diffEstLL","diffEstUL")] <-
   VIRA_diff[VIRA_diff$contrast == "(Herbicide Year2018 - Control Year2018)", 
-            c("effect.size", "lower.CL", "upper.CL")]
+            c("estimate",  "lower.CL", "upper.CL")]
 
 
 

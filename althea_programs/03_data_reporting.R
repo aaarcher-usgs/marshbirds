@@ -37,7 +37,7 @@ load(file = "data/processed/results.Rdata")
 #' Point counts in both wide and long format
 #' 
 load(file = "data/processed/NWPOINTR2.Rdata")
-NWPOINTR2.long$Treatment <- factor(NWPOINTR2$TreatmentN, 
+NWPOINTR2.long$Treatment <- factor(NWPOINTR2.long$TreatmentN, 
                                    levels = c("Spray", "Control"), 
                                    labels = c("Herbicide", "Control"))
 

@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Data analysis</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: #990073
+   }
+
+   pre .number {
+     color: #099;
+   }
+
+   pre .comment {
+     color: #998;
+     font-style: italic
+   }
+
+   pre .keyword {
+     color: #900;
+     font-weight: bold
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: #d14;
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<h1>Data analysis</h1>
+
+<h2>Project: Marshbird response to herbicide treatments</h2>
+
+<h3>Original programmer: Nina Hill</h3>
+
+<h3>Secondary programmer: Althea Archer</h3>
+
+<h2>Header</h2>
+
+<pre><code class="r">library(ezknitr)
+
+
+# Analysis libraries
+library(lme4)
+
+#remotes::install_github(&quot;palday/coefplot2&quot;, subdir = &quot;pkg&quot;)
+library(coefplot2)
+
+library(interactions)
+library(glmmTMB)
+library(modEvA)
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+library(emmeans)
+
+
+remove(list = ls())
+set.seed(22059747)
+</code></pre>
+
+<h2>Load data</h2>
+
+<p>Point counts in both wide and long format</p>
+
+<pre><code class="r">load(file = &quot;data/processed/NWPOINTR2_NV.Rdata&quot;)
+</code></pre>
+
+<p>Convert Treatment to factor</p>
+
+<pre><code class="r">NWPOINTR2$Treatment &lt;- factor(NWPOINTR2$TreatmentN, 
+                               levels = c(&quot;Spray&quot;, &quot;Control&quot;), 
+                               labels = c(&quot;Herbicide&quot;, &quot;Control&quot;))
+</code></pre>
+
+<p>Separate data into before treatment and after treatment datasets and
+add in new terms (binary, detection/non-detection)</p>
+
+<pre><code class="r">NWprePOINTR2 &lt;- NWPOINTR2 %&gt;%
+  filter(Year == &quot;2015&quot;) %&gt;%
+  mutate(PBGRbin = case_when(PBGR == 0 ~ 0, 
+                             PBGR != 0 ~1),
+         AMBIbin = case_when(AMBI == 0 ~ 0, 
+                             AMBI != 0 ~1),
+         LEBIbin = case_when(LEBI == 0 ~ 0, 
+                             LEBI != 0 ~1),
+         SORAbin = case_when(SORA == 0 ~ 0, 
+                             SORA != 0 ~1),
+         VIRAbin = case_when(VIRA == 0 ~ 0, 
+                             VIRA != 0 ~1))
+
+NWpostPOINTR2 &lt;- NWPOINTR2 %&gt;%
+  filter(Year != &quot;2015&quot;) %&gt;%
+  mutate(PBGRbin = case_when(PBGR == 0 ~ 0, 
+                             PBGR != 0 ~1),
+         AMBIbin = case_when(AMBI == 0 ~ 0, 
+                             AMBI != 0 ~1),
+         LEBIbin = case_when(LEBI == 0 ~ 0, 
+                             LEBI != 0 ~1),
+         SORAbin = case_when(SORA == 0 ~ 0, 
+                             SORA != 0 ~1),
+         VIRAbin = case_when(VIRA == 0 ~ 0, 
+                             VIRA != 0 ~1))
+
+NWprePOINTR2.long &lt;- NWPOINTR2.long %&gt;%
+  filter(Year == &quot;2015&quot;) %&gt;%
+  mutate(CountBin = case_when(Count == 0 ~ 0, 
+                              Count != 0 ~1))
+
+NWpostPOINTR2.long &lt;- NWPOINTR2.long %&gt;%
+  filter(Year != &quot;2015&quot;) %&gt;%
+  mutate(CountBin = case_when(Count == 0 ~ 0, 
+                             Count != 0 ~1))
+</code></pre>
+
+<p>Summarize counts for table in manuscript</p>
+
+<pre><code class="r">NWPOINTR2.long %&gt;%
+  group_by(Species, Year, Treatment) %&gt;%
+  summarise(sum = sum(Count)) %&gt;%
+  print.data.frame()
+</code></pre>
+
+<pre><code>##    Species Year Treatment sum
+## 1     AMBI 2015   Control  29
+## 2     AMBI 2015     Spray  13
+## 3     AMBI 2016   Control  55
+## 4     AMBI 2016     Spray  31
+## 5     AMBI 2017   Control  22
+## 6     AMBI 2017     Spray  28
+## 7     AMBI 2018   Control   4
+## 8     AMBI 2018     Spray   6
+## 9     LEBI 2015   Control   4
+## 10    LEBI 2015     Spray  11
+## 11    LEBI 2016   Control   4
+## 12    LEBI 2016     Spray   2
+## 13    LEBI 2017   Control   3
+## 14    LEBI 2017     Spray   6
+## 15    LEBI 2018   Control   2
+## 16    LEBI 2018     Spray   0
+## 17    PBGR 2015   Control  11
+## 18    PBGR 2015     Spray   6
+## 19    PBGR 2016   Control  18
+## 20    PBGR 2016     Spray   7
+## 21    PBGR 2017   Control  11
+## 22    PBGR 2017     Spray   7
+## 23    PBGR 2018   Control   2
+## 24    PBGR 2018     Spray  10
+## 25    SORA 2015   Control  24
+## 26    SORA 2015     Spray  20
+## 27    SORA 2016   Control  16
+## 28    SORA 2016     Spray   9
+## 29    SORA 2017   Control  15
+## 30    SORA 2017     Spray  31
+## 31    SORA 2018   Control   1
+## 32    SORA 2018     Spray  16
+## 33    VIRA 2015   Control   7
+## 34    VIRA 2015     Spray  12
+## 35    VIRA 2016   Control   8
+## 36    VIRA 2016     Spray   4
+## 37    VIRA 2017   Control   9
+## 38    VIRA 2017     Spray  13
+## 39    VIRA 2018   Control   1
+## 40    VIRA 2018     Spray  17
+</code></pre>
+
+<pre><code class="r">NWPOINTR2.long %&gt;%
+  group_by(Species, Treatment) %&gt;%
+  summarise(sum = sum(Count)) %&gt;%
+  print.data.frame()
+</code></pre>
+
+<pre><code>##    Species Treatment sum
+## 1     AMBI   Control 110
+## 2     AMBI     Spray  78
+## 3     LEBI   Control  13
+## 4     LEBI     Spray  19
+## 5     PBGR   Control  42
+## 6     PBGR     Spray  30
+## 7     SORA   Control  56
+## 8     SORA     Spray  76
+## 9     VIRA   Control  25
+## 10    VIRA     Spray  46
+</code></pre>
+
+<pre><code class="r">NWPOINTR2.long %&gt;%
+  group_by(Species) %&gt;%
+  summarise(sum = sum(Count)) %&gt;%
+  print.data.frame()
+</code></pre>
+
+<pre><code>##   Species sum
+## 1    AMBI 188
+## 2    LEBI  32
+## 3    PBGR  72
+## 4    SORA 132
+## 5    VIRA  71
+</code></pre>
+
+<pre><code class="r">NWPOINTR2.long %&gt;%
+  group_by(Year, Treatment) %&gt;%
+  summarise(sum = sum(Count)) %&gt;%
+  print.data.frame()
+</code></pre>
+
+<pre><code>##   Year Treatment sum
+## 1 2015   Control  75
+## 2 2015     Spray  62
+## 3 2016   Control 101
+## 4 2016     Spray  53
+## 5 2017   Control  60
+## 6 2017     Spray  85
+## 7 2018   Control  10
+## 8 2018     Spray  49
+</code></pre>
+
+<pre><code class="r">NWPOINTR2.long %&gt;%
+  group_by(Treatment) %&gt;%
+  summarise(sum = sum(Count)) %&gt;%
+  print.data.frame()
+</code></pre>
+
+<pre><code>##   Treatment sum
+## 1   Control 246
+## 2     Spray 249
+</code></pre>
+
+<p>Plot histograms of the counts</p>
+
+<pre><code class="r">table(NWPOINTR2.long$Species, NWPOINTR2.long$Count)
+</code></pre>
+
+<pre><code>##       
+##          0   1   2   3   4   5   6
+##   AMBI  95  57  29  12   8   1   0
+##   LEBI 175  24   1   2   0   0   0
+##   PBGR 161  27   5   4   3   1   1
+##   SORA 130  42  12  11   3   3   1
+##   VIRA 152  32  15   3   0   0   0
+</code></pre>
+
+<pre><code class="r">ggplot(data = NWPOINTR2.long, aes(x = Count))+
+  geom_histogram() +
+  facet_wrap(~ Species)
+</code></pre>
+
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+</code></pre>
+
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfgAAAH4CAYAAACmKP9/AAAEDmlDQ1BrQ0dDb2xvclNwYWNlR2VuZXJpY1JHQgAAOI2NVV1oHFUUPpu5syskzoPUpqaSDv41lLRsUtGE2uj+ZbNt3CyTbLRBkMns3Z1pJjPj/KRpKT4UQRDBqOCT4P9bwSchaqvtiy2itFCiBIMo+ND6R6HSFwnruTOzu5O4a73L3PnmnO9+595z7t4LkLgsW5beJQIsGq4t5dPis8fmxMQ6dMF90A190C0rjpUqlSYBG+PCv9rt7yDG3tf2t/f/Z+uuUEcBiN2F2Kw4yiLiZQD+FcWyXYAEQfvICddi+AnEO2ycIOISw7UAVxieD/Cyz5mRMohfRSwoqoz+xNuIB+cj9loEB3Pw2448NaitKSLLRck2q5pOI9O9g/t/tkXda8Tbg0+PszB9FN8DuPaXKnKW4YcQn1Xk3HSIry5ps8UQ/2W5aQnxIwBdu7yFcgrxPsRjVXu8HOh0qao30cArp9SZZxDfg3h1wTzKxu5E/LUxX5wKdX5SnAzmDx4A4OIqLbB69yMesE1pKojLjVdoNsfyiPi45hZmAn3uLWdpOtfQOaVmikEs7ovj8hFWpz7EV6mel0L9Xy23FMYlPYZenAx0yDB1/PX6dledmQjikjkXCxqMJS9WtfFCyH9XtSekEF+2dH+P4tzITduTygGfv58a5VCTH5PtXD7EFZiNyUDBhHnsFTBgE0SQIA9pfFtgo6cKGuhooeilaKH41eDs38Ip+f4At1Rq/sjr6NEwQqb/I/DQqsLvaFUjvAx+eWirddAJZnAj1DFJL0mSg/gcIpPkMBkhoyCSJ8lTZIxk0TpKDjXHliJzZPO50dR5ASNSnzeLvIvod0HG/mdkmOC0z8VKnzcQ2M/Yz2vKldduXjp9bleLu0ZWn7vWc+l0JGcaai10yNrUnXLP/8Jf59ewX+c3Wgz+B34Df+vbVrc16zTMVgp9um9bxEfzPU5kPqUtVWxhs6OiWTVW+gIfywB9uXi7CGcGW/zk98k/kmvJ95IfJn/j3uQ+4c5zn3Kfcd+AyF3gLnJfcl9xH3OfR2rUee80a+6vo7EK5mmXUdyfQlrYLTwoZIU9wsPCZEtP6BWGhAlhL3p2N6sTjRdduwbHsG9kq32sgBepc+xurLPW4T9URpYGJ3ym4+8zA05u44QjST8ZIoVtu3qE7fWmdn5LPdqvgcZz8Ww8BWJ8X3w0PhQ/wnCDGd+LvlHs8dRy6bLLDuKMaZ20tZrqisPJ5ONiCq8yKhYM5cCgKOu66Lsc0aYOtZdo5QCwezI4wm9J/v0X23mlZXOfBjj8Jzv3WrY5D+CsA9D7aMs2gGfjve8ArD6mePZSeCfEYt8CONWDw8FXTxrPqx/r9Vt4biXeANh8vV7/+/16ffMD1N8AuKD/A/8leAvFY9bLAAAAOGVYSWZNTQAqAAAACAABh2kABAAAAAEAAAAaAAAAAAACoAIABAAAAAEAAAH4oAMABAAAAAEAAAH4AAAAAAROaeoAAEAASURBVHgB7d0NmBXVfcfxs+/LvvEiiFgB0RiJRsVILNEUG22iRmq00RKKTSTVxGjbvAFRCxhjYhJCa/rEGJu3tdYHtBpTG1NBGxNfHoEoiq8FREEEAUEEYZd93/o77Wx27947987dc+6d2f3O8+zee2fOnPnP55w7/5m5c+eWdL87GAYEEEAAAQQQGFQCpYNqbVgZBBBAAAEEELACJHg6AgIIIIAAAoNQgAQ/CBuVVUIAAQQQQIAETx9AAAEEEEBgEAqUx3WdduzYYbj+L66tk8y4ysrKzKGHHtov+L1795qDBw/2G88IBAYiMG7cuLSzb9++Pe14RiKQr0BdXZ2pr6/vN3tsE/ybb75Jgu/XXIwYiEBlZWXaBL9v3z6jJM+AgEuBTAle2zYGBFwLpEvwnKJ3rUx9CCCAAAIIxECABB+DRiAEBBBAAAEEXAuQ4F2LUh8CCCCAAAIxECDBx6ARCAEBBBBAAAHXArG9yM71iia1vpdfftmMGDHCjBkzxq7C7t27zauvvmpOPfXUnlV6/fXXTUtLi5k4caJZs2aNHT9s2DDznve8x+jqSg3PPvusOemkk+xz/iGQTiBdH3n++efNgQMHeoo3NDSYY445hn7WI8KTXAX27Nlj1q9fb4vrgldtn4YPH263Zzt37jQlJSVm7NixZtKkST1VdnZ2mo0bN5qtW7eao48+2hx55JF2Wu9+qYvLNE3bPIa+AhzB9/WI1auuri5z8803m8bGxp641LEXLlxoNm3a1DPuhz/8oVm2bJl55513zL/8y7+Ybdu2GZWbN2+e0ZtKwz//8z/3lOcJAukE0vUR9a0tW7bYPqV+pR1M+lk6PcZlE3jxxRfNL3/5S9uXlOi//OUvm9dee838x3/8h91hVD9bunSpue2222xVbW1t5rrrrjOrV6+236j613/9V1tWE9Uvd+3aZbdvK1euNF/84hdNR0eHnY9/fxDgCP4PFrF79tRTT5mTTz7ZvPDCC3ajqqMnDVOnTjWPPPKI3dN9++237Z5vELy+533RRRfZl01NTWbz5s1m1KhRwWQeEYgscOGFFxodcQWDkjz9LNDgMYrA+973vp7tk+5LobNGGj7ykY+Y448/3jQ3N5trr73WjtPOwLRp08yMGTN6ytx99932uf6de+65pqKiwr5+5ZVXjL5+ePjhh/dM54kxJPgY94Lly5ebOXPmmNGjR5sVK1aYiy++2EZ7wgknmCeffNI+f/TRR8306dN7XuvI/pvf/KZpbW01SvCXX355jNeQ0JIg8I//+I9GG2MNH/rQh4w20vSzJLRc/GLUqXYdcb/11lvmwQcfNN/61rfsKXgdnesARv3qsssus4HrwObzn/+8fa6bA+l+FVOmTDE6s6lB8+i0vuo65JBDSO5Wpe8/Enxfj9i8Umd+5pln7GdU2qtdt25dz55vaWmpPXrXZ/E6FX/ppZf2JPjx48ebq666yiZ47e0+8MADPXvAsVk5AkmUwGc+85meI6Wamhp71z/6WaKaMDbB6nqON954w35ertPvhx12mI1NZ4mOPfZYO+0HP/iBvcZIfW3//v12uq5F2rBhg3nooYd6TuGfdtppNunfddddZsGCBbFZxzgFQoKPU2v0iuU3v/mNmTVrlvnoRz9qx+qz+KeffrqnxJ/+6Z+ae++91158p4QfDOXl5WbkyJH2pS6q0w4AAwIDEdAZpN6n6HVbX/rZQESH7ryTJ082n/zkJ/sB6OhdHyVq26UjdJ19VALX5/NK/DpLqbNHq1at6plXF3vqFL3+brjhBnPTTTeZ3tvCnoJD+AkJPqaNrz3V73znO/YIXiHqc6j77rvPnHHGGTZifV6l01tf//rX7evgn/Zyv/rVr9pTqrroZO7cucEkHhEIFdCGVX0nGK6//nr79Oqrr+65zkNXPV955ZX2aIp+FkjxOFABHbXX1tbaC+V08KKEr22dTr/rYmFdIa/n+ty9urq6z+J0TdLDDz9s/vM//9NccMEFfaYN9Rcl7/6gS3ccEZ577jnuRR/HhklwTDoK1efHqYOu5OVe9KkqvB6oQKavpQYXlg20/qE0v47otQPAkF5AF72m++2DP5zbTT8fYxFAAAEEECiqAMk9P34SfH5uzIUAAggggECsBUjwsW4egkMAAQQQQCA/gdh+Bq+viYUNulpS34HUrQxdDqpTg+tLE4KrO4PvcLqK2Ve8+t6zDFzHKwfXdcpSV3WrL4S1m5ad7jeT9TXE9vb20CbRlbrZyoRWkGGiDw/1CbWfjzt7Ea+xV2rnsu3RBYnphmzbtlz6crp6s43z0XZapuJNSl9TvEl6L+cab1VVVb+LDzVvbK+i10Y3bNB3JNVQwfckw8pGmaY69UbQjWJcDkFiybZeUZepK0qV2FwnH93/XreKdB2v2k33zXed5PUVG8WrujMNSnpBO/Quo7YOm0/9QVf1Ztsw964z1+eKx7Wx+rDaT7eUdT34iFcbJ/25jlftpveHa1/1YV2wmW3bkynBZ4tHN21Rn/SxDcq27Hz6iy7w0i2xXSd5H31N66fv3quvhR0M5OPgI95ctz1BX0+Nm1P0qSK8RgABBBBAYBAIkOAHQSOyCggggAACCKQKkOBTRXiNAAIIIIDAIBAgwQ+CRmQVEEAAAQQQSBUgwaeK8BoBBBBAAIFBIECCHwSNyCoggAACCCCQKkCCTxXhNQIIIIAAAoNAILbfg9d3lsMGfe9Pf9nKhdWRbpqveoMb0viIV9/ndF2v4vXlq1gDj3RtkM+4XOLV+qQbNG+YXzBfWJl09eYyLtuyc6kjtUwS4/Xl4KsPDyTebP1IdfuIeyAxp/ax1NdJi1dt4Pp78D58B/pejm2C7/3706mdSa/VQFr5bOXSzRs2Lqg3rEw+04I3tet4dRcpOQQdIZ/Y0s2j+hSz63hVp27E4uPNJYt86tUbM9N6fupTn+rHc+edd/Ybl+8IX8Zh65RvrJrPR7zBzaUytUG+8QYbXNf1ymAg255s8Shu9WXXg4+2U4yKV22o+l0OvuJVjGqDfLYVYevnI17ZBvGGLTsol1rGfS9KXUKerw8ePBg6Z7BC2cqFVpJmYrCxcX0XqeAN6zpedVIfd7LTncV0dzzX8ardfNzJTr8Xncud7NI0ub2rXtid7FLncWmifuGyPsWqPiwP1/Wqbh/x6q6GPuoNdnpdO6gP6y9bvbqbYLoh23y6U576so9tULZlp4s32zjdwU2xur6TnY8+oXXRHQbl4DrB+4hXfVh30czWbnV1dWmbKf05y7RFGYkAAggggAACSREgwSelpYgTAQQQQACBCAIk+AhYFEUAAQQQQCApAiT4pLQUcSKAAAIIIBBBgAQfAYuiCCCAAAIIJEWABJ+UliJOBBBAAAEEIgiQ4CNgURQBBBBAAIGkCJDgk9JSxIkAAggggEAEARJ8BCyKIoAAAgggkBQBEnxSWoo4EUAAAQQQiCBAgo+ARVEEEEAAAQSSIkCCT0pLEScCCCCAAAIRBEjwEbAoigACCCCAQFIESPBJaSniRAABBBBAIIJAbH8uNsI6UBQBBBBIvMCcOXP6rUNjY2O/cYxAIFcBjuBzlaIcAggggAACCRIgwSeosQgVAQQQQACBXAVI8LlKUQ4BBBBAAIEECZDgE9RYhIoAAggggECuAiT4XKUohwACCCCAQIIESPAJaixCRQABBBBAIFcBEnyuUpRDAAEEEEAgQQIk+AQ1FqEigAACCCCQq4DzBN/a2mo2bdrUs/xt27aZl156yf7t2rXLjm9qajJr1qwxemRAAAEEEEAAAfcCThN8c3OzueGGG8yKFSt6Il28eLF57LHH7N+WLVvMnj17zPz588369evNvHnzjHYIGBBAAAEEEEDArYDTW9XecsstZtKkSaa9vd1G2dXVZR9nzZplamtrTVlZmVm2bJmZOXOmmT59utH01atX2+cq+NOf/tSsW7fOznPdddeZ8vLM4amu0tJSM2LECFve1b+SkhKjv2HDhrmq0tYTrIvidjnIoLu72/65rLeiosK2V2VlpctqvdSpAOVbU1NjqqurM8bb2dmZdprmjdKPopRNu8BeI7Vs131C/dfHe0Nh+4hXsUZtg16EoU9l66MPD8Q3Sv+JUjYUwlPbaZnqb/X19c63QT76WmA0fPjw4KmzR5/xZusHQa5NXZnMGTS1ZA6v586da9auXWtWrVplS2/dutXoFL3up7xx40ZzxRVXmO3bt5upU6fa6WPHjjU7d+7sqfmoo47q2UB3dHTYHYCeiSlPgjdtW1tbypSBvdQGQR1Wy3c5aIOgwXW8SsRq3EzJK991kIPqdB2v2k07gNopcTnIQW0W1m6ZlqnxUdYzStls66h+4bI+LU9tJw/X9apuH/EGG0bX8ep9rMF1vbluezIdJESJJ0pZu7Ih/3y0nRZXVVVl39OZkkxISKGTfMWrgwAf2yAf8aoPK95s/UDv+XSD0wSfuoAjjjjC3H777fbISgl+6dKlpqGhoSdxK4GocwTDmWeeGTy1OwI9LzI80UZMHwu4HFSnGsr1RwdBA7iOV40vx+CsiSsLbcTUqVzHq/haWlp6+oCreIM3gerONARtkDpdfmHzpZZ3aaKYXNanWNWH5eG6XtXtI15tA5TkXcer97F23lzXKwe9P7LVm+koMdt8qj8YopQN5sn06KPttKy6ujr7/gnbuc4UU9h4X/EqB8k10w5/WExh03zEqz6ssyPZ+oHaIN3g9DP41AXoCH758uV2tDagCnTixIk9F+Ft3rzZTJgwIXU2XiOAAAIIIIDAAAW8HsGPHz/eHsFv2LDBHhXPnj3bjBw50ixZssSsXLnSHr1PmTJlgKvA7AgggAACCCCQKuA8wSthB0lbnx8sWLDAnuoNPrdSAIsWLeo3LjUwXiOAAAIIIIBA/gJeT9EHYfVO7mHjgmk8IoAAAggggMDABAqS4AcWInMjgAACCCCAQFQBEnxUMcojgAACCCCQAAESfAIaiRARQAABBBCIKkCCjypGeQQQQAABBBIgQIJPQCMRIgIIIIAAAlEFSPBRxSiPAAIIIIBAAgRI8AloJEJEAAEEEEAgqgAJPqoY5RFAAAEEEEiAAAk+AY1EiAgggAACCEQVIMFHFaM8AggggAACCRAgwSegkQgRAQQQQACBqAIk+KhilEcAAQQQQCABAiT4BDQSISKAAAIIIBBVgAQfVYzyCCCAAAIIJECABJ+ARiJEBBBAAAEEogqQ4KOKUR4BBBBAAIEECJDgE9BIhIgAAggggEBUARJ8VDHKI4AAAgggkAABEnwCGokQEUAAAQQQiCpAgo8qRnkEEEAAAQQSIECCT0AjESICCCCAAAJRBcqjzlCo8nV1daakpCTj4ioqKkxpaampr6/PWCafCapTy62srMxn9ozzBPW5jresrMx0d3ebrq6ujMvOZ0J5ebn1Vf0uB7Wb6lbMLgfFWV1dbVR/piGTkeaN0i5RymaKJRivfuGyPtWrPuzjvaG6fcQrf/UJ1w56H6teH314IL5R1jNKWbVP2OCj7bQ8OdfW1jrfBvmKVzErv7gefMQb5MB8+0FsE/yBAwdC/WtqauzGfP/+/aHlok4MdhxaW1ujzhpaPmgg1/EqqXV2dpr29vbQ5UedqI1iW1ubaW5ujjpraHm1W0tLi/ONgdpN9eov06B1amho6DdZfk1NTf3GZxrhsg3VL1zWp5hloY2N63pVt494q6qq7A6J63iVhPX+8NGHc/HNlESirGeUsmqfsMFH22l5w4YNs++fjo6OsMVHnuYrXu2MKL+4PsjwEa/6sLaZ2fpBpr7GKfrI3Y4ZEEAAAQQQiL8ACT7+bUSECCCAAAIIRBYgwUcmYwYEEEAAAQTiL0CCj38bESECCCCAAAKRBUjwkcmYAQEEEEAAgfgLkODj30ZEiAACCCCAQGQBEnxkMmZAAAEEEEAg/gIk+Pi3EREigAACCCAQWYAEH5mMGRBAAAEEEIi/AAk+/m1EhAgggAACCEQWIMFHJmMGBBBAAAEE4i9Ago9/GxEhAggggAACkQVI8JHJmAEBBBBAAIH4C5Dg499GRIgAAggggEBkARJ8ZDJmQAABBBBAIP4CJPj4txERIoAAAgggEFmABB+ZjBkQQAABBBCIvwAJPv5tRIQIIIAAAghEFiDBRyZjBgQQQAABBOIvQIKPfxsRIQIIIIAAApEFSPCRyZgBAQQQQACB+AuQ4OPfRkSIAAIIIIBAZAESfGQyZkAAAQQQQCD+As4TfGtrq9m0aVPPmnd0dJhnn33WvPnmmz3jmpqazJo1a4weGRBAAAEEEEDAvYDTBN/c3GxuuOEGs2LFChtpd3e3WbBggXnhhRfM9ddfb1555RWzZ88eM3/+fLN+/Xozb948ox0CBgQQQAABBBBwK1DusrpbbrnFTJo0ybS3t9tqlcTHjRtnZs+ebaZMmWLuv/9+c+ihh5qZM2ea6dOnm66uLrN69Wr7XDPs27fPtLW12XlLS8P3PUpKSoz+spWzlUX457NehZGUeBWrL1/XBkGs2eLV9ExDlJiilM20vGB8tpiDclEeg/V0GWewfB/xKs4k1TtQ3yjtEqVs0EaZHn0YB8tSnC5jVb2+49UBqMvBR7yBafAYNV6nCX7u3Llm7dq1ZtWqVTaO7du32wSvF2PHjjU7d+40nZ2dZurUqXZ6MM6+ePff1772NfP444/bl08//bSpqKgIJmV8rK6uzjgtjhNqamriGFbamGRbX1+fdtpARvqoU/EMHz48NKxgxzO1UFVVlRkxYkTq6IyvtZPqcvDVJ1zHGaxz0uL11d/y3fZEaZcoZYP2CXv01XajRo0KW2ze03zFO2bMmLxjCpvRV7zZ+sHBgwfThuU0wacuQXsdOkrXoMSuDWm6ccF8t956a/DUaOcgbBCkdgB01O9yUJ2K0fVHB8FGZv/+/S7DNdrIyDZT8sp3YUp4Opuij11cDmq3lpaWnn7hqm5tYBSr6s40lJWV2TNIqdPV1lH60Y4dO1KryPu1+oXrPqE+rPbbtWtX3nFlmtFHvNou1NbW2o/vMi03n/F6H+v94aMPV1ZWmr1794aGpbOX6YYo/SdK2XTL6j3OR9upfiUfffSq661cDr7iPeyww+zBpusjeB/xqg/LN1s/qKurS0sffh487Sy5j5w4cWLPBXebN282EyZMMOnG5V4jJRFAAAEEEEAgFwGvR/BHHnmkGT16tL3Abvfu3ebGG280OopasmSJWblypT2i12fzDAgggAACCCDgVsB5glfC7p20L7/8cnuqV6e0gmHRokX9xgXTeEQAAQQQQACBgQt4PUUfhNc7uYeNC6bxiAACCCCAAAIDE3B+BD+wcHKbe86cOX0KNjY29nnNCwQQQAABBIa6QEGO4Ic6MuuPAAIIIIBAoQVI8IUWZ3kIIIAAAggUQIAEXwBkFoEAAggggEChBUjwhRZneQgggAACCBRAgARfAGQWgQACCCCAQKEFSPCFFmd5CCCAAAIIFECABF8AZBaBAAIIIIBAoQVI8IUWZ3kIIIAAAggUQIAEXwBkFoEAAggggEChBUjwhRZneQgggAACCBRAgARfAGQWgQACCCCAQKEFSPCFFmd5CCCAAAIIFECABF8AZBaBAAIIIIBAoQVI8IUWZ3kIIIAAAggUQIAEXwBkFoEAAggggEChBUjwhRZneQgggAACCBRAgARfAGQWgQACCCCAQKEFSPCFFmd5CCCAAAIIFECABF8AZBaBAAIIIIBAoQVI8IUWZ3kIIIAAAggUQKC8AMvIaxElJSU5zxelbLZKVVfwl61sPtNdxhos31e8PuoN6vThII98640yX5SyQRuFPbquL1hWUupVnMFfELuLx6BO1w5BfcFj1FijzBelbC5xuK4vWKbq9VG3jzoVc1LqDeIMHgPvXB9jm+BrampyXQcTpWy2SsvKymzj69HlUFFRYatzGasqLC8vN11dXSao31XMqleD63gVpzprd3e3q1BtPWqvqqoqE9ZumZapeaKsZ5Sy2VZSHi7r0/JKS0vtn+t6VbePeNXXFLPreNXPXL8vAgPFnG+8UeaLUlaxhQ0+2k7Lk3N1dbXdDoUtP+o0X/EqDrlm2h5EjTMo7yPeILFn6wdBuSCW4DG2Cb6pqSmIMetjlLLZKlMjaWPT2tqarWik6apTg8tYVZ/eWJ2dnaa9vV0vnQ1yaGtrM83Nzc7qVEXqqC0tLc43BkruajPVnWnIlPzlFzZfan0u21D9wmV9ilVtp37hul7V7SPeYMfMdbyKVQ4++rAsssXb0NCgYv2GbPP1niFK2d7zpXvuo+20nNraWnPw4EHT0dGRbrF5j/MVb319vW071wneR7yqs66uLmtfU5l0A5/Bp1NhHAIIIIAAAgkXIMEnvAEJHwEEEEAAgXQCJPh0KoxDAAEEEEAg4QIk+IQ3IOEjgAACCCCQToAEn06FcQgggAACCCRcgASf8AYkfAQQQAABBNIJkODTqTAOAQQQQACBhAuQ4BPegISPAAIIIIBAOgESfDoVxiGAAAIIIJBwARJ8whuQ8BFAAAEEEEgnQIJPp8I4BBBAAAEEEi5Agk94AxI+AggggAAC6QRI8OlUGIcAAggggEDCBUjwCW9AwkcAAQQQQCCdAAk+nQrjEEAAAQQQSLgACT7hDUj4CCCAAAIIpBMgwadTYRwCCCCAAAIJFyDBJ7wBCR8BBBBAAIF0AuXpRg7lcZdcckmf1W9sbOzzmhcIIIAAAggkQYAj+CS0EjEigAACCCAQUYAEHxGM4ggggAACCCRBgASfhFYiRgQQQAABBCIKkOAjglEcAQQQQACBJAh4v8hu27ZtZt++fdZizJgxRn9NTU1m3bp1ZvLkyaa2tjYJTsSIAAIIIIBAogS8H8EvXrzYPPbYY/Zvy5YtZs+ePWb+/Plm/fr1Zt68eaa1tTVRYASLAAIIIIBAEgS8HsF3dXVZg1mzZtkj9bKyMrNs2TIzc+ZMM336dKPpq1evts9V8O677zavvvqqnecLX/iCKS3Nbf+jvr7ezuPjn6u6KysrbXiu6gvWtby83DoG1sH4gT6qXvmrzVwOFRUVRnV3d3e7rNbGWV1dbVR/piGTkdYxSrtEKZsplmC8+oXL+lSv2k1/rutV3T7ilb/6hOt4S0pKbL0++vBAfKOsZ5Syap+wwUfbaXly1pnYTO+vsJjCpvmKV8usq6sLW3Re03zEK1sN+faD3DJoXqtrzNatW41O0eu75F/60pfMiy++aLZv327GjRtnaxw7dqzZuXNnT+16k2sDrT/XCaBnIYPsSdKcFG/SYh5kXWbIrA59bcg0NSuaQcDrEfwRRxxhbr/9dlNTU2M2btxoli5dahoaGnr29Do7O01VVVVPaBdeeGHPc+0I5Drs378/16KRy7mqO9gDc1VfsCI6apVje3t7MMrJo4562traTHNzs5P6gkrUF1paWnr6QDB+oI/aKVS9+ss0aJ3U/1IH+em6kFwHl22ofuGyPq2DLHQ04bpe1e0jXm0DdETsOl7VqfeHjz6ci2+mo8Qo6xmlrNonbPDRdlresGHD7Puno6MjbPGRp/mKV2cbDhw44PxAw0e86sPaZmbrB5n6mvcj+OXLl9uG1YZXABMnTjSbNm2y4zZv3mwmTJgQueGZAQEEEEAAAQTCBbwewY8fP94ewW/YsMHuoc+ePduMHDnSLFmyxKxcudIevU+ZMiU8QqYigAACCCCAQGQBrwleFwgsWLDAnurVKa1gWLRoUb9xwTQeEUAAAQQQQGDgAl5P0Qfh9U7uYeOCaTwigAACCCCAwMAECpLgBxYicyOAAAIIIIBAVAESfFQxyiOAAAIIIJAAARJ8AhqJEBFAAAEEEIgqQIKPKkZ5BBBAAAEEEiBAgk9AIxEiAggggAACUQVI8FHFKI8AAggggEACBEjwCWgkQkQAAQQQQCCqAAk+qhjlEUAAAQQQSIAACT4BjUSICCCAAAIIRBUgwUcVozwCCCCAAAIJECDBJ6CRCBEBBBBAAIGoAiT4qGKURwABBBBAIAECJPgENBIhIoAAAgggEFWABB9VjPIIIIAAAggkQIAEn4BGIkQEEEAAAQSiCpDgo4pRHgEEEEAAgQQIkOAT0EiEiAACCCCAQFSB8qgzUD4/gYsuuqjfjI2Njf3GMQIBBBBAAAEXAhzBu1CkDgQQQAABBGImQIKPWYMQDgIIIIAAAi4EOEXvQpE6EEAAgRgLzJkzp190fETYj2TQjYhtgq+rq8sZO0rZnCv9/4Jxr7u8vNx0dXWZqqqqqKsWWl71lpSUmNJStyd5KioqTFlZmenu7g5dftSJqrO6utoo7kxDpmVq3ijtHKVspliC8fJwWZ/qVZvpz3W9qttHvGqzqG2gWLIN6r+q21cfztc3ynxRymbzSJ3uqm4519TU2O1Q6jIG8tpHXwviqa2tDZ46e/QRr2w1ZGuroFzqymTeGqaWLPDrAwcO5LzEKGVzrvT/C8a9biW1zs5O097eHnXVQstrw9jW1maam5tDy0WdqA1BS0uL841BZWWlrVd1ZxqURBoaGvpNll/YfKkzuOwT9fX1xmV9ilUbGu3wua5XdfuIV7EqCbuOV3Xq/eGjD6u/ZYtXVumGbPP1nidK2d7z5fLcVd16T8u4o6Mjl8XmXMZHX9PClSybmpqcH2T4iFd9WDsj2doq0w5AbBN8zr2AgggkVCD1tCmnTBPakISNQEwF3J5/jelKEhYCCCCAAAJDTYAEP9RanPVFAAEEEBgSAiT4IdHMrCQCCCCAwFATIMEPtRZnfRFAAAEEhoQACX5INDMriQACCCAw1ARI8EOtxVlfBBBAAIEhIUCCHxLNzEoigAACCAw1ARL8UGtx1hcBBBBAYEgIkOCHRDOzkggggAACQ02ABD/UWpz1RQABBBAYEgIk+CHRzKwkAggggMBQEyDBD7UWZ30RQAABBIaEAD82k7BmTv2BEoV/xx13JGwtCBcBBBBAwLcAR/C+hakfAQQQQACBIgiQ4IuAziIRQAABBBDwLUCC9y1M/QgggAACCBRBgARfBHQWiQACCCCAgG8BLrLzLZyg+tNdwNfY2JigNSBUBBBAAIFAgCP4QIJHBBBAAAEEBpEACX4QNSarggACCCCAQCDAKfpAgkcEEEAAgcgC5513Xp95+FivD0dRX5Dgi8rPwhFAAAEEJMA1QO77QVESfFNTk1m3bp2ZPHmyqa2tdb9W1IgAAggggMD/C6TuPNx2221DwqbgCX7Pnj1m4cKF5vTTTzc/+9nPzE033WSqqqqGBDYriUDSBFI3jPfcc0/SVoF4ERiyAgVP8CtWrDAzZ84006dPN11dXWb16tX2+ZBtgSGy4qmJgs/p/Db8jBkz+iwA7z4cvEDAiUDqdk2Vunqvuai74Al++/btZurUqRZ37NixZufOnT3Ql112mXnsscfs6+eeey7nI/tx48b11OH6SRLqHj16tOvV7qnP1/r7qDfbmaC2trae9er9RPONHDmy96jQ5z5i1wJ91euy7rq6OqM/H4Ov9R8+fLiPcM2wYcPyqjfKekYpGzUYX3W7rNdlXb19DjvssN4vnT73FbOCzFR3c3Nz2nUo6X53SDvF08jvf//75txzzzXHHnusWb58udFG9/zzz7dL02fzHR0d9vnBgwdDI6ipqTEVFRVm3759oeWiTlSdpaWlprW1NeqsoeWDjeKBAwdCy0WdWF1dbTo7O017e3vUWUPLa6OoOjN1nNCZQyaq3VpaWuzZm5BikScpQSvWsHYrKyszY8aM6Vf322+/HTqf+oPm670z2q+SPEeoX7juE+Xl5WbEiBFm9+7deUaVeTYf8WoHS9fi6OM7l4PaTe8PH304l21PpiSyY8eO0NUcNWqU7ROZdkhDZw6Z6KPttDi9N/QeCrbdISFEmuQrXh1Yvvnmm8Z16vMRb67bHr1/6uvr+/kW/Ah+4sSJZtOmTTbBb9682UybNq0nqN4X3GV7U6pxgr+eChw8Cep03fhBaK7r9RlvUHcQu4vHoE7XDkFsYfUOdFrY/MHy83kc6vVq/YO/fPwyzRPU6do3qC94zLT8TONznS/XcpmWk268jzq1HNXro24fdSYp3mD9g8d0bRo2ruAJ/uyzzzZLliwxK1eutKfgp0yZEhYf0xBAAAEEEEAgD4GCJ3idol20aJE9NV9ZWZlHyMyCAAIIIIAAAtkEinarWpJ7tqZhOgIIIIAAAvkLFC3B5x8ycyKAAAIIIIBANgESfDYhpiOAAAIIIJBAARJ8AhuNkBFAAAEEEMgmEJrgdUeeRx55pE8d8+fPNw8++GCfcbxAAAEEEEAAgXgJpL3RzUsvvWRvPrN37157Mxld+a5B38XTDQ3WrFljjjrqqHitCdEggAACg0DgG9/4hrngggvMiSeemIi1+fKXv2y+8pWvmPHjxyci3ksvvdTcfPPN3u7I6BJBN3KTrX63JZ8h7dfkjjvuOPPEE0+Yu+++2xxxxBHm1FNPtXXrTmCHHHKI0SMDAggggIB7gRdeeMGcccYZ7iv2VOPTTz9tdBfSpAyrVq1yfudPX+uuuxnq91ryHdImeFV26KGHmquuusqos+k0fe/bEH70ox81ut0fAwIIIICAW4GSkhKjv6QMxOuvpQZqm/YUfRDuww8/bH/57WMf+5gJTtNr2rx588x73/veoBiPCCCAAAIIIBAzgdAEf80119jPgWbNmhWzsAkHAQQQQAABBMIEQq+i/8AHPmCeeeaZsPmZhgACCCDgSEAfhT777LP2184cVem1Gv0omOJ1/WuWPoPWL05u3LjR5yKc1a1Y9TG5fjE0nyH0CP6hhx6yp+j1M3S9fxTmW9/6lnn/+9+fz/Jynke/B5/vL+jkvBAKDikB3R75fe97X791fu2114y+McKAgEuBk046KVJ12t7prOkJJ5xgL3LW1dNHH310pDoKWfj111833/ve98yZZ55pvzr93e9+N+1PlhYyplyWddNNN9mfrJZ1nAcdXP/617+2v7z61FNPGflGHTJeZKeK9Dn7nXfe2a/OP/qjP+o3jhEIIIAAAvkLrF+/3owbN87Mnj3bHlDdf//95otf/GL+FXqec/fu3TY+7YS88847Rlen6wLsOA+KUVemJ2FYunSp/WG26upq+1G5zu6Ul4em7H6rFVpapwfUcKlD7yvqU6fxGgEEEEAgusD27dttgtec+pbSzp07o1dSwDlOPvlkuzTdG+Wxxx4z3/72twu49OiL0lm6Bx54wOh78OkOXKPX6HcOueoMifLwMcccY4/koy4xNMHrc4r77rvP1qnPAF5++WV7akPjxowZE3VZlEcAAQQQyCBQWlpqurq67FRtb6uqqjKUjM9oHcXr57+/9KUvmdGjR8cnsDSR/NM//ZO9v8CmTZvsR3KKPc4x6+D661//ur0Xzde+9jV7k7mRI0emWbPMo0IT/Mc//nGjv97DX/7lXybmFEfvuHmOAAIIxFlg4sSJ9rN3xbh582YzYcKEOIdrlCCVgPS16UmTJsU6VgWnaxt03YCO5Hft2mV0xiTOCf7II4+0d5JV7Nrhy+ejhdAEr4pTh8MOO8zoVraTJ09OncRrRwJqSN0dSqdmdLvK3nttW7duNfqsTm9+ffalvX6dylm3bp1duu4yePjhh9u9viCcgwcP2unBKbVgPI8IBALqb/rWTDCoD+oM3qhRo+xNV7Qh/P3vf28n6+YbuqOlblcd3NWSPhbI5f+oDbqcr7/+eps8b7zxxvwrK8CcP//5z22cumhNw0UXXWSmT59egCXnt4iLL77Yzrhlyxaj/qqEH+fhc5/7nLn99tvtXQLVN/K5uVzoVfS/+tWv7AKEoCs8teejS/aff/5576foh/JV9F/96lftRTa1tbXmv//7v82CBQts0tZHI7/5zW/MWWedZfc+33jjDXPdddfZWxmqrT784Q/bvTzdefDcc881Z599tu2/uljnrrvusldhKvkP1YGr6DO3vL4Zo/ufH3/88baQbnKl/qU+WFFRYT7ykY+YK664wnzqU5+y2wJtA5Tc9eNTGuhjlqHPv6hX0Qcza+dKfZUBAQnoQC/fj2tCj+D1ZtcFCcGghUydOtWMGDEiGMWjYwHtWeqzl5kzZ9o3uS6u0H2e9aMDy5cvtz+SEBw13XbbbWbFihW2Pd7znveY8847z0Zz7LHH2msnggT/29/+1m6ctRHWXiEDAqkC2iHUzmOQ4PVcPyKii6eCQWeSgj6mj+4++9nPBpMMfayHYsBPSO4DJhxUFeSb3IUQeqMbnYL74Ac/aHRRgi7Z103vtTfB4E9g2LBh9uj7sssus0fcBw4csFdQvvrqq/YqyiC5KwLtbL344os2GN1sQqfMbr31VvNv//ZvZsaMGXa8PsvT6dQPfehDRt+lzOdzHFsR/wa1gD6+0Uc/+oaMPlvVRz+pn0/qqm71sZ/85Cf2NPKFF15IHxvUvYKVS7pAaIJXcpk2bZrRjUC0h69koe85trS0JH29Yxu/LqZQcm5sbLRHS/pah252UFdXZ0/L9w5cp1A1XoN+9e+0006zny3ppkTB50s66n/rrbfMD37wA5vcH3300d5V8BwBK6DP1fVef/LJJ+2R/DnnnNNPpqGhwZx++un2h6hUPtiJpI/1o2IEArEQCE3wy5Yts6fp9F28Sy65xO6560Ic/ZQsgx8BHanr+6Q6gtLdAv/iL/7C7mDpbMqOHTvsVaBaso7E9fl88FO+OkrXhY+6McbKlSvtBVE6GluzZo259tprzac//Wlz9dVX289K/UROrUkX0Ec6v/vd72yfUbJPHXR2SR//fOITn7C//a2PiOhjqUq8RiA+AqGfwWsvPfVoXa91JT2DHwF95q6jcSVqXeugez3rayg6Na8LoRYvXmwvfNJp1PPPP9+ccsopfXa4tGOgi/QWLlxo/vqv/9pOV/LXEFyNr50I7TAwINBbQD8RrWtAdAfL3h8F9S4TPFffuvLKK42O6tUH6WOBDI8IxEcg9Cp6XTWvr2n92Z/9mdEVoTq9q3G6AMf3MJSvopetvrWgjW3vn+kNzLWTpdsXMkQT4Cr6aF6UHphAvlfRD2ypzI3AHwRCT9HrCFLJXPdH1ufvunL2wQcf/MPcPPMmoLMn6ZK7Fkhy98ZOxQgggMCgEQhN8Lqpik4D64Ib3cxAV9Gn3tlu0EiwIggggAACCAwigdAE/4tf/MJemPUnf/IndpV//OMf21sS6kpbBgQQQAABBBCIr0DoRXb6ylbqLxrt37/fXuTle5X08QC/B+9beWjVn+mnFnW3NgYEEEBgsAmEJnjdW1in53XEru9V6+tXSrrHHXecdwfdHjNs0OfTKqM7vLkcVKeuRHd9Q5/6+nobpnaQXA76PF47Yu3t7S6rtVfw66t4uorf5aB200WCwa9muapb90xXrKnf+uhdf6YrwzU+7O5h6g+6wlxfU3Q9qF+47hPqw9pB1g9quB58xKs7dWkna8+ePU7DVbvp/eGjD6u/6IJjBgTiLBB6il4/aKJ7Un/sYx+ziV33PdeNVxgQQAABBBBAIN4CoUfwCl3feb/88svjvRZEhwACCCCAAAJ9BEKP4PuU5AUCCCCAAAIIJEaABJ+YpiJQBBBAAAEEchcgweduRUkEEEAAAQQSI0CCT0xTESgCCCCAAAK5C5Dgc7eiJAIIIIAAAokRIMEnpqkIFAEEEEAAgdwFsn5NLveq3Jasq6sz+sGVTENwQ5rgBjKZykUdr5tjaLlhNz6JWqfKB/W5jlc3adHNh1zfOEZ3fZNFppvD5GOgedRuqtv1XQoVp25qovozDZmMNG9YuwT9MKxMpmVmG69+4bpetZv+XNerdfERr/zVJ1zHq3ZTvT76sC/fbP2F6QhEEYhtgj9w4EDoegR3svNxFzC9eYf6ney0UUzSneyU2HUXu2x3stPvl6cOuhNgU1NT6uie1+oP6m+u+5oWoKTmul5ZKBG7rtdXvLqTnYxdx6s6fd7JLlu8OkhhQKCYApyiL6Y+y0YAAQQQQMCTAAneEyzVIoAAAgggUEwBEnwx9Vk2AggggAACngRI8J5gqRYBBBBAAIFiCpDgi6nPshFAAAEEEPAkQIL3BEu1CCCAAAIIFFOABF9MfZaNAAIIIICAJwESvCdYqkUAAQQQQKCYAiT4YuqzbAQQQAABBDwJkOA9wVItAggggAACxRQgwRdTn2UjgAACCCDgSYAE7wmWahFAAAEEECimAAm+mPosGwEEEEAAAU8CJHhPsFSLAAIIIIBAMQVI8MXUZ9kIIIAAAgh4EiDBe4KlWgQQQAABBIopQIIvpj7LRgABBBBAwJMACd4TLNUigAACCCBQTAESfDH1WTYCCCCAAAKeBEjwnmCpFgEEEEAAgWIKkOCLqc+yEUAAAQQQ8CRAgvcES7UIIIAAAggUU4AEX0x9lo0AAggggIAnAecJvrW11WzatKkn3G3btpmXXnrJ/u3atcuOb2pqMmvWrDF6ZEAAAQQQQAAB9wLlLqtsbm42N954ozniiCPMFVdcYatevHixOe644+zzqVOnmrKyMrNw4UJz+umnm5/97GfmpptuMlVVVS7DoC4EnAnMmTOnX12NjY39xjECAQQQiJuA0wR/yy23mEmTJpn29na7nl1dXfZx1qxZpra21ib3ZcuWmZkzZ5rp06cbTV+9erV9roKPP/642bFjh53nrLPOMiUlJfZ5un8VFRWmvLzcDBs2LN3kvMdpB0TLLS11e3JDsWpwHa8c5BjUn/eKp8woB9XtI14tqru7O2WJA3up9qqsrAztM5mWoHmjrGeUspmWGYz32YddxukzXvUz9TfX8ep97KsP+4g3MOYRAVcCThP83Llzzdq1a82qVatsfFu3bjU6Ra8jno0bN9qj+u3btxsdyWsYO3as2blzp32uf88995x58cUX7etzzjknNGnpDaYNc3V1dc/8Lp5oo6A/1wkzqM91vDJQsnSdMOXrY0cnaDcXbdW7DjkEiaL3+N7POzs7e7/seR7M2zMiyxOXbah+4bI+hR70Ydf1qm4f8cpffz7i9dHfgjp9xCtjBgRcCThN8KlB6VT97bffbmpqamyCX7p0qWloaLBHnCqrDW7v0/NXXnllTxXaEQgbVKc26Pv27QsrFnma6tTGRtcSuBzq6+ttdfv373dZrd0oyjE4a+Kq8hEjRpi2tjajj11cDmq3lpaWnj7gqu5Ro0bZWFV3pkEbZp1JSh06OjrMgQMHUkdnfP32229nnBZ1gvqF6z6hPqz2cxlnsF4+4tU2QO3iOt5gp8FHH9bZor179wYsaR/HjRuXdjwjESiUgNvz0ClR6wh++fLldqw2vNo4TJw4secivM2bN5sJEyakzMVLBBBAAAEEEBiogNcj+PHjx9sj+A0bNtij4tmzZ5uRI0eaJUuWmJUrV9qj9ylTpgx0HZgfAQQQQAABBFIEnCd4JewgaeuzwAULFthTvTqlFQyLFi3qNy6YxiMCCCCAAAIIDFzA6yn6ILzeyT1sXDCNRwQQQAABBBAYmEBBEvzAQmRuBBBAAAEEEIgqQIKPKkZ5BBBAAAEEEiBAgk9AIxEiAggggAACUQVI8FHFKI8AAggggEACBEjwCWgkQkQAAQQQQCCqAAk+qhjlEUAAAQQQSIAACT4BjUSICCCAAAIIRBUgwUcVozwCCCCAAAIJECDBJ6CRCBEBBBBAAIGoAiT4qGKURwABBBBAIAECJPgENBIhIoAAAgggEFWABB9VjPIIIIAAAggkQIAEn4BGIkQEEEAAAQSiCpDgo4pRHgEEEEAAgQQIkOAT0EiEiAACCCCAQFQBEnxUMcojgAACCCCQAIHyBMTYL8Q5c+b0GdfY2NjnNS8QQAABBBAY6gIcwQ/1HsD6I4AAAggMSgES/KBsVlYKAQQQQGCoC5Dgh3oPYP0RQAABBAalAAl+UDYrK4UAAgggMNQFYnuRXXV1dc5tE6VstkrLyspMaWmpKSkpyVY00vTy8v+jdhmrAqioqDCKWX8uBxmobh/xdnd3G/25HIJ486lT80ZZzyhls8WjfuGyPi1PfUH913W9qttHvOpnUdtAsWQbZOCrD8vYh2+2dWI6AlEEYpvgOzo6cl6PKGVzqVTJx3WdXV1ddtGu69WGUXW7rlcGnZ2dzutVglC9gUcu7ZFLmVzilVW6IWp7u7T20XbBOrqMM6jTR7xql6htEMQT9ujrvaE+rLp9+IatD9MQiCpAgk8R016/j41NkNBcbxSChOm6Xhn42JgHdQYeKfx5v8wl3kxnOaK2t0vrwCPvFU8zo68+rEX5iFftErUN0qx2v1FKwnp/uGyvwMBHvP1WgBEIDFAg/SHNACtldgQQQAABBBAorgAJvrj+LB0BBBBAAAEvAiR4L6xUigACCCCAQHEFSPDF9WfpCCCAAAIIeBEgwXthpVIEEEAAAQSKK0CCL64/S0cAAQQQQMCLAAneCyuVIoAAAgggUFwBEnxx/Vk6AggggAACXgRI8F5YqRQBBBBAAIHiCpDgi+vP0hFAAAEEEPAiQIL3wkqlCCCAAAIIFFeABF9cf5aOAAIIIICAFwESvBdWKkUAAQQQQKC4AiT44vqzdAQQQAABBLwIkOC9sFIpAggggAACxRUgwRfXn6UjgAACCCDgRYAE74WVShFAAAEEECiuAAm+uP4sHQEEEEAAAS8CJHgvrFSKAAIIIIBAcQVI8MX1Z+kIIIAAAgh4ESDBe2GlUgQQQAABBIorQIIvrj9LRwABBBBAwIuA8wTf2tpqNm3a1BNsR0eHefbZZ82bb77ZM66pqcmsWbPG6JEBAQQQQAABBNwLOE3wzc3N5oYbbjArVqywkXZ3d5sFCxaYF154wVx//fXmlVdeMXv27DHz588369evN/PmzTPaIWBAAAEEEEAAAbcC5S6ru+WWW8ykSZNMe3u7rVZJfNy4cWb27NlmypQp5v777zeHHnqomTlzppk+fbrp6uoyq1evts9dxkFdCCCAAAIIDHUBpwl+7ty5Zu3atWbVqlXWdfv27TbB68XYsWPNzp07TWdnp5k6daqdHoyzL979t3DhQvPUU0/Zl/fee68pL88tvNGjRwdVDPixpKTE6E87Hy6H0tL/O1lSVVXlslqjenWmRH8uh7KyMlNZWWlqampcVmvjra2t9RJvfX29qauryxivPi5KN2g9w+ZLncdlf5Oz6z6h/qt6XcYZGPiKV/3YdbzBe9lHH1bdruMNjHlEwJVAbhk0z6XpTRskSiV2bcjSjQuqv/TSS82FF15oXx44cMAm2mBa2OO+ffvCJkeapp0KxdjW1hZpvmyFg42MPsZwOSg5yThT8sp3WUp4qrOlpSXfKtLOV11dbW2DfpG2UB4jGxoabKxh7aaN8rBhw/rVrjNOBw8e7Dc+0wiX/U39wnWfUB/Wzo7LOAMLH/GqD6tdXMer97Hq9tGHZaxtVNjADkCYDtMKIeA1wU+cONE88cQTdj02b95sJkyYYEaMGGEvwjv22GONxk2bNq1nPY8++uie5zr6z3UIPhLItXy2ctowuK4zSGiu69URlXaeXNerMwI+6q2oqLCxBh7Z2iLX6bnEK6t0g+aN4helbLrl9R4nB5f1BXVHXadgvmyPPuINdvpdO6hetbnretWHfdSbzZ7pCEQV8JrgjzzySHsaSxfY7d6929x44432jbFkyRKzcuVKe0Svz+YZEEAAAQQQQMCtgPMEr4TdO2lffvnl9pSsTpUFw6JFi/qNC6bxiAACCCCAAAIDF3D6NblM4fRO7kGZdOOCaTwigAACCCCAwMAECpLgBxYicyOAAAIIIIBAVAESfFQxyiOAAAIIIJAAARJ8AhqJEBFAAAEEEIgqQIKPKkZ5BBBAAAEEEiBAgk9AIxEiAggggAACUQVI8FHFKI8AAggggEACBEjwCWgkQkQAAQQQQCCqAAk+qhjlEUAAAQQQSIAACT4BjUSICCCAAAIIRBUgwUcVozwCCCCAAAIJECDBJ6CRCBEBBBBAAIGoAiT4qGKURwABBBBAIAECJPgENBIhIoAAAgggEFWABB9VjPIIIIAAAggkQIAEn4BGIkQEEEAAAQSiCpDgo4pRHgEEEEAAgQQIkOAT0EiEiAACCCCAQFQBEnxUMcojgAACCCCQAAESfAIaiRARQAABBBCIKkCCjypGeQQQQAABBBIgQIJPQCMRIgIIIIAAAlEFSPBRxSiPAAIIIIBAAgTK4xpjXV2dKSkpySm8+vr6nMrlUqi0tNQut7KyMpfiOZcJ6nMZqxZeVlZmuru7TVdXV86x5FKwvLzcyEL1uxwqKiqM6lbMLgfFWV1dbVR/piGTkeaN0i5RymaKJRivfuGyPtWrdtOf63pVt4945a8+4TpebT9Ur48+7MtXxgwIuBKIbYI/cOBAzuu4f//+nMtmK6gEoTdva2trtqKRpgcbL5exKgAltc7OTtPe3h4pnmyFtVFsa2szzc3N2YpGml5TU2NaWlqc75Co3VSv/jINWqeGhoZ+k+XX1NTUb3ymES7bUP3CZX2KWRZKxK7rVd0+4q2qqrLvOdfx6n2s94ePPpyLrw5SGBAopgCn6Iupz7IRQAABBBDwJECC9wRLtQgggAACCBRTgARfTH2WjQACCCCAgCcBErwnWKpFAAEEEECgmAIk+GLqs2wEEEAAAQQ8CZDgPcFSLQIIIIAAAsUUIMEXU59lI4AAAggg4EmABO8JlmoRQAABBBAopgAJvpj6LBsBBBBAAAFPAiR4T7BUiwACCCCAQDEFSPDF1GfZCCCAAAIIeBIgwXuCpVoEEEAAAQSKKUCCL6Y+y0YAAQQQQMCTAAneEyzVIoAAAgggUEwBEnwx9Vk2AggggAACngRI8J5gqRYBBBBAAIFiCpDgi6nPshFAAAEEEPAkQIL3BEu1CCCAAAIIFFOABF9MfZaNAAIIIICAJwESvCdYqkUAAQQQQKCYAiT4YuqzbAQQQAABBDwJkOA9wVItAggggAACxRQgwRdTn2UjgAACCCDgSaDcU7091W7bts3s27fPvh4zZozRX1NTk1m3bp2ZPHmyqa2t7SnLEwQQQAABBBBwI+D9CH7x4sXmscces39btmwxe/bsMfPnzzfr16838+bNM62trW7WhFoQQAABBBBAoEfA6xF8V1eXXdCsWbPskXpZWZlZtmyZmTlzppk+fbrR9NWrV9vnKvjcc8+Zt99+285z/PHHm9LS3PY/qqqq7Dwu/inGXJcbZXmqV4PLWFVfeXm5jdd1zKpPdfuIt7Ky0nR3dyt8Z8NA4tW8UdYzStlsK6h+4bI+LU91lpSUOK83qNt1vBUVFbYPu65XBr76cNQ+k60fMB0BHwJeE/zWrVuNTtE3NjaajRs3miuuuMJs377dTJ061a7L2LFjzc6dO3vW69e//rVZu3atfa159ObMZairq8ulWE5ltFHQ4HpjEyT44DGnYHIopA2NkqXrhKk49aeNr8tB8bquU/Ep1urq6tB26+joSLsqmnfYsGFpp6Ub6bK/Bc7plpPvOPVhObuMM4jFV7yq10e8Pvqb6pSxj3gDZx4RcCGQWwbNc0lHHHGEuf32201NTY1N8EuXLjUNDQ32yF1VdnZ29tkgX3PNNT1L0o5ArsNbb72Va9Gs5YKjCdcfHdTX19tl79+/P2sMUQooqcmxvb09ymxZy44YMcK0tbWZ5ubmrGWjFFBfaGlp6ekDUeYNKztq1Cgbq+rONCiJaPmpg+yitIvL/qZ+EWXZqbGne60+rPZzGWewHB/xamda1+Lo4zuXgxKx3h8++rDOQu3duzc03HHjxoVOZyICvgVyOweeZxQ6gl++fLmdWxtebRwmTpxoNm3aZMdt3rzZTJgwIc/amQ0BBBBAAAEEMgl4PYIfP368PYLfsGGDPWU4e/ZsM3LkSLNkyRKzcuWuq2AgAAAPz0lEQVRKe/Q+ZcqUTLExHgEEEEAAAQTyFPCa4PU51YIFC+ypXp3SCoZFixb1GxdM4xEBBBBAAAEEBi7g9RR9EF7v5B42LpjGIwIIIIAAAggMTKAgCX5gITI3AggggAACCEQVIMFHFaM8AggggAACCRAgwSegkQgRAQQQQACBqAJeL7KLGkwcyl9yySV9wtANdxgQQAABBBBImgBH8ElrMeJFAAEEEEAgBwESfA5IFEEAAQQQQCBpAiT4pLUY8SKAAAIIIJCDAAk+BySKIIAAAgggkDQBEnzSWox4EUAAAQQQyEGABJ8DEkUQQAABBBBImgAJPmktRrwIIIAAAgjkIECCzwGJIggggAACCCRNgASftBYjXgQQQAABBHIQIMHngEQRBBBAAAEEkibArWqT1mLEO2gE5syZ02dduC1yHw5eIIDAAAU4gh8gILMjgAACCCAQRwESfBxbhZgQQAABBBAYoAAJfoCAzI4AAggggEAcBUjwcWwVYkIAAQQQQGCAAiT4AQIyOwIIIIAAAnEUIMHHsVWICQEEEEAAgQEKxPZrchUVFaakpCSn1ausrMypXD6FXNVdVlZmF++qvmBdysvLTWlpac5WwXzZHlWn6vYRr+rs6urKFkKk6bnEm6k/aXyU9YxSNspKuKpXfS3qOuUap+p2FWewzKAPu65XBj76sAzU31zHG3jwiIArgdgmeL059ZfLkGu5XOpKLeO6btf1BfFS7/9J5OOgeaLMF6Vs0D65PLqqN6gneMxl2VHKuK43qC94jBJLWNmgvuAxrGyUaUF9wWOUeSmLQCEFYpvg29racnZobW3NuWzUgq7qDvb2XdUXrIc2Mp2dnaa9vT0Y5eRx2LBhpqOjw7iOV0c/alvXR/C1tbVZ49Wy0w2KJcp6RimbbnmZxrmqV2e/uru7I61TpphSx6sfu4qzd90+6tVRtv5cxxscwbuut7cHzxFwIcBn8C4UqQMBBBBAAIGYCZDgY9YghIMAAggggIALARK8C0XqQAABBBBAIGYCJPiYNQjhIIAAAggg4EKABO9CkToQQAABBBCImQAJPmYNQjgIIIAAAgi4ECDBu1CkDgQQQAABBGImQIKPWYMQDgIIIIAAAi4ESPAuFKkDAQQQQACBmAnE9k52MXMiHAQSJTBjxow+8TY2NvZ5zQsEEBj8AhzBD/42Zg0RQAABBIagAAl+CDY6q4wAAgggMPgFOEVfoDa+6KKL+i2J06b9SBiBAAIIIOBIgCN4R5BUgwACCCCAQJwEOIKPU2vkEMucOXP6lbrjjjv6jWMEAggggMDQFuAIfmi3P2uPAAIIIDBIBUjwg7RhWS0EEEAAgaEtQIIf2u3P2iOAAAIIDFIBEvwgbVhWCwEEEEBgaAuQ4Id2+7P2CCCAAAKDVIAEP0gbltVCAAEEEBjaAiT4od3+rD0CCCCAwCAVKMr34Juamsy6devM5MmTTW1t7SClTd5qpfuOvau77aXW7are5CknK+LUdrvnnnuStQJEi8AQFij4EfyePXvM/Pnzzfr16828efNMa2vrEOZn1RFAAAEEEPAjUPAj+BUrVpiZM2ea6dOnm66uLrN69Wr73M/qUSsCCCCAAAJDU6DgCX779u1m6tSpVnvs2LFm586dPfJLliwxzz33nH39ox/9yJSX5xbeqFGjeupw/SQJdTc0NJju7m7Xq27r87X+Luv9xCc+0Wfd77vvvj6vgxednZ3B0z6PFRUVpqamps+4sBcuY++9HFf1lpSU9K7WPndVd3V1tZGXy6G0tNSUlZUZVzEGsclBdStml4Pq1J/reF3GSF0ISKDk3cTgJzNk8P3+979vzj33XHPsscea5cuXm7a2NnP++efb0k8//bTZvXu3fX7KKafYN1GGakxVVZXdKDQ3N2cqktd4bWi0Yejo6Mhr/kwzDRs2zE46ePBgpiJ5jdfGVmdCMiWvvCp9dyYlPNXp+iOUyspK097e7nyHpK6uzsaqusOGkSNH9pu8b98+a9hvwv+PUH8YPny42bt3b6YieY9X8mlpacl7/nQzqg/r2pZ33nkn3eQBjfMRr/qw3s8HDhwYUGypM6vdVLe2MS4HxaqDD11LFDak62th5ZmGgGuB3A6RHS514sSJZtOmTTbBb9682UybNq2n9g984AM9z3WkHzZoD1qD642jNgiq23ViU70+4lWdSsTZEptdeIR/2pCrTte+ga12SlwO2iHJFq8SX7pBsYStp6++pljUL8KWnS7ebONUpzxc1+srXh1j+HBQuynJu3bwVW+2dmU6AlEFCp7gzz77bKNT8StXrrR77VOmTIkaM+URQAABBBBAIItAwRO8jiwWLVpkT5vpdC0DAggggAACCLgXKPjX5IJVILkHEjwigAACCCDgXqBoCd79qlAjAggggAACCAQCJPhAgkcEEEAAAQQGkQAJfhA1JquCAAIIIIBAIECCDyR4RAABBBBAYBAJFPxGN7na7d+/P7ToSy+9ZG+Ko1veuh703VnX9/958sknbZgf/OAHnYbrI1YF+Mgjj5gxY8aY4447LhHx/td//ZeN9cgjj8wYr76/nO7HjXTzobAbG+lmSnfffbf5zGc+k7HufCf4aD/dLOq3v/2tufjii/MNK+N8PuJ97bXXzIsvvmg+/vGPZ1xuvhN8xPs///M/5s033zRnnHFGaFj19fWh05mIgG+Bgn9NLtcVyvbm2LBhg72t7XnnnZdrlUUtt2bNGnvTjTPPPLOoceS68N/97nfmpJNOMn/8x3+c6yxFLXf//fcb3TnshBNOiBxHcJfBTDMqwf/4xz82f/u3f5upSKzG60ZSy5YtM5/97GdjFVemYHRTq1/96lf2NyoylYnTeG17nnnmGTNjxow4hUUsCPQT4BR9PxJGIIAAAgggkHyB2J6iz0arH6nRvauPPvrobEVjMf3111+3cYwfPz4W8WQL4pVXXjG6v7t+ECgJw7p168yhhx7q5QdAdC9z/QhS8CNJcffQ++LVV181J554YtxDtfG9/fbb9kenJk+enIh4k7btSQQqQXoRSGyC96JBpQgggAACCAwSgcSeot+4caPRX1IGHVFt27YtKeHaOHXhU1IG/XDRrl27vISrC6qeffZZ57/Y5yXYdyvVRXa6ECxJg4z1l4RBZxyStO1Jgikx+hFI5BH8T37yE/vLYTt27LAXgcX9Qrvvfe979vSxfr5Tp73nzJnjpzUd1qqL7H70ox+Zu+66y2Gtfqr65je/aXR696mnnrJXjuunhl0N+vbDPffcYz8Keuutt8w111zjqmov9egnmOVwzDHH2AvBvvOd73hZjstK9Q2Gz3/+87btzjnnHJdVO6/r3//9382ePXvst2z0s7FJuZDROQQVJkIgtlfRh+npCtZbbrnFfrXp7//+702cE7x+ivSoo44yn/zkJ228l19+eewTvI4AH3/8cXtVelg7xGGavi6pb1xccMEFRr9UqKMrl4OS+4IFC+wy5s2bZ39jvaGhweUinNaln8ydO3eu0c/9rl692h7Njx492ukyXFfW2Nho3yOu63Vdn36WWV8fvfnmm+3ZnPXr17teBPUh4FQgcafotQEfPny4RSgvL4/9aVN991rJXcO9995rTj31VPs8rv/0/f8f/vCH5sorr7Rf64trnEFcunhRH38sXLjQXHfddc7vX7Bv3z6b3LU8XcQX99PIf/7nf26Tuz5e0cWBhxxySEAVy8e1a9easrIy8/73vz+W8fUOSmdwmpqazNVXX23mz59vd556T+c5AnETSFyC18ZAR8XBoCSfhOHOO+80L7/8stERfJwH7YQcdthhRt9N1ve/t2zZEudwbULXEeq3v/1t8zd/8zfml7/8pbd4dSpZp2XjPgRnuG644YZY76TpBkO33nqr/XaC+puuUVGfi+ugnV/dgEt9TR99JOHjq7haEldhBBKX4HV6VEdVGrQ3ne0mJYVhDF/KHXfcYbT3f+2115q475Do7nVKYvrsWV+3ivtpSN25LjDVXcuUNFwOOmrX16I0vPHGG3bnx2X9rut6+umnzdKlS83ixYtj/xGLdpimTZtmFLNuzqMzMXpPx3XQ2ZBRo0bZ8NTXWltb4xoqcSHwf/303b3S7qRZPPzww0YXgel0vS7OifPpPSWHv/qrvzLHH3+8Za6pqbF7/0kw/8IXvmAvtIt7rD//+c/tkZXOkOhz8okTJzoLWVdL6zNiff6q2wwHH7c4W4DjimbNmmUv5Ax2fHU6+fDDD3e8FPfV3XfffXbHMu4X2ekWwLorpc446Na6Z511lnsMakTAkUAir6LXumvvX59v648BAX3eXFFR4e2UtOqvrKwEGgH7EaF2+NTfGBCIs0BiE3ycUYkNAQQQQACBYgtw+FvsFmD5CCCAAAIIeBAgwXtApUoEEEAAAQSKLUCCL3YLsHwEiiygOywm8FrbIquxeATiL0CCj38bESECXgR05fqUKVPsV9Xe+973Gt0Vsvc9JlwsVPdR+OlPf+qiKupAAIGIAiT4iGAUR2AwCDz00EM2of/iF78wut3vCy+8YG/EdNNNNzldvSeeeMKsXLnSaZ1UhgACuQmQ4HNzohQCg0pA9w74xje+YX9ERyummxtp3JlnnmnX85VXXrE/pHLccceZz33uczb5a4Lu+a/7DWjQ0fm5555rny9ZssT8wz/8gz0joO/df/e737U3rVm0aJG5//77jaYzIIBAYQVI8IX1ZmkIxELg97//vU3GvYMZN26cOfnkk+2oSy65xJx44on2yP700083X/nKV+x43U5W9wTQoB+22bp1q32uX1jTbY51Ixj9mp1uk6tBOxEzZsywP4BjR/APAQQKJkCCLxg1C0IgPgI6Ys90W1/dolj3s7/sssvsjaSU7JW09+7dG7oC559/vr09ro7gdYvf4JbSoTMxEQEEvAmQ4L3RUjEC8RXQkbp+ya33oCSuWz/rB530i43BnfuCu0XqansNuoubhtQdBP1IUTCk/ihUMJ5HBBAonAAJvnDWLAmB2AhcddVV9jS67rWvQb/roPv46377uo/9hz/8YbNixQo7TRfKKalPmDDBJn79KIyGRx99NOvX67SToFP5DAggUHgBEnzhzVkiAkUXOO200+yFcBdddJH9IaSpU6eaU045xV5Yp+AWLFhgf8pVn79/+tOftp+va/zf/d3fGf0IkXYAnn/+eY0KHU444QTzwAMP9HyGH1qYiQgg4FSAe9E75aQyBJInoM/K9TPM+gnU1EG/f15fX99ntI7IW1pa+o3vU6jXCx396y845d9rEk8RQMCjAAneIy5VI4AAAgggUCwBTtEXS57lIoAAAggg4FGABO8Rl6oRQAABBBAolgAJvljyLBcBBBBAAAGPAiR4j7hUjQACCCCAQLEESPDFkme5CCCAAAIIeBT4X2L1qHHYk5pTAAAAAElFTkSuQmCC" alt="plot of chunk histogram"/></p>
+
+<p>Set up a data.frame to hold the results of analysis for plotting, printing</p>
+
+<pre><code class="r">results.graph &lt;- data.frame(
+  Year = rep(rep(2015:2018, each = 2), 6),
+  Species = rep(c(&quot;AMBI&quot;, &quot;LEBI&quot;, &quot;PBGR&quot;, &quot;SORA&quot;, &quot;VIRA&quot;, &quot;All&quot;), each = 8),
+  Treatment = rep(c(&quot;Herbicide&quot;, &quot;Control&quot;), 24),
+  logEstimate = NA,
+  logEstLL = NA,
+  logEstUL = NA
+)
+</code></pre>
+
+<pre><code class="r">results.table &lt;- data.frame(
+  Species = unique(results.graph$Species),
+  t15ratioEst = NA,
+  t15ratioSE = NA,
+  t15t.ratio = NA,
+  t15p.value = NA,
+  t16ratioEst = NA,
+  t16ratioSE = NA,
+  t16t.ratio = NA,
+  t16p.value = NA,
+  t17ratioEst = NA,
+  t17ratioSE = NA,
+  t17t.ratio = NA,
+  t17p.value = NA,
+  t18ratioEst = NA,
+  t18ratioSE = NA,
+  t18t.ratio = NA,
+  t18p.value = NA,
+  df = NA
+)
+
+diff.results.table &lt;- data.frame(
+  Species = unique(results.graph$Species),
+  diff15Est = NA,
+  diff15LL = NA,
+  diff15UL = NA,
+  diff16Est = NA,
+  diff16LL = NA,
+  diff16UL = NA,
+  diff17Est = NA,
+  diff17LL = NA,
+  diff17UL = NA,
+  diff18Est = NA,
+  diff18LL = NA,
+  diff18UL = NA
+)
+diff.results.graph &lt;- data.frame(
+  Year = rep(rep(2015:2018), 6),
+  Species = rep(c(&quot;AMBI&quot;, &quot;LEBI&quot;, &quot;PBGR&quot;, &quot;SORA&quot;, &quot;VIRA&quot;, &quot;All&quot;), each = 4),
+  #Treatment = rep(c(&quot;Control&quot;, &quot;Herbicide&quot;), 12),
+  diffEstimate = NA,
+  diffEstLL = NA,
+  diffEstUL = NA
+)
+</code></pre>
+
+<hr/>
+
+<h3>AMBI Analysis</h3>
+
+<h4>GLMM analysis</h4>
+
+<pre><code class="r">table(NWPOINTR2$AMBI)
+</code></pre>
+
+<pre><code>## 
+##  0  1  2  3  4  5 
+## 95 57 29 12  8  1
+</code></pre>
+
+<pre><code class="r">var(NWPOINTR2$AMBI)/mean(NWPOINTR2$AMBI)
+</code></pre>
+
+<pre><code>## [1] 1.384672
+</code></pre>
+
+<pre><code class="r">AMBI_glmerBin &lt;- glmmTMB(AMBI ~ Treatment + Year + Treatment*Year + (1|SiteName),
+                             data = NWPOINTR2,
+                             family = &quot;poisson&quot;)
+(AMBI &lt;- summary(AMBI_glmerBin))
+</code></pre>
+
+<pre><code>##  Family: poisson  ( log )
+## Formula:          AMBI ~ Treatment + Year + Treatment * Year + (1 | SiteName)
+## Data: NWPOINTR2
+## 
+##      AIC      BIC   logLik deviance df.resid 
+##    494.4    524.2   -238.2    476.4      193 
+## 
+## Random effects:
+## 
+## Conditional model:
+##  Groups   Name        Variance Std.Dev.
+##  SiteName (Intercept) 0.1364   0.3693  
+## Number of obs: 202, groups:  SiteName, 9
+## 
+## Conditional model:
+##                           Estimate Std. Error z value Pr(&gt;|z|)  
+## (Intercept)                -0.7748     0.3055  -2.536   0.0112 *
+## TreatmentControl            0.7460     0.3343   2.231   0.0257 *
+## Year2016                    0.8379     0.3305   2.535   0.0112 *
+## Year2017                    0.7847     0.3360   2.335   0.0195 *
+## Year2018                   -0.5311     0.4954  -1.072   0.2836  
+## TreatmentControl:Year2016  -0.1979     0.4024  -0.492   0.6229  
+## TreatmentControl:Year2017  -1.0136     0.4389  -2.309   0.0209 *
+## TreatmentControl:Year2018  -1.1997     0.7268  -1.651   0.0988 .
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+</code></pre>
+
+<pre><code class="r">(AMBIEmm &lt;- emmeans(AMBI_glmerBin, pairwise~Treatment*Year, level = 0.9, type = &quot;response&quot;))
+</code></pre>
+
+<pre><code>## $emmeans
+##  Treatment Year  rate     SE  df lower.CL upper.CL
+##  Herbicide 2015 0.461 0.1408 193   0.2781    0.763
+##  Control   2015 0.972 0.2199 193   0.6684    1.412
+##  Herbicide 2016 1.065 0.2346 193   0.7401    1.533
+##  Control   2016 1.843 0.3443 193   1.3531    2.509
+##  Herbicide 2017 1.010 0.2327 193   0.6901    1.478
+##  Control   2017 0.773 0.1945 193   0.5098    1.172
+##  Herbicide 2018 0.271 0.1172 193   0.1325    0.554
+##  Control   2018 0.172 0.0895 193   0.0729    0.406
+## 
+## Confidence level used: 0.9 
+## Intervals are back-transformed from the log scale 
+## 
+## $contrasts
+##  contrast                                 ratio     SE  df null t.ratio p.value
+##  Herbicide Year2015 / Control Year2015    0.474 0.1586 193    1  -2.231  0.3379
+##  Herbicide Year2015 / Herbicide Year2016  0.433 0.1430 193    1  -2.535  0.1871
+##  Herbicide Year2015 / Control Year2016    0.250 0.0773 193    1  -4.486  0.0003
+##  Herbicide Year2015 / Herbicide Year2017  0.456 0.1533 193    1  -2.335  0.2801
+##  Herbicide Year2015 / Control Year2017    0.596 0.2092 193    1  -1.474  0.8205
+##  Herbicide Year2015 / Herbicide Year2018  1.701 0.8426 193    1   1.072  0.9618
+##  Herbicide Year2015 / Control Year2018    2.678 1.5351 193    1   1.718  0.6757
+##  Control Year2015 / Herbicide Year2016    0.912 0.2363 193    1  -0.355  1.0000
+##  Control Year2015 / Control Year2016      0.527 0.1210 193    1  -2.789  0.1038
+##  Control Year2015 / Herbicide Year2017    0.962 0.2558 193    1  -0.146  1.0000
+##  Control Year2015 / Control Year2017      1.257 0.3560 193    1   0.808  0.9925
+##  Control Year2015 / Herbicide Year2018    3.586 1.6143 193    1   2.837  0.0920
+##  Control Year2015 / Control Year2018      5.646 3.0178 193    1   3.238  0.0302
+##  Herbicide Year2016 / Control Year2016    0.578 0.1303 193    1  -2.432  0.2319
+##  Herbicide Year2016 / Herbicide Year2017  1.055 0.2755 193    1   0.204  1.0000
+##  Herbicide Year2016 / Control Year2017    1.378 0.3859 193    1   1.146  0.9457
+##  Herbicide Year2016 / Herbicide Year2018  3.932 1.7626 193    1   3.054  0.0515
+##  Herbicide Year2016 / Control Year2018    6.189 3.3000 193    1   3.419  0.0172
+##  Control Year2016 / Herbicide Year2017    1.824 0.4256 193    1   2.578  0.1705
+##  Control Year2016 / Control Year2017      2.384 0.6026 193    1   3.438  0.0162
+##  Control Year2016 / Herbicide Year2018    6.802 2.9360 193    1   4.441  0.0004
+##  Control Year2016 / Control Year2018     10.707 5.5579 193    1   4.568  0.0002
+##  Herbicide Year2017 / Control Year2017    1.307 0.3732 193    1   0.937  0.9820
+##  Herbicide Year2017 / Herbicide Year2018  3.728 1.6833 193    1   2.914  0.0754
+##  Herbicide Year2017 / Control Year2018    5.869 3.1452 193    1   3.302  0.0248
+##  Control Year2017 / Herbicide Year2018    2.853 1.3170 193    1   2.271  0.3154
+##  Control Year2017 / Control Year2018      4.491 2.4442 193    1   2.759  0.1117
+##  Herbicide Year2018 / Control Year2018    1.574 1.0162 193    1   0.703  0.9968
+## 
+## P value adjustment: tukey method for comparing a family of 8 estimates 
+## Tests are performed on the log scale
+</code></pre>
+
+<pre><code class="r">(AMBIdiff &lt;- eff_size(object = AMBIEmm, sigma = sigma(AMBI_glmerBin), 
+                      edf = 193, level = 0.9, type = &quot;response&quot;))
+</code></pre>
+
+<pre><code>## Since &#39;object&#39; is a list, we are using the contrasts already present.
+</code></pre>
+
+<pre><code>##  contrast                                  estimate    SE  df lower.CL upper.CL
+##  (Herbicide Year2015 - Control Year2015)    -0.7460 0.336 193  -1.3021  -0.1898
+##  (Herbicide Year2015 - Herbicide Year2016)  -0.8379 0.333 193  -1.3887  -0.2871
+##  (Herbicide Year2015 - Control Year2016)    -1.3860 0.317 193  -1.9099  -0.8622
+##  (Herbicide Year2015 - Herbicide Year2017)  -0.7847 0.338 193  -1.3440  -0.2254
+##  (Herbicide Year2015 - Control Year2017)    -0.5171 0.352 193  -1.0986   0.0644
+##  (Herbicide Year2015 - Herbicide Year2018)   0.5311 0.496 193  -0.2888   1.3511
+##  (Herbicide Year2015 - Control Year2018)     0.9849 0.576 193   0.0337   1.9361
+##  (Control Year2015 - Herbicide Year2016)    -0.0919 0.259 193  -0.5201   0.3362
+##  (Control Year2015 - Control Year2016)      -0.6400 0.232 193  -1.0231  -0.2569
+##  (Control Year2015 - Herbicide Year2017)    -0.0387 0.266 193  -0.4782   0.4008
+##  (Control Year2015 - Control Year2017)       0.2289 0.283 193  -0.2395   0.6973
+##  (Control Year2015 - Herbicide Year2018)     1.2771 0.455 193   0.5254   2.0288
+##  (Control Year2015 - Control Year2018)       1.7309 0.542 193   0.8355   2.6263
+##  (Herbicide Year2016 - Control Year2016)    -0.5481 0.227 193  -0.9234  -0.1728
+##  (Herbicide Year2016 - Herbicide Year2017)   0.0532 0.261 193  -0.3785   0.4849
+##  (Herbicide Year2016 - Control Year2017)     0.3208 0.280 193  -0.1428   0.7844
+##  (Herbicide Year2016 - Herbicide Year2018)   1.3690 0.454 193   0.6192   2.1189
+##  (Herbicide Year2016 - Control Year2018)     1.8228 0.541 193   0.9283   2.7173
+##  (Control Year2016 - Herbicide Year2017)     0.6013 0.235 193   0.2125   0.9901
+##  (Control Year2016 - Control Year2017)       0.8689 0.257 193   0.4449   1.2930
+##  (Control Year2016 - Herbicide Year2018)     1.9172 0.443 193   1.1857   2.6486
+##  (Control Year2016 - Control Year2018)       2.3709 0.533 193   1.4901   3.2517
+##  (Herbicide Year2017 - Control Year2017)     0.2676 0.286 193  -0.2049   0.7401
+##  (Herbicide Year2017 - Herbicide Year2018)   1.3159 0.456 193   0.5614   2.0703
+##  (Herbicide Year2017 - Control Year2018)     1.7696 0.543 193   0.8714   2.6678
+##  (Control Year2017 - Herbicide Year2018)     1.0482 0.465 193   0.2801   1.8164
+##  (Control Year2017 - Control Year2018)       1.5020 0.550 193   0.5935   2.4104
+##  (Herbicide Year2018 - Control Year2018)     0.4537 0.646 193  -0.6139   1.5214
+## 
+## sigma used for effect sizes: 1 
+## Confidence level used: 0.9
+</code></pre>
+
+<pre><code class="r">#emmip(AMBI_glmerBin,Treatment ~ Year, type = &quot;response&quot;)
+</code></pre>
+
+<p>Results for plotting</p>
+
+<pre><code class="r">AMBI_emmeans &lt;- summary(AMBIEmm$emmeans)
+results.graph[results.graph$Species == &quot;AMBI&quot;,
+              c(&quot;logEstimate&quot;, &quot;logEstLL&quot;, &quot;logEstUL&quot;)] &lt;-
+  AMBI_emmeans[,c(&quot;rate&quot;, &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+
+AMBI_contrasts &lt;- summary(AMBIEmm$contrasts)
+AMBI_diff &lt;- summary(AMBIdiff)
+#2015
+results.table[results.table$Species == &quot;AMBI&quot;, 
+              c(&quot;t15ratioEst&quot;, &quot;t15ratioSE&quot;, &quot;t15t.ratio&quot;, &quot;t15p.value&quot;)] &lt;- 
+  AMBI_contrasts[AMBI_contrasts$contrast == &quot;Herbicide Year2015 / Control Year2015&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;AMBI&quot; &amp; diff.results.graph$Year == 2015, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  AMBI_diff[AMBI_diff$contrast == &quot;(Herbicide Year2015 - Control Year2015)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+#2016
+results.table[results.table$Species == &quot;AMBI&quot;, 
+              c(&quot;t16ratioEst&quot;, &quot;t16ratioSE&quot;, &quot;t16t.ratio&quot;, &quot;t16p.value&quot;)] &lt;- 
+  AMBI_contrasts[AMBI_contrasts$contrast == &quot;Herbicide Year2016 / Control Year2016&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;AMBI&quot; &amp; diff.results.graph$Year == 2016, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  AMBI_diff[AMBI_diff$contrast == &quot;(Herbicide Year2016 - Control Year2016)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+#2017
+results.table[results.table$Species == &quot;AMBI&quot;, 
+              c(&quot;t15ratioEst&quot;, &quot;t17ratioSE&quot;, &quot;t17t.ratio&quot;, &quot;t17p.value&quot;)] &lt;- 
+  AMBI_contrasts[AMBI_contrasts$contrast == &quot;Herbicide Year2017 / Control Year2017&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;AMBI&quot; &amp; diff.results.graph$Year == 2017, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  AMBI_diff[AMBI_diff$contrast == &quot;(Herbicide Year2017 - Control Year2017)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+
+#2018
+results.table[results.table$Species == &quot;AMBI&quot;, 
+              c(&quot;t18ratioEst&quot;, &quot;t18ratioSE&quot;, &quot;t18t.ratio&quot;, &quot;t18p.value&quot;)] &lt;- 
+  AMBI_contrasts[AMBI_contrasts$contrast == &quot;Herbicide Year2018 / Control Year2018&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;AMBI&quot; &amp; diff.results.graph$Year == 2018, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  AMBI_diff[AMBI_diff$contrast == &quot;(Herbicide Year2018 - Control Year2018)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+</code></pre>
+
+<hr/>
+
+<h3>LEBI Analysis</h3>
+
+<h4>GLMM analysis</h4>
+
+<pre><code class="r">table(NWPOINTR2$LEBI)
+</code></pre>
+
+<pre><code>## 
+##   0   1   2   3 
+## 175  24   1   2
+</code></pre>
+
+<pre><code class="r">var(NWPOINTR2$LEBI)/mean(NWPOINTR2$LEBI)
+</code></pre>
+
+<pre><code>## [1] 1.285448
+</code></pre>
+
+<pre><code class="r">LEBI_glmerBin &lt;- glmmTMB(LEBI ~ Treatment + Year + Treatment*Year + (1|SiteName),
+                         data = NWPOINTR2,
+                         family = &quot;poisson&quot;)
+(LEBI &lt;- summary(LEBI_glmerBin))
+</code></pre>
+
+<pre><code>##  Family: poisson  ( log )
+## Formula:          LEBI ~ Treatment + Year + Treatment * Year + (1 | SiteName)
+## Data: NWPOINTR2
+## 
+##      AIC      BIC   logLik deviance df.resid 
+##    188.5    218.3    -85.3    170.5      193 
+## 
+## Random effects:
+## 
+## Conditional model:
+##  Groups   Name        Variance Std.Dev.
+##  SiteName (Intercept) 0.373    0.6107  
+## Number of obs: 202, groups:  SiteName, 9
+## 
+## Conditional model:
+##                             Estimate Std. Error z value Pr(&gt;|z|)   
+## (Intercept)                  -1.0603     0.3922  -2.704  0.00685 **
+## TreatmentControl             -1.0861     0.5853  -1.856  0.06352 . 
+## Year2016                     -1.7243     0.7688  -2.243  0.02490 * 
+## Year2017                     -0.5223     0.5108  -1.023  0.30647   
+## Year2018                    -20.9147 11820.2359  -0.002  0.99859   
+## TreatmentControl:Year2016     1.7243     1.0445   1.651  0.09878 . 
+## TreatmentControl:Year2017     0.3322     0.9171   0.362  0.71716   
+## TreatmentControl:Year2018    20.4766 11820.2359   0.002  0.99862   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+</code></pre>
+
+<pre><code class="r">(LEBIEmm &lt;- emmeans(LEBI_glmerBin, pairwise ~ Treatment*Year, level = 0.9, type = &quot;response&quot;))
+</code></pre>
+
+<pre><code>## $emmeans
+##  Treatment Year   rate       SE  df lower.CL upper.CL
+##  Herbicide 2015 0.3463 1.36e-01 193   0.1811        1
+##  Control   2015 0.1169 6.59e-02 193   0.0460        0
+##  Herbicide 2016 0.0618 4.62e-02 193   0.0179        0
+##  Control   2016 0.1169 6.59e-02 193   0.0460        0
+##  Herbicide 2017 0.2054 9.77e-02 193   0.0936        0
+##  Control   2017 0.0967 6.12e-02 193   0.0340        0
+##  Herbicide 2018 0.0000 3.38e-06 193   0.0000      Inf
+##  Control   2018 0.0754 5.77e-02 193   0.0213        0
+## 
+## Confidence level used: 0.9 
+## Intervals are back-transformed from the log scale 
+## 
+## $contrasts
+##  contrast                                   ratio       SE  df null t.ratio p.value
+##  Herbicide Year2015 / Control Year2015   3.00e+00 2.00e+00 193    1   1.856  0.5830
+##  Herbicide Year2015 / Herbicide Year2016 6.00e+00 4.00e+00 193    1   2.243  0.3311
+##  Herbicide Year2015 / Control Year2016   3.00e+00 2.00e+00 193    1   1.856  0.5830
+##  Herbicide Year2015 / Herbicide Year2017 2.00e+00 1.00e+00 193    1   1.023  0.9705
+##  Herbicide Year2015 / Control Year2017   4.00e+00 2.00e+00 193    1   1.950  0.5185
+##  Herbicide Year2015 / Herbicide Year2018 1.21e+09 1.43e+13 193    1   0.002  1.0000
+##  Herbicide Year2015 / Control Year2018   5.00e+00 4.00e+00 193    1   1.971  0.5042
+##  Control Year2015 / Herbicide Year2016   2.00e+00 2.00e+00 193    1   0.736  0.9958
+##  Control Year2015 / Control Year2016     1.00e+00 1.00e+00 193    1   0.000  1.0000
+##  Control Year2015 / Herbicide Year2017   1.00e+00 0.00e+00 193    1  -0.868  0.9885
+##  Control Year2015 / Control Year2017     1.00e+00 1.00e+00 193    1   0.248  1.0000
+##  Control Year2015 / Herbicide Year2018   4.09e+08 4.83e+12 193    1   0.002  1.0000
+##  Control Year2015 / Control Year2018     2.00e+00 1.00e+00 193    1   0.504  0.9996
+##  Herbicide Year2016 / Control Year2016   1.00e+00 0.00e+00 193    1  -0.736  0.9958
+##  Herbicide Year2016 / Herbicide Year2017 0.00e+00 0.00e+00 193    1  -1.469  0.8229
+##  Herbicide Year2016 / Control Year2017   1.00e+00 1.00e+00 193    1  -0.490  0.9997
+##  Herbicide Year2016 / Herbicide Year2018 2.16e+08 2.55e+12 193    1   0.002  1.0000
+##  Herbicide Year2016 / Control Year2018   1.00e+00 1.00e+00 193    1  -0.199  1.0000
+##  Control Year2016 / Herbicide Year2017   1.00e+00 0.00e+00 193    1  -0.868  0.9885
+##  Control Year2016 / Control Year2017     1.00e+00 1.00e+00 193    1   0.248  1.0000
+##  Control Year2016 / Herbicide Year2018   4.09e+08 4.83e+12 193    1   0.002  1.0000
+##  Control Year2016 / Control Year2018     2.00e+00 1.00e+00 193    1   0.504  0.9996
+##  Herbicide Year2017 / Control Year2017   2.00e+00 2.00e+00 193    1   1.064  0.9634
+##  Herbicide Year2017 / Herbicide Year2018 7.18e+08 8.49e+12 193    1   0.002  1.0000
+##  Herbicide Year2017 / Control Year2018   3.00e+00 2.00e+00 193    1   1.219  0.9253
+##  Control Year2017 / Herbicide Year2018   3.38e+08 3.99e+12 193    1   0.002  1.0000
+##  Control Year2017 / Control Year2018     1.00e+00 1.00e+00 193    1   0.271  1.0000
+##  Herbicide Year2018 / Control Year2018   0.00e+00 0.00e+00 193    1  -0.002  1.0000
+## 
+## P value adjustment: tukey method for comparing a family of 8 estimates 
+## Tests are performed on the log scale
+</code></pre>
+
+<pre><code class="r">(LEBIdiff &lt;- eff_size(object = LEBIEmm, sigma = sigma(LEBI_glmerBin), 
+                      edf = 193, level = 0.9, type = &quot;reponse&quot;))
+</code></pre>
+
+<pre><code>## Since &#39;object&#39; is a list, we are using the contrasts already present.
+</code></pre>
+
+<pre><code>##  contrast                                  estimate       SE  df  lower.CL upper.CL
+##  (Herbicide Year2015 - Control Year2015)      1.086 5.88e-01 193  1.14e-01 2.06e+00
+##  (Herbicide Year2015 - Herbicide Year2016)    1.724 7.74e-01 193  4.45e-01 3.00e+00
+##  (Herbicide Year2015 - Control Year2016)      1.086 5.88e-01 193  1.14e-01 2.06e+00
+##  (Herbicide Year2015 - Herbicide Year2017)    0.522 5.11e-01 193 -3.23e-01 1.37e+00
+##  (Herbicide Year2015 - Control Year2017)      1.276 6.58e-01 193  1.89e-01 2.36e+00
+##  (Herbicide Year2015 - Herbicide Year2018)   20.915 1.18e+04 193 -1.95e+04 1.96e+04
+##  (Herbicide Year2015 - Control Year2018)      1.524 7.77e-01 193  2.40e-01 2.81e+00
+##  (Control Year2015 - Herbicide Year2016)      0.638 8.68e-01 193 -7.96e-01 2.07e+00
+##  (Control Year2015 - Control Year2016)        0.000 7.07e-01 193 -1.17e+00 1.17e+00
+##  (Control Year2015 - Herbicide Year2017)     -0.564 6.50e-01 193 -1.64e+00 5.11e-01
+##  (Control Year2015 - Control Year2017)        0.190 7.65e-01 193 -1.07e+00 1.46e+00
+##  (Control Year2015 - Herbicide Year2018)     19.829 1.18e+04 193 -1.95e+04 1.96e+04
+##  (Control Year2015 - Control Year2018)        0.438 8.69e-01 193 -9.98e-01 1.87e+00
+##  (Herbicide Year2016 - Control Year2016)     -0.638 8.68e-01 193 -2.07e+00 7.96e-01
+##  (Herbicide Year2016 - Herbicide Year2017)   -1.202 8.20e-01 193 -2.56e+00 1.54e-01
+##  (Herbicide Year2016 - Control Year2017)     -0.448 9.15e-01 193 -1.96e+00 1.06e+00
+##  (Herbicide Year2016 - Herbicide Year2018)   19.190 1.18e+04 193 -1.95e+04 1.96e+04
+##  (Herbicide Year2016 - Control Year2018)     -0.200 1.00e+00 193 -1.86e+00 1.46e+00
+##  (Control Year2016 - Herbicide Year2017)     -0.564 6.50e-01 193 -1.64e+00 5.11e-01
+##  (Control Year2016 - Control Year2017)        0.190 7.65e-01 193 -1.07e+00 1.46e+00
+##  (Control Year2016 - Herbicide Year2018)     19.829 1.18e+04 193 -1.95e+04 1.96e+04
+##  (Control Year2016 - Control Year2018)        0.438 8.69e-01 193 -9.98e-01 1.87e+00
+##  (Herbicide Year2017 - Control Year2017)      0.754 7.10e-01 193 -4.19e-01 1.93e+00
+##  (Herbicide Year2017 - Herbicide Year2018)   20.392 1.18e+04 193 -1.95e+04 1.96e+04
+##  (Herbicide Year2017 - Control Year2018)      1.002 8.23e-01 193 -3.59e-01 2.36e+00
+##  (Control Year2017 - Herbicide Year2018)     19.638 1.18e+04 193 -1.95e+04 1.96e+04
+##  (Control Year2017 - Control Year2018)        0.248 9.15e-01 193 -1.26e+00 1.76e+00
+##  (Herbicide Year2018 - Control Year2018)    -19.390 1.18e+04 193 -1.96e+04 1.95e+04
+## 
+## sigma used for effect sizes: 1 
+## Confidence level used: 0.9
+</code></pre>
+
+<pre><code class="r">#emmip(LEBI_glmerBin,Treatment ~ Year, type = &quot;response&quot;)
+</code></pre>
+
+<p>Results for plotting</p>
+
+<pre><code class="r">LEBI_emmeans &lt;- summary(LEBIEmm$emmeans)
+results.graph[results.graph$Species == &quot;LEBI&quot;,
+              c(&quot;logEstimate&quot;, &quot;logEstLL&quot;, &quot;logEstUL&quot;)] &lt;-
+  LEBI_emmeans[,c(&quot;rate&quot;, &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+
+LEBI_contrasts &lt;- summary(LEBIEmm$contrasts)
+LEBI_diff &lt;- summary(LEBIdiff)
+#2015
+results.table[results.table$Species == &quot;LEBI&quot;, 
+              c(&quot;t15ratioEst&quot;, &quot;t15ratioSE&quot;, &quot;t15t.ratio&quot;, &quot;t15p.value&quot;)] &lt;- 
+  LEBI_contrasts[LEBI_contrasts$contrast == &quot;Herbicide Year2015 / Control Year2015&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;LEBI&quot; &amp; diff.results.graph$Year == 2015, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  LEBI_diff[LEBI_diff$contrast == &quot;(Herbicide Year2015 - Control Year2015)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+#2016
+results.table[results.table$Species == &quot;LEBI&quot;, 
+              c(&quot;t16ratioEst&quot;, &quot;t16ratioSE&quot;, &quot;t16t.ratio&quot;, &quot;t16p.value&quot;)] &lt;- 
+  LEBI_contrasts[LEBI_contrasts$contrast == &quot;Herbicide Year2016 / Control Year2016&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;LEBI&quot; &amp; diff.results.graph$Year == 2016, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  LEBI_diff[LEBI_diff$contrast == &quot;(Herbicide Year2016 - Control Year2016)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+#2017
+results.table[results.table$Species == &quot;LEBI&quot;, 
+              c(&quot;t15ratioEst&quot;, &quot;t17ratioSE&quot;, &quot;t17t.ratio&quot;, &quot;t17p.value&quot;)] &lt;- 
+  LEBI_contrasts[LEBI_contrasts$contrast == &quot;Herbicide Year2017 / Control Year2017&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;LEBI&quot; &amp; diff.results.graph$Year == 2017, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  LEBI_diff[LEBI_diff$contrast == &quot;(Herbicide Year2017 - Control Year2017)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+
+#2018
+results.table[results.table$Species == &quot;LEBI&quot;, 
+              c(&quot;t18ratioEst&quot;, &quot;t18ratioSE&quot;, &quot;t18t.ratio&quot;, &quot;t18p.value&quot;)] &lt;- 
+  LEBI_contrasts[LEBI_contrasts$contrast == &quot;Herbicide Year2018 / Control Year2018&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;LEBI&quot; &amp; diff.results.graph$Year == 2018, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  LEBI_diff[LEBI_diff$contrast == &quot;(Herbicide Year2018 - Control Year2018)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+</code></pre>
+
+<hr/>
+
+<h3>PBGR Analysis</h3>
+
+<h4>GLMM analysis</h4>
+
+<pre><code class="r">table(NWPOINTR2$PBGR)
+</code></pre>
+
+<pre><code>## 
+##   0   1   2   3   4   5   6 
+## 161  27   5   4   3   1   1
+</code></pre>
+
+<pre><code class="r">var(NWPOINTR2$PBGR)/mean(NWPOINTR2$PBGR)
+</code></pre>
+
+<pre><code>## [1] 2.321725
+</code></pre>
+
+<pre><code class="r">PBGR_glmerBin &lt;- glmmTMB(PBGR ~ Treatment + Year + Treatment*Year + (1|SiteName),
+                         data = NWPOINTR2,
+                         family = &quot;poisson&quot;)
+(PBGR &lt;- summary(PBGR_glmerBin))
+</code></pre>
+
+<pre><code>##  Family: poisson  ( log )
+## Formula:          PBGR ~ Treatment + Year + Treatment * Year + (1 | SiteName)
+## Data: NWPOINTR2
+## 
+##      AIC      BIC   logLik deviance df.resid 
+##    338.7    368.5   -160.4    320.7      193 
+## 
+## Random effects:
+## 
+## Conditional model:
+##  Groups   Name        Variance Std.Dev.
+##  SiteName (Intercept) 0.6642   0.815   
+## Number of obs: 202, groups:  SiteName, 9
+## 
+## Conditional model:
+##                           Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)                -1.8047     0.5103  -3.536 0.000406 ***
+## TreatmentControl            0.5113     0.5089   1.005 0.315060    
+## Year2016                    0.1369     0.5564   0.246 0.805700    
+## Year2017                    0.1670     0.5568   0.300 0.764282    
+## Year2018                    0.6794     0.5198   1.307 0.191220    
+## TreatmentControl:Year2016   0.3556     0.6753   0.527 0.598488    
+## TreatmentControl:Year2017  -0.1391     0.7010  -0.198 0.842661    
+## TreatmentControl:Year2018  -2.1932     0.9264  -2.367 0.017914 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+</code></pre>
+
+<pre><code class="r">(PBGREmm &lt;- emmeans(PBGR_glmerBin, pairwise ~ Treatment*Year, level = 0.9, type = &quot;response&quot;))
+</code></pre>
+
+<pre><code>## $emmeans
+##  Treatment Year   rate     SE  df lower.CL upper.CL
+##  Herbicide 2015 0.1645 0.0840 193   0.0708    0.382
+##  Control   2015 0.2743 0.1188 193   0.1341    0.561
+##  Herbicide 2016 0.1887 0.0915 193   0.0846    0.421
+##  Control   2016 0.4489 0.1752 193   0.2355    0.856
+##  Herbicide 2017 0.1944 0.0952 193   0.0865    0.437
+##  Control   2017 0.2821 0.1236 193   0.1367    0.582
+##  Herbicide 2018 0.3245 0.1481 193   0.1527    0.690
+##  Control   2018 0.0604 0.0471 193   0.0166    0.219
+## 
+## Confidence level used: 0.9 
+## Intervals are back-transformed from the log scale 
+## 
+## $contrasts
+##  contrast                                ratio    SE  df null t.ratio p.value
+##  Herbicide Year2015 / Control Year2015   0.600 0.305 193    1  -1.005  0.9733
+##  Herbicide Year2015 / Herbicide Year2016 0.872 0.485 193    1  -0.246  1.0000
+##  Herbicide Year2015 / Control Year2016   0.367 0.173 193    1  -2.123  0.4042
+##  Herbicide Year2015 / Herbicide Year2017 0.846 0.471 193    1  -0.300  1.0000
+##  Herbicide Year2015 / Control Year2017   0.583 0.297 193    1  -1.058  0.9645
+##  Herbicide Year2015 / Herbicide Year2018 0.507 0.264 193    1  -1.307  0.8953
+##  Herbicide Year2015 / Control Year2018   2.725 2.232 193    1   1.224  0.9238
+##  Control Year2015 / Herbicide Year2016   1.454 0.705 193    1   0.772  0.9943
+##  Control Year2015 / Control Year2016     0.611 0.234 193    1  -1.287  0.9028
+##  Control Year2015 / Herbicide Year2017   1.411 0.685 193    1   0.710  0.9966
+##  Control Year2015 / Control Year2017     0.973 0.415 193    1  -0.065  1.0000
+##  Control Year2015 / Herbicide Year2018   0.845 0.372 193    1  -0.382  0.9999
+##  Control Year2015 / Control Year2018     4.544 3.499 193    1   1.966  0.5077
+##  Herbicide Year2016 / Control Year2016   0.420 0.188 193    1  -1.939  0.5257
+##  Herbicide Year2016 / Herbicide Year2017 0.970 0.519 193    1  -0.056  1.0000
+##  Herbicide Year2016 / Control Year2017   0.669 0.325 193    1  -0.828  0.9913
+##  Herbicide Year2016 / Herbicide Year2018 0.581 0.289 193    1  -1.092  0.9579
+##  Herbicide Year2016 / Control Year2018   3.125 2.514 193    1   1.416  0.8488
+##  Control Year2016 / Herbicide Year2017   2.309 1.033 193    1   1.871  0.5725
+##  Control Year2016 / Control Year2017     1.591 0.610 193    1   1.212  0.9274
+##  Control Year2016 / Herbicide Year2018   1.383 0.550 193    1   0.815  0.9921
+##  Control Year2016 / Control Year2018     7.436 5.553 193    1   2.687  0.1330
+##  Herbicide Year2017 / Control Year2017   0.689 0.334 193    1  -0.767  0.9945
+##  Herbicide Year2017 / Herbicide Year2018 0.599 0.297 193    1  -1.033  0.9688
+##  Herbicide Year2017 / Control Year2018   3.221 2.589 193    1   1.455  0.8302
+##  Control Year2017 / Herbicide Year2018   0.869 0.382 193    1  -0.319  1.0000
+##  Control Year2017 / Control Year2018     4.672 3.596 193    1   2.003  0.4825
+##  Herbicide Year2018 / Control Year2018   5.376 4.165 193    1   2.171  0.3741
+## 
+## P value adjustment: tukey method for comparing a family of 8 estimates 
+## Tests are performed on the log scale
+</code></pre>
+
+<pre><code class="r">(PBGRdiff &lt;- eff_size(object = PBGREmm, sigma = sigma(PBGR_glmerBin), 
+                      edf = 193, level = 0.9, type = &quot;reponse&quot;))
+</code></pre>
+
+<pre><code>## Since &#39;object&#39; is a list, we are using the contrasts already present.
+</code></pre>
+
+<pre><code>##  contrast                                  estimate    SE  df lower.CL upper.CL
+##  (Herbicide Year2015 - Control Year2015)    -0.5113 0.510 193  -1.3535    0.331
+##  (Herbicide Year2015 - Herbicide Year2016)  -0.1369 0.556 193  -1.0566    0.783
+##  (Herbicide Year2015 - Control Year2016)    -1.0037 0.476 193  -1.7899   -0.218
+##  (Herbicide Year2015 - Herbicide Year2017)  -0.1670 0.557 193  -1.0873    0.753
+##  (Herbicide Year2015 - Control Year2017)    -0.5391 0.510 193  -1.3825    0.304
+##  (Herbicide Year2015 - Herbicide Year2018)  -0.6794 0.521 193  -1.5404    0.182
+##  (Herbicide Year2015 - Control Year2018)     1.0026 0.820 193  -0.3535    2.359
+##  (Control Year2015 - Herbicide Year2016)     0.3744 0.485 193  -0.4277    1.177
+##  (Control Year2015 - Control Year2016)      -0.4925 0.384 193  -1.1264    0.141
+##  (Control Year2015 - Herbicide Year2017)     0.3443 0.485 193  -0.4581    1.147
+##  (Control Year2015 - Control Year2017)      -0.0278 0.427 193  -0.7333    0.678
+##  (Control Year2015 - Herbicide Year2018)    -0.1681 0.440 193  -0.8956    0.559
+##  (Control Year2015 - Control Year2018)       1.5139 0.774 193   0.2347    2.793
+##  (Herbicide Year2016 - Control Year2016)    -0.8669 0.449 193  -1.6093   -0.124
+##  (Herbicide Year2016 - Herbicide Year2017)  -0.0301 0.535 193  -0.9143    0.854
+##  (Herbicide Year2016 - Control Year2017)    -0.4022 0.486 193  -1.2056    0.401
+##  (Herbicide Year2016 - Herbicide Year2018)  -0.5425 0.498 193  -1.3651    0.280
+##  (Herbicide Year2016 - Control Year2018)     1.1394 0.807 193  -0.1937    2.473
+##  (Control Year2016 - Herbicide Year2017)     0.8368 0.449 193   0.0942    1.579
+##  (Control Year2016 - Control Year2017)       0.4647 0.384 193  -0.1699    1.099
+##  (Control Year2016 - Herbicide Year2018)     0.3244 0.398 193  -0.3338    0.983
+##  (Control Year2016 - Control Year2018)       2.0063 0.754 193   0.7606    3.252
+##  (Herbicide Year2017 - Control Year2017)    -0.3721 0.485 193  -1.1744    0.430
+##  (Herbicide Year2017 - Herbicide Year2018)  -0.5124 0.497 193  -1.3334    0.309
+##  (Herbicide Year2017 - Control Year2018)     1.1695 0.806 193  -0.1629    2.502
+##  (Control Year2017 - Herbicide Year2018)    -0.1403 0.439 193  -0.8666    0.586
+##  (Control Year2017 - Control Year2018)       1.5417 0.774 193   0.2630    2.820
+##  (Herbicide Year2018 - Control Year2018)     1.6820 0.780 193   0.3936    2.970
+## 
+## sigma used for effect sizes: 1 
+## Confidence level used: 0.9
+</code></pre>
+
+<pre><code class="r">#emmip(PBGR_glmerBin,Treatment ~ Year, type = &quot;response&quot;)
+</code></pre>
+
+<p>Results for plotting</p>
+
+<pre><code class="r">PBGR_emmeans &lt;- summary(PBGREmm$emmeans)
+results.graph[results.graph$Species == &quot;PBGR&quot;,
+              c(&quot;logEstimate&quot;, &quot;logEstLL&quot;, &quot;logEstUL&quot;)] &lt;-
+  PBGR_emmeans[,c(&quot;rate&quot;, &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+
+PBGR_contrasts &lt;- summary(PBGREmm$contrasts)
+PBGR_diff &lt;- summary(PBGRdiff)
+#2015
+results.table[results.table$Species == &quot;PBGR&quot;, 
+              c(&quot;t15ratioEst&quot;, &quot;t15ratioSE&quot;, &quot;t15t.ratio&quot;, &quot;t15p.value&quot;)] &lt;- 
+  PBGR_contrasts[PBGR_contrasts$contrast == &quot;Herbicide Year2015 / Control Year2015&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;PBGR&quot; &amp; diff.results.graph$Year == 2015, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  PBGR_diff[PBGR_diff$contrast == &quot;(Herbicide Year2015 - Control Year2015)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+#2016
+results.table[results.table$Species == &quot;PBGR&quot;, 
+              c(&quot;t16ratioEst&quot;, &quot;t16ratioSE&quot;, &quot;t16t.ratio&quot;, &quot;t16p.value&quot;)] &lt;- 
+  PBGR_contrasts[PBGR_contrasts$contrast == &quot;Herbicide Year2016 / Control Year2016&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;PBGR&quot; &amp; diff.results.graph$Year == 2016, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  PBGR_diff[PBGR_diff$contrast == &quot;(Herbicide Year2016 - Control Year2016)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+#2017
+results.table[results.table$Species == &quot;PBGR&quot;, 
+              c(&quot;t15ratioEst&quot;, &quot;t17ratioSE&quot;, &quot;t17t.ratio&quot;, &quot;t17p.value&quot;)] &lt;- 
+  PBGR_contrasts[PBGR_contrasts$contrast == &quot;Herbicide Year2017 / Control Year2017&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;PBGR&quot; &amp; diff.results.graph$Year == 2017, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  PBGR_diff[PBGR_diff$contrast == &quot;(Herbicide Year2017 - Control Year2017)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+
+#2018
+results.table[results.table$Species == &quot;PBGR&quot;, 
+              c(&quot;t18ratioEst&quot;, &quot;t18ratioSE&quot;, &quot;t18t.ratio&quot;, &quot;t18p.value&quot;)] &lt;- 
+  PBGR_contrasts[PBGR_contrasts$contrast == &quot;Herbicide Year2018 / Control Year2018&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;PBGR&quot; &amp; diff.results.graph$Year == 2018, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  PBGR_diff[PBGR_diff$contrast == &quot;(Herbicide Year2018 - Control Year2018)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+</code></pre>
+
+<hr/>
+
+<h3>SORA Analysis</h3>
+
+<h4>GLMM analysis</h4>
+
+<pre><code class="r">table(NWPOINTR2$SORA)
+</code></pre>
+
+<pre><code>## 
+##   0   1   2   3   4   5   6 
+## 130  42  12  11   3   3   1
+</code></pre>
+
+<pre><code class="r">var(NWPOINTR2$SORA)/mean(NWPOINTR2$SORA)
+</code></pre>
+
+<pre><code>## [1] 1.992763
+</code></pre>
+
+<pre><code class="r">SORA_glmerBin &lt;- glmmTMB(SORA ~ Treatment + Year + Treatment*Year + (1|SiteName),
+                         data = NWPOINTR2,
+                         family = &quot;poisson&quot;)
+(SORA &lt;- summary(SORA_glmerBin))
+</code></pre>
+
+<pre><code>##  Family: poisson  ( log )
+## Formula:          SORA ~ Treatment + Year + Treatment * Year + (1 | SiteName)
+## Data: NWPOINTR2
+## 
+##      AIC      BIC   logLik deviance df.resid 
+##    453.6    483.3   -217.8    435.6      193 
+## 
+## Random effects:
+## 
+## Conditional model:
+##  Groups   Name        Variance Std.Dev.
+##  SiteName (Intercept) 0.3931   0.627   
+## Number of obs: 202, groups:  SiteName, 9
+## 
+## Conditional model:
+##                           Estimate Std. Error z value Pr(&gt;|z|)   
+## (Intercept)                -0.4373     0.3122  -1.401  0.16131   
+## TreatmentControl            0.1408     0.3036   0.464  0.64282   
+## Year2016                   -0.8153     0.4014  -2.031  0.04227 * 
+## Year2017                    0.6073     0.2921   2.079  0.03762 * 
+## Year2018                    0.1239     0.3413   0.363  0.71657   
+## TreatmentControl:Year2016   0.4098     0.5151   0.796  0.42628   
+## TreatmentControl:Year2017  -0.8965     0.4366  -2.053  0.04006 * 
+## TreatmentControl:Year2018  -2.9610     1.0744  -2.756  0.00585 **
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+</code></pre>
+
+<pre><code class="r">(SORAEmm &lt;- emmeans(SORA_glmerBin, pairwise ~ Treatment*Year, level = 0.9, type = &quot;response&quot;))
+</code></pre>
+
+<pre><code>## $emmeans
+##  Treatment Year   rate     SE  df lower.CL upper.CL
+##  Herbicide 2015 0.6458 0.2016 193  0.38549    1.082
+##  Control   2015 0.7434 0.2219 193  0.45388    1.218
+##  Herbicide 2016 0.2858 0.1136 193  0.14813    0.551
+##  Control   2016 0.4956 0.1643 193  0.28650    0.857
+##  Herbicide 2017 1.1854 0.3333 193  0.74475    1.887
+##  Control   2017 0.5567 0.1880 193  0.31864    0.973
+##  Herbicide 2018 0.7310 0.2461 193  0.41909    1.275
+##  Control   2018 0.0436 0.0446 193  0.00801    0.237
+## 
+## Confidence level used: 0.9 
+## Intervals are back-transformed from the log scale 
+## 
+## $contrasts
+##  contrast                                 ratio      SE  df null t.ratio p.value
+##  Herbicide Year2015 / Control Year2015    0.869  0.2637 193    1  -0.464  0.9998
+##  Herbicide Year2015 / Herbicide Year2016  2.260  0.9071 193    1   2.031  0.4640
+##  Herbicide Year2015 / Control Year2016    1.303  0.4380 193    1   0.787  0.9936
+##  Herbicide Year2015 / Herbicide Year2017  0.545  0.1592 193    1  -2.079  0.4323
+##  Herbicide Year2015 / Control Year2017    1.160  0.4020 193    1   0.428  0.9999
+##  Herbicide Year2015 / Herbicide Year2018  0.883  0.3016 193    1  -0.363  1.0000
+##  Herbicide Year2015 / Control Year2018   14.826 15.2210 193    1   2.626  0.1530
+##  Control Year2015 / Herbicide Year2016    2.601  1.0183 193    1   2.442  0.2273
+##  Control Year2015 / Control Year2016      1.500  0.4841 193    1   1.256  0.9135
+##  Control Year2015 / Herbicide Year2017    0.627  0.1744 193    1  -1.678  0.7016
+##  Control Year2015 / Control Year2017      1.335  0.4450 193    1   0.868  0.9885
+##  Control Year2015 / Herbicide Year2018    1.017  0.3338 193    1   0.051  1.0000
+##  Control Year2015 / Control Year2018     17.067 17.4461 193    1   2.775  0.1074
+##  Herbicide Year2016 / Control Year2016    0.577  0.2406 193    1  -1.320  0.8905
+##  Herbicide Year2016 / Herbicide Year2017  0.241  0.0922 193    1  -3.720  0.0063
+##  Herbicide Year2016 / Control Year2017    0.513  0.2184 193    1  -1.567  0.7691
+##  Herbicide Year2016 / Herbicide Year2018  0.391  0.1648 193    1  -2.228  0.3399
+##  Herbicide Year2016 / Control Year2018    6.561  6.9285 193    1   1.781  0.6335
+##  Control Year2016 / Herbicide Year2017    0.418  0.1310 193    1  -2.783  0.1053
+##  Control Year2016 / Control Year2017      0.890  0.3233 193    1  -0.320  1.0000
+##  Control Year2016 / Herbicide Year2018    0.678  0.2431 193    1  -1.084  0.9596
+##  Control Year2016 / Control Year2018     11.378 11.7462 193    1   2.355  0.2696
+##  Herbicide Year2017 / Control Year2017    2.129  0.6719 193    1   2.395  0.2498
+##  Herbicide Year2017 / Herbicide Year2018  1.622  0.5044 193    1   1.554  0.7767
+##  Herbicide Year2017 / Control Year2018   27.213 27.6758 193    1   3.248  0.0292
+##  Control Year2017 / Herbicide Year2018    0.762  0.2751 193    1  -0.754  0.9951
+##  Control Year2017 / Control Year2018     12.781 13.2064 193    1   2.466  0.2166
+##  Herbicide Year2018 / Control Year2018   16.781 17.2989 193    1   2.736  0.1183
+## 
+## P value adjustment: tukey method for comparing a family of 8 estimates 
+## Tests are performed on the log scale
+</code></pre>
+
+<pre><code class="r">(SORAdiff &lt;- eff_size(object = SORAEmm, sigma = sigma(SORA_glmerBin), 
+                      edf = 198, level = 0.90, type = &quot;response&quot;))
+</code></pre>
+
+<pre><code>## Since &#39;object&#39; is a list, we are using the contrasts already present.
+</code></pre>
+
+<pre><code>##  contrast                                  estimate    SE  df lower.CL upper.CL
+##  (Herbicide Year2015 - Control Year2015)    -0.1408 0.304 193  -0.6426   0.3611
+##  (Herbicide Year2015 - Herbicide Year2016)   0.8153 0.404 193   0.1483   1.4822
+##  (Herbicide Year2015 - Control Year2016)     0.2647 0.336 193  -0.2913   0.8207
+##  (Herbicide Year2015 - Herbicide Year2017)  -0.6073 0.294 193  -1.0928  -0.1219
+##  (Herbicide Year2015 - Control Year2017)     0.1484 0.347 193  -0.4246   0.7213
+##  (Herbicide Year2015 - Herbicide Year2018)  -0.1239 0.341 193  -0.6882   0.4403
+##  (Herbicide Year2015 - Control Year2018)     2.6964 1.036 193   0.9848   4.4079
+##  (Control Year2015 - Herbicide Year2016)     0.9560 0.394 193   0.3042   1.6079
+##  (Control Year2015 - Control Year2016)       0.4055 0.323 193  -0.1290   0.9400
+##  (Control Year2015 - Herbicide Year2017)    -0.4666 0.279 193  -0.9278  -0.0053
+##  (Control Year2015 - Control Year2017)       0.2892 0.334 193  -0.2621   0.8404
+##  (Control Year2015 - Herbicide Year2018)     0.0169 0.328 193  -0.5257   0.5594
+##  (Control Year2015 - Control Year2018)       2.8371 1.032 193   1.1312   4.5430
+##  (Herbicide Year2016 - Control Year2016)    -0.5506 0.418 193  -1.2416   0.1405
+##  (Herbicide Year2016 - Herbicide Year2017)  -1.4226 0.389 193  -2.0656  -0.7796
+##  (Herbicide Year2016 - Control Year2017)    -0.6669 0.427 193  -1.3722   0.0385
+##  (Herbicide Year2016 - Herbicide Year2018)  -0.9392 0.424 193  -1.6403  -0.2380
+##  (Herbicide Year2016 - Control Year2018)     1.8811 1.060 193   0.1287   3.6335
+##  (Control Year2016 - Herbicide Year2017)    -0.8720 0.316 193  -1.3949  -0.3491
+##  (Control Year2016 - Control Year2017)      -0.1163 0.363 193  -0.7166   0.4840
+##  (Control Year2016 - Herbicide Year2018)    -0.3886 0.359 193  -0.9822   0.2050
+##  (Control Year2016 - Control Year2018)       2.4317 1.040 193   0.7135   4.1499
+##  (Herbicide Year2017 - Control Year2017)     0.7557 0.318 193   0.2304   1.2811
+##  (Herbicide Year2017 - Herbicide Year2018)   0.4834 0.312 193  -0.0322   0.9990
+##  (Herbicide Year2017 - Control Year2018)     3.3037 1.030 193   1.6005   5.0068
+##  (Control Year2017 - Herbicide Year2018)    -0.2723 0.361 193  -0.8698   0.3252
+##  (Control Year2017 - Control Year2018)       2.5480 1.041 193   0.8271   4.2688
+##  (Herbicide Year2018 - Control Year2018)     2.8203 1.041 193   1.1005   4.5401
+## 
+## sigma used for effect sizes: 1 
+## Confidence level used: 0.9
+</code></pre>
+
+<pre><code class="r">#emmip(SORA_glmerBin,Treatment ~ Year, type = &quot;response&quot;)
+</code></pre>
+
+<p>Results for plotting</p>
+
+<pre><code class="r">SORA_emmeans &lt;- summary(SORAEmm$emmeans)
+results.graph[results.graph$Species == &quot;SORA&quot;,
+              c(&quot;logEstimate&quot;, &quot;logEstLL&quot;, &quot;logEstUL&quot;)] &lt;-
+  SORA_emmeans[,c(&quot;rate&quot;, &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+
+SORA_contrasts &lt;- summary(SORAEmm$contrasts)
+SORA_diff &lt;- summary(SORAdiff)
+#2015
+results.table[results.table$Species == &quot;SORA&quot;, 
+              c(&quot;t15ratioEst&quot;, &quot;t15ratioSE&quot;, &quot;t15t.ratio&quot;, &quot;t15p.value&quot;)] &lt;- 
+  SORA_contrasts[SORA_contrasts$contrast == &quot;Herbicide Year2015 / Control Year2015&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;SORA&quot; &amp; diff.results.graph$Year == 2015, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  SORA_diff[SORA_diff$contrast == &quot;(Herbicide Year2015 - Control Year2015)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+#2016
+results.table[results.table$Species == &quot;SORA&quot;, 
+              c(&quot;t16ratioEst&quot;, &quot;t16ratioSE&quot;, &quot;t16t.ratio&quot;, &quot;t16p.value&quot;)] &lt;- 
+  SORA_contrasts[SORA_contrasts$contrast == &quot;Herbicide Year2016 / Control Year2016&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;SORA&quot; &amp; diff.results.graph$Year == 2016, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  SORA_diff[SORA_diff$contrast == &quot;(Herbicide Year2016 - Control Year2016)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+#2017
+results.table[results.table$Species == &quot;SORA&quot;, 
+              c(&quot;t15ratioEst&quot;, &quot;t17ratioSE&quot;, &quot;t17t.ratio&quot;, &quot;t17p.value&quot;)] &lt;- 
+  SORA_contrasts[SORA_contrasts$contrast == &quot;Herbicide Year2017 / Control Year2017&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;SORA&quot; &amp; diff.results.graph$Year == 2017, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  SORA_diff[SORA_diff$contrast == &quot;(Herbicide Year2017 - Control Year2017)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+
+#2018
+results.table[results.table$Species == &quot;SORA&quot;, 
+              c(&quot;t18ratioEst&quot;, &quot;t18ratioSE&quot;, &quot;t18t.ratio&quot;, &quot;t18p.value&quot;)] &lt;- 
+  SORA_contrasts[SORA_contrasts$contrast == &quot;Herbicide Year2018 / Control Year2018&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;SORA&quot; &amp; diff.results.graph$Year == 2018, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  SORA_diff[SORA_diff$contrast == &quot;(Herbicide Year2018 - Control Year2018)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+</code></pre>
+
+<hr/>
+
+<h3>VIRA Analysis</h3>
+
+<h4>GLMM analysis</h4>
+
+<pre><code class="r">table(NWPOINTR2$VIRA)
+</code></pre>
+
+<pre><code>## 
+##   0   1   2   3 
+## 152  32  15   3
+</code></pre>
+
+<pre><code class="r">var(NWPOINTR2$VIRA)/mean(NWPOINTR2$VIRA)
+</code></pre>
+
+<pre><code>## [1] 1.331161
+</code></pre>
+
+<pre><code class="r">VIRA_glmerBin &lt;- glmmTMB(VIRA ~ Treatment + Year + Treatment*Year + (1|SiteName),
+                         data = NWPOINTR2,
+                         family = &quot;poisson&quot;)
+(VIRA &lt;- summary(VIRA_glmerBin))
+</code></pre>
+
+<pre><code>##  Family: poisson  ( log )
+## Formula:          VIRA ~ Treatment + Year + Treatment * Year + (1 | SiteName)
+## Data: NWPOINTR2
+## 
+##      AIC      BIC   logLik deviance df.resid 
+##    312.9    342.7   -147.5    294.9      193 
+## 
+## Random effects:
+## 
+## Conditional model:
+##  Groups   Name        Variance  Std.Dev. 
+##  SiteName (Intercept) 2.671e-09 5.168e-05
+## Number of obs: 202, groups:  SiteName, 9
+## 
+## Conditional model:
+##                           Estimate Std. Error z value Pr(&gt;|z|)   
+## (Intercept)                -0.8109     0.2887  -2.809  0.00497 **
+## TreatmentControl           -0.5754     0.4756  -1.210  0.22636   
+## Year2016                   -1.1350     0.5774  -1.966  0.04932 * 
+## Year2017                    0.1178     0.4003   0.294  0.76859   
+## Year2018                    0.6997     0.3770   1.856  0.06348 . 
+## TreatmentControl:Year2016   1.2685     0.7754   1.636  0.10184   
+## TreatmentControl:Year2017   0.2076     0.6436   0.323  0.74698   
+## TreatmentControl:Year2018  -2.3091     1.1336  -2.037  0.04165 * 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+</code></pre>
+
+<pre><code class="r">(VIRAEmm &lt;- emmeans(VIRA_glmerBin, pairwise ~ Treatment*Year, level = 0.9, type = &quot;response&quot;))
+</code></pre>
+
+<pre><code>## $emmeans
+##  Treatment Year  rate     SE  df lower.CL upper.CL
+##  Herbicide 2015 0.444 0.1283 193  0.27581    0.716
+##  Control   2015 0.250 0.0945 193  0.13386    0.467
+##  Herbicide 2016 0.143 0.0714 193  0.06252    0.326
+##  Control   2016 0.286 0.1010 193  0.15928    0.513
+##  Herbicide 2017 0.500 0.1387 193  0.31615    0.791
+##  Control   2017 0.346 0.1154 193  0.19953    0.601
+##  Herbicide 2018 0.895 0.2170 193  0.59924    1.336
+##  Control   2018 0.050 0.0500 193  0.00958    0.261
+## 
+## Confidence level used: 0.9 
+## Intervals are back-transformed from the log scale 
+## 
+## $contrasts
+##  contrast                                 ratio      SE  df null t.ratio p.value
+##  Herbicide Year2015 / Control Year2015    1.778  0.8455 193    1   1.210  0.9282
+##  Herbicide Year2015 / Herbicide Year2016  3.111  1.7962 193    1   1.966  0.5077
+##  Herbicide Year2015 / Control Year2016    1.556  0.7100 193    1   0.968  0.9783
+##  Herbicide Year2015 / Herbicide Year2017  0.889  0.3558 193    1  -0.294  1.0000
+##  Herbicide Year2015 / Control Year2017    1.284  0.5662 193    1   0.567  0.9992
+##  Herbicide Year2015 / Herbicide Year2018  0.497  0.1873 193    1  -1.856  0.5829
+##  Herbicide Year2015 / Control Year2018    8.889  9.2519 193    1   2.099  0.4192
+##  Control Year2015 / Herbicide Year2016    1.750  1.0969 193    1   0.893  0.9864
+##  Control Year2015 / Control Year2016      0.875  0.4529 193    1  -0.258  1.0000
+##  Control Year2015 / Herbicide Year2017    0.500  0.2344 193    1  -1.479  0.8180
+##  Control Year2015 / Control Year2017      0.722  0.3640 193    1  -0.646  0.9982
+##  Control Year2015 / Herbicide Year2018    0.279  0.1255 193    1  -2.839  0.0915
+##  Control Year2015 / Control Year2018      5.000  5.3452 193    1   1.505  0.8038
+##  Herbicide Year2016 / Control Year2016    0.500  0.3062 193    1  -1.132  0.9490
+##  Herbicide Year2016 / Herbicide Year2017  0.286  0.1634 193    1  -2.191  0.3618
+##  Herbicide Year2016 / Control Year2017    0.413  0.2480 193    1  -1.473  0.8210
+##  Herbicide Year2016 / Herbicide Year2018  0.160  0.0887 193    1  -3.301  0.0249
+##  Herbicide Year2016 / Control Year2018    2.857  3.1944 193    1   0.939  0.9818
+##  Control Year2016 / Herbicide Year2017    0.571  0.2568 193    1  -1.245  0.9171
+##  Control Year2016 / Control Year2017      0.825  0.4011 193    1  -0.395  0.9999
+##  Control Year2016 / Herbicide Year2018    0.319  0.1369 193    1  -2.663  0.1407
+##  Control Year2016 / Control Year2018      5.714  6.0609 193    1   1.643  0.7234
+##  Herbicide Year2017 / Control Year2017    1.444  0.6264 193    1   0.848  0.9900
+##  Herbicide Year2017 / Herbicide Year2018  0.559  0.2059 193    1  -1.579  0.7621
+##  Herbicide Year2017 / Control Year2018   10.000 10.3775 193    1   2.219  0.3452
+##  Control Year2017 / Herbicide Year2018    0.387  0.1595 193    1  -2.304  0.2970
+##  Control Year2017 / Control Year2018      6.923  7.2976 193    1   1.836  0.5967
+##  Herbicide Year2018 / Control Year2018   17.895 18.4135 193    1   2.803  0.1002
+## 
+## P value adjustment: tukey method for comparing a family of 8 estimates 
+## Tests are performed on the log scale
+</code></pre>
+
+<pre><code class="r">(VIRAdiff &lt;- eff_size(object = VIRAEmm, sigma = sigma(VIRA_glmerBin), 
+                      edf = 193, level = 0.9, type = &quot;reponse&quot;))
+</code></pre>
+
+<pre><code>## Since &#39;object&#39; is a list, we are using the contrasts already present.
+</code></pre>
+
+<pre><code>##  contrast                                  estimate    SE  df lower.CL upper.CL
+##  (Herbicide Year2015 - Control Year2015)      0.575 0.476 193  -0.2122   1.3629
+##  (Herbicide Year2015 - Herbicide Year2016)    1.135 0.580 193   0.1760   2.0940
+##  (Herbicide Year2015 - Control Year2016)      0.442 0.457 193  -0.3135   1.1971
+##  (Herbicide Year2015 - Herbicide Year2017)   -0.118 0.400 193  -0.7795   0.5439
+##  (Herbicide Year2015 - Control Year2017)      0.250 0.441 193  -0.4792   0.9791
+##  (Herbicide Year2015 - Herbicide Year2018)   -0.700 0.379 193  -1.3256  -0.0738
+##  (Herbicide Year2015 - Control Year2018)      2.185 1.047 193   0.4547   3.9149
+##  (Control Year2015 - Herbicide Year2016)      0.560 0.627 193  -0.4774   1.5966
+##  (Control Year2015 - Control Year2016)       -0.134 0.518 193  -0.9890   0.7219
+##  (Control Year2015 - Herbicide Year2017)     -0.693 0.470 193  -1.4702   0.0839
+##  (Control Year2015 - Control Year2017)       -0.325 0.504 193  -1.1588   0.5080
+##  (Control Year2015 - Herbicide Year2018)     -1.275 0.454 193  -2.0250  -0.5251
+##  (Control Year2015 - Control Year2018)        1.609 1.072 193  -0.1626   3.3815
+##  (Herbicide Year2016 - Control Year2016)     -0.693 0.613 193  -1.7069   0.3207
+##  (Herbicide Year2016 - Herbicide Year2017)   -1.253 0.575 193  -2.2036  -0.3019
+##  (Herbicide Year2016 - Control Year2017)     -0.885 0.603 193  -1.8810   0.1109
+##  (Herbicide Year2016 - Herbicide Year2018)   -1.835 0.564 193  -2.7660  -0.9033
+##  (Herbicide Year2016 - Control Year2018)      1.050 1.119 193  -0.8002   2.8998
+##  (Control Year2016 - Herbicide Year2017)     -0.560 0.450 193  -1.3038   0.1846
+##  (Control Year2016 - Control Year2017)       -0.192 0.486 193  -0.9952   0.6114
+##  (Control Year2016 - Herbicide Year2018)     -1.142 0.433 193  -1.8566  -0.4264
+##  (Control Year2016 - Control Year2018)        1.743 1.064 193  -0.0162   3.5021
+##  (Herbicide Year2017 - Control Year2017)      0.368 0.434 193  -0.3496   1.0851
+##  (Herbicide Year2017 - Herbicide Year2018)   -0.582 0.370 193  -1.1928   0.0290
+##  (Herbicide Year2017 - Control Year2018)      2.303 1.044 193   0.5765   4.0287
+##  (Control Year2017 - Herbicide Year2018)     -0.950 0.415 193  -1.6356  -0.2636
+##  (Control Year2017 - Control Year2018)        1.935 1.059 193   0.1851   3.6846
+##  (Herbicide Year2018 - Control Year2018)      2.885 1.039 193   1.1666   4.6024
+## 
+## sigma used for effect sizes: 1 
+## Confidence level used: 0.9
+</code></pre>
+
+<pre><code class="r">#emmip(VIRA_glmerBin,Treatment ~ Year, type = &quot;response&quot;)
+</code></pre>
+
+<p>Results for plotting</p>
+
+<pre><code class="r">VIRA_emmeans &lt;- summary(VIRAEmm$emmeans)
+results.graph[results.graph$Species == &quot;VIRA&quot;,
+              c(&quot;logEstimate&quot;, &quot;logEstLL&quot;, &quot;logEstUL&quot;)] &lt;-
+  VIRA_emmeans[,c(&quot;rate&quot;, &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+
+VIRA_contrasts &lt;- summary(VIRAEmm$contrasts)
+VIRA_diff &lt;- summary(VIRAdiff)
+#2015
+results.table[results.table$Species == &quot;VIRA&quot;, 
+              c(&quot;t15ratioEst&quot;, &quot;t15ratioSE&quot;, &quot;t15t.ratio&quot;, &quot;t15p.value&quot;)] &lt;- 
+  VIRA_contrasts[VIRA_contrasts$contrast == &quot;Herbicide Year2015 / Control Year2015&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;VIRA&quot; &amp; diff.results.graph$Year == 2015, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  VIRA_diff[VIRA_diff$contrast == &quot;(Herbicide Year2015 - Control Year2015)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+#2016
+results.table[results.table$Species == &quot;VIRA&quot;, 
+              c(&quot;t16ratioEst&quot;, &quot;t16ratioSE&quot;, &quot;t16t.ratio&quot;, &quot;t16p.value&quot;)] &lt;- 
+  VIRA_contrasts[VIRA_contrasts$contrast == &quot;Herbicide Year2016 / Control Year2016&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;VIRA&quot; &amp; diff.results.graph$Year == 2016, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  VIRA_diff[VIRA_diff$contrast == &quot;(Herbicide Year2016 - Control Year2016)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+#2017
+results.table[results.table$Species == &quot;VIRA&quot;, 
+              c(&quot;t15ratioEst&quot;, &quot;t17ratioSE&quot;, &quot;t17t.ratio&quot;, &quot;t17p.value&quot;)] &lt;- 
+  VIRA_contrasts[VIRA_contrasts$contrast == &quot;Herbicide Year2017 / Control Year2017&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;VIRA&quot; &amp; diff.results.graph$Year == 2017, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  VIRA_diff[VIRA_diff$contrast == &quot;(Herbicide Year2017 - Control Year2017)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+
+#2018
+results.table[results.table$Species == &quot;VIRA&quot;, 
+              c(&quot;t18ratioEst&quot;, &quot;t18ratioSE&quot;, &quot;t18t.ratio&quot;, &quot;t18p.value&quot;)] &lt;- 
+  VIRA_contrasts[VIRA_contrasts$contrast == &quot;Herbicide Year2018 / Control Year2018&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+
+diff.results.graph[diff.results.graph$Species == &quot;VIRA&quot; &amp; diff.results.graph$Year == 2018, 
+                   c(&quot;diffEstimate&quot;,&quot;diffEstLL&quot;,&quot;diffEstUL&quot;)] &lt;-
+  VIRA_diff[VIRA_diff$contrast == &quot;(Herbicide Year2018 - Control Year2018)&quot;, 
+            c(&quot;estimate&quot;,  &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+</code></pre>
+
+<hr/>
+
+<h3>All Species Analysis</h3>
+
+<h4>GLMM analysis</h4>
+
+<pre><code class="r">table(NWPOINTR2.long$Count)
+</code></pre>
+
+<pre><code>## 
+##   0   1   2   3   4   5   6 
+## 713 182  62  32  14   5   2
+</code></pre>
+
+<pre><code class="r">var(NWPOINTR2.long$Count)/mean(NWPOINTR2.long$Count)
+</code></pre>
+
+<pre><code>## [1] 1.812706
+</code></pre>
+
+<pre><code class="r">All_glmerBin &lt;- glmmTMB(Count ~ Treatment + Year + Treatment*Year + (1|SiteName),
+                         data = NWPOINTR2.long,
+                         family = &quot;poisson&quot;)
+(All &lt;- summary(All_glmerBin))
+</code></pre>
+
+<pre><code>##  Family: poisson  ( log )
+## Formula:          Count ~ Treatment + Year + Treatment * Year + (1 | SiteName)
+## Data: NWPOINTR2.long
+## 
+##      AIC      BIC   logLik deviance df.resid 
+##   1981.8   2026.0   -981.9   1963.8     1001 
+## 
+## Random effects:
+## 
+## Conditional model:
+##  Groups   Name        Variance Std.Dev.
+##  SiteName (Intercept) 0.1125   0.3354  
+## Number of obs: 1010, groups:  SiteName, 9
+## 
+## Conditional model:
+##                         Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)              -0.6846     0.1623  -4.218 2.46e-05 ***
+## TreatmentSpray           -0.1239     0.1721  -0.720   0.4715    
+## Year2016                  0.2976     0.1524   1.953   0.0509 .  
+## Year2017                 -0.1456     0.1738  -0.838   0.4022    
+## Year2018                 -1.7664     0.3374  -5.235 1.65e-07 ***
+## TreatmentSpray:Year2016  -0.4765     0.2413  -1.975   0.0483 *  
+## TreatmentSpray:Year2017   0.5203     0.2407   2.162   0.0306 *  
+## TreatmentSpray:Year2018   1.7686     0.3872   4.567 4.94e-06 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+</code></pre>
+
+<pre><code class="r">(AllEmm &lt;- emmeans(All_glmerBin, pairwise ~ Treatment*Year, level = 0.9, type = &quot;response&quot;))
+</code></pre>
+
+<pre><code>## $emmeans
+##  Treatment Year   rate     SE   df lower.CL upper.CL
+##  Control   2015 0.5043 0.0818 1001   0.3860    0.659
+##  Spray     2015 0.4455 0.0759 1001   0.3366    0.590
+##  Control   2016 0.6791 0.1028 1001   0.5293    0.871
+##  Spray     2016 0.3725 0.0663 1001   0.2779    0.499
+##  Control   2017 0.4360 0.0756 1001   0.3277    0.580
+##  Spray     2017 0.6480 0.1023 1001   0.4997    0.840
+##  Control   2018 0.0862 0.0291 1001   0.0494    0.150
+##  Spray     2018 0.4465 0.0833 1001   0.3285    0.607
+## 
+## Confidence level used: 0.9 
+## Intervals are back-transformed from the log scale 
+## 
+## $contrasts
+##  contrast                            ratio    SE   df null t.ratio p.value
+##  Control Year2015 / Spray Year2015   1.132 0.195 1001    1   0.720  0.9964
+##  Control Year2015 / Control Year2016 0.743 0.113 1001    1  -1.953  0.5148
+##  Control Year2015 / Spray Year2016   1.354 0.244 1001    1   1.683  0.6982
+##  Control Year2015 / Control Year2017 1.157 0.201 1001    1   0.838  0.9909
+##  Control Year2015 / Spray Year2017   0.778 0.124 1001    1  -1.571  0.7679
+##  Control Year2015 / Control Year2018 5.850 1.974 1001    1   5.235  &lt;.0001
+##  Control Year2015 / Spray Year2018   1.129 0.209 1001    1   0.657  0.9980
+##  Spray Year2015 / Control Year2016   0.656 0.106 1001    1  -2.605  0.1553
+##  Spray Year2015 / Spray Year2016     1.196 0.224 1001    1   0.956  0.9802
+##  Spray Year2015 / Control Year2017   1.022 0.186 1001    1   0.119  1.0000
+##  Spray Year2015 / Spray Year2017     0.688 0.115 1001    1  -2.234  0.3324
+##  Spray Year2015 / Control Year2018   5.168 1.767 1001    1   4.804  &lt;.0001
+##  Spray Year2015 / Spray Year2018     0.998 0.193 1001    1  -0.012  1.0000
+##  Control Year2016 / Spray Year2016   1.823 0.310 1001    1   3.530  0.0103
+##  Control Year2016 / Control Year2017 1.558 0.255 1001    1   2.709  0.1209
+##  Control Year2016 / Spray Year2017   1.048 0.156 1001    1   0.316  1.0000
+##  Control Year2016 / Control Year2018 7.877 2.618 1001    1   6.211  &lt;.0001
+##  Control Year2016 / Spray Year2018   1.521 0.267 1001    1   2.385  0.2497
+##  Spray Year2016 / Control Year2017   0.854 0.162 1001    1  -0.830  0.9914
+##  Spray Year2016 / Spray Year2017     0.575 0.101 1001    1  -3.152  0.0355
+##  Spray Year2016 / Control Year2018   4.321 1.495 1001    1   4.230  0.0007
+##  Spray Year2016 / Spray Year2018     0.834 0.167 1001    1  -0.905  0.9856
+##  Control Year2017 / Spray Year2017   0.673 0.114 1001    1  -2.342  0.2716
+##  Control Year2017 / Control Year2018 5.057 1.730 1001    1   4.739  0.0001
+##  Control Year2017 / Spray Year2018   0.976 0.189 1001    1  -0.123  1.0000
+##  Spray Year2017 / Control Year2018   7.516 2.520 1001    1   6.015  &lt;.0001
+##  Spray Year2017 / Spray Year2018     1.451 0.263 1001    1   2.056  0.4447
+##  Control Year2018 / Spray Year2018   0.193 0.067 1001    1  -4.739  0.0001
+## 
+## P value adjustment: tukey method for comparing a family of 8 estimates 
+## Tests are performed on the log scale
+</code></pre>
+
+<pre><code class="r">#emmip(All_glmerBin,Treatment ~ Year, type = &quot;response&quot;)
+</code></pre>
+
+<p>Test with species effects too</p>
+
+<pre><code class="r">All_glmerBin2 &lt;- glmmTMB(Count ~ Treatment*Year*Species + (1|SiteName),
+                        data = NWPOINTR2.long,
+                        family = &quot;poisson&quot;, na.action = &quot;na.omit&quot;)
+(All2 &lt;- summary(All_glmerBin2))
+</code></pre>
+
+<pre><code>##  Family: poisson  ( log )
+## Formula:          Count ~ Treatment * Year * Species + (1 | SiteName)
+## Data: NWPOINTR2.long
+## 
+##      AIC      BIC   logLik deviance df.resid 
+##   1807.8   2009.4   -862.9   1725.8      969 
+## 
+## Random effects:
+## 
+## Conditional model:
+##  Groups   Name        Variance Std.Dev.
+##  SiteName (Intercept) 0.1125   0.3354  
+## Number of obs: 1010, groups:  SiteName, 9
+## 
+## Conditional model:
+##                                       Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)                           -0.02539    0.21793  -0.117 0.907240    
+## TreatmentSpray                        -0.73592    0.33403  -2.203 0.027582 *  
+## Year2016                               0.64004    0.22949   2.789 0.005287 ** 
+## Year2017                              -0.19869    0.28308  -0.702 0.482762    
+## Year2018                              -1.73245    0.53385  -3.245 0.001174 ** 
+## SpeciesLEBI                           -1.98100    0.53337  -3.714 0.000204 ***
+## SpeciesPBGR                           -0.96939    0.35411  -2.738 0.006189 ** 
+## SpeciesSORA                           -0.18924    0.27595  -0.686 0.492857    
+## SpeciesVIRA                           -1.42138    0.42112  -3.375 0.000737 ***
+## TreatmentSpray:Year2016                0.20693    0.40232   0.514 0.607017    
+## TreatmentSpray:Year2017                1.02510    0.43885   2.336 0.019499 *  
+## TreatmentSpray:Year2018                1.19683    0.72675   1.647 0.099594 .  
+## TreatmentSpray:SpeciesLEBI             1.81394    0.67254   2.697 0.006994 ** 
+## TreatmentSpray:SpeciesPBGR             0.19619    0.60744   0.323 0.746709    
+## TreatmentSpray:SpeciesSORA             0.62002    0.45064   1.376 0.168859    
+## TreatmentSpray:SpeciesVIRA             1.34134    0.58103   2.309 0.020969 *  
+## Year2016:SpeciesLEBI                  -0.64004    0.74341  -0.861 0.389268    
+## Year2017:SpeciesLEBI                  -0.01143    0.81441  -0.014 0.988802    
+## Year2018:SpeciesLEBI                   1.28786    1.01709   1.266 0.205438    
+## Year2016:SpeciesPBGR                  -0.14757    0.44624  -0.331 0.740872    
+## Year2017:SpeciesPBGR                   0.27624    0.51162   0.540 0.589241    
+## Year2018:SpeciesPBGR                   0.27624    0.93563   0.295 0.767807    
+## Year2016:SpeciesSORA                  -1.04550    0.39602  -2.640 0.008290 ** 
+## Year2017:SpeciesSORA                  -0.19375    0.43390  -0.447 0.655208    
+## Year2018:SpeciesSORA                  -1.19706    1.15159  -1.039 0.298580    
+## Year2016:SpeciesVIRA                  -0.50651    0.56615  -0.895 0.370970    
+## Year2017:SpeciesVIRA                   0.52756    0.57785   0.913 0.361250    
+## Year2018:SpeciesVIRA                   0.03510    1.19471   0.029 0.976562    
+## TreatmentSpray:Year2016:SpeciesLEBI   -1.93374    1.11926  -1.728 0.084044 .  
+## TreatmentSpray:Year2017:SpeciesLEBI   -1.36195    1.01660  -1.340 0.180340    
+## TreatmentSpray:Year2018:SpeciesLEBI  -19.18462 3415.33022  -0.006 0.995518    
+## TreatmentSpray:Year2016:SpeciesPBGR   -0.56730    0.78602  -0.722 0.470455    
+## TreatmentSpray:Year2017:SpeciesPBGR   -0.88933    0.82699  -1.075 0.282203    
+## TreatmentSpray:Year2018:SpeciesPBGR    1.00779    1.17714   0.856 0.391924    
+## TreatmentSpray:Year2016:SpeciesSORA   -0.62204    0.65355  -0.952 0.341204    
+## TreatmentSpray:Year2017:SpeciesSORA   -0.13524    0.61900  -0.218 0.827052    
+## TreatmentSpray:Year2018:SpeciesSORA    1.74710    1.29701   1.347 0.177973    
+## TreatmentSpray:Year2016:SpeciesVIRA   -1.46114    0.87352  -1.673 0.094386 .  
+## TreatmentSpray:Year2017:SpeciesVIRA   -1.21477    0.77897  -1.559 0.118889    
+## TreatmentSpray:Year2018:SpeciesVIRA    1.08640    1.34651   0.807 0.419766    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+</code></pre>
+
+<pre><code class="r">(AllEmm2 &lt;- emmeans(All_glmerBin2, pairwise ~ Treatment*Year*Species, level = 0.9, type = &quot;response&quot;))
+</code></pre>
+
+<pre><code>## $emmeans
+##  Treatment Year Species   rate       SE  df lower.CL upper.CL
+##  Control   2015 AMBI    0.9749 2.12e-01 969  0.68099        1
+##  Spray     2015 AMBI    0.4671 1.40e-01 969  0.28517        1
+##  Control   2016 AMBI    1.8490 3.27e-01 969  1.38245        2
+##  Spray     2016 AMBI    1.0894 2.31e-01 969  0.76819        2
+##  Control   2017 AMBI    0.7993 1.94e-01 969  0.53607        1
+##  Spray     2017 AMBI    1.0673 2.36e-01 969  0.74166        2
+##  Control   2018 AMBI    0.1724 8.86e-02 969  0.07395        0
+##  Spray     2018 AMBI    0.2734 1.16e-01 969  0.13568        1
+##  Control   2015 LEBI    0.1345 6.90e-02 969  0.05780        0
+##  Spray     2015 LEBI    0.3952 1.27e-01 969  0.23253        1
+##  Control   2016 LEBI    0.1345 6.90e-02 969  0.05780        0
+##  Spray     2016 LEBI    0.0703 5.03e-02 969  0.02162        0
+##  Control   2017 LEBI    0.1090 6.42e-02 969  0.04134        0
+##  Spray     2017 LEBI    0.2287 9.70e-02 969  0.11378        0
+##  Control   2018 LEBI    0.0862 6.18e-02 969  0.02647        0
+##  Spray     2018 LEBI    0.0000 1.33e-05 969  0.00000      Inf
+##  Control   2015 PBGR    0.3698 1.19e-01 969  0.21750        1
+##  Spray     2015 PBGR    0.2156 9.13e-02 969  0.10730        0
+##  Control   2016 PBGR    0.6051 1.58e-01 969  0.39320        1
+##  Spray     2016 PBGR    0.2460 9.70e-02 969  0.12849        0
+##  Control   2017 PBGR    0.3996 1.29e-01 969  0.23481        1
+##  Spray     2017 PBGR    0.2668 1.05e-01 969  0.13925        1
+##  Control   2018 PBGR    0.0862 6.18e-02 969  0.02647        0
+##  Spray     2018 PBGR    0.4556 1.54e-01 969  0.26109        1
+##  Control   2015 SORA    0.8068 1.89e-01 969  0.54902        1
+##  Spray     2015 SORA    0.7185 1.80e-01 969  0.47552        1
+##  Control   2016 SORA    0.5379 1.48e-01 969  0.34214        1
+##  Spray     2016 SORA    0.3163 1.11e-01 969  0.17718        1
+##  Control   2017 SORA    0.5449 1.54e-01 969  0.34200        1
+##  Spray     2017 SORA    1.1816 2.52e-01 969  0.83196        2
+##  Control   2018 SORA    0.0431 4.34e-02 969  0.00821        0
+##  Spray     2018 SORA    0.7290 2.02e-01 969  0.46182        1
+##  Control   2015 VIRA    0.2353 9.29e-02 969  0.12285        0
+##  Spray     2015 VIRA    0.4311 1.34e-01 969  0.25872        1
+##  Control   2016 VIRA    0.2689 9.99e-02 969  0.14589        0
+##  Spray     2016 VIRA    0.1406 7.21e-02 969  0.06045        0
+##  Control   2017 VIRA    0.3270 1.15e-01 969  0.18289        1
+##  Spray     2017 VIRA    0.4955 1.49e-01 969  0.30231        1
+##  Control   2018 VIRA    0.0431 4.34e-02 969  0.00821        0
+##  Spray     2018 VIRA    0.7745 2.10e-01 969  0.49614        1
+## 
+## Confidence level used: 0.9 
+## Intervals are back-transformed from the log scale 
+## 
+## $contrasts
+##  contrast                                         ratio       SE  df null t.ratio p.value
+##  Control Year2015 AMBI / Spray Year2015 AMBI   2.00e+00 1.00e+00 969    1   2.203  0.9776
+##  Control Year2015 AMBI / Control Year2016 AMBI 1.00e+00 0.00e+00 969    1  -2.789  0.6974
+##  Control Year2015 AMBI / Spray Year2016 AMBI   1.00e+00 0.00e+00 969    1  -0.429  1.0000
+##  Control Year2015 AMBI / Control Year2017 AMBI 1.00e+00 0.00e+00 969    1   0.702  1.0000
+##  Control Year2015 AMBI / Spray Year2017 AMBI   1.00e+00 0.00e+00 969    1  -0.341  1.0000
+##  Control Year2015 AMBI / Control Year2018 AMBI 6.00e+00 3.00e+00 969    1   3.245  0.3246
+##  Control Year2015 AMBI / Spray Year2018 AMBI   4.00e+00 2.00e+00 969    1   2.831  0.6634
+##  Control Year2015 AMBI / Control Year2015 LEBI 7.00e+00 4.00e+00 969    1   3.714  0.0923
+##  Control Year2015 AMBI / Spray Year2015 LEBI   2.00e+00 1.00e+00 969    1   2.548  0.8625
+##  Control Year2015 AMBI / Control Year2016 LEBI 7.00e+00 4.00e+00 969    1   3.714  0.0923
+##  Control Year2015 AMBI / Spray Year2016 LEBI   1.40e+01 1.00e+01 969    1   3.597  0.1317
+##  Control Year2015 AMBI / Control Year2017 LEBI 9.00e+00 5.00e+00 969    1   3.612  0.1260
+##  Control Year2015 AMBI / Spray Year2017 LEBI   4.00e+00 2.00e+00 969    1   3.230  0.3357
+##  Control Year2015 AMBI / Control Year2018 LEBI 1.10e+01 8.00e+00 969    1   3.316  0.2762
+##  Control Year2015 AMBI / Spray Year2018 LEBI   2.50e+08 8.52e+11 969    1   0.006  1.0000
+##  Control Year2015 AMBI / Control Year2015 PBGR 3.00e+00 1.00e+00 969    1   2.738  0.7376
+##  Control Year2015 AMBI / Spray Year2015 PBGR   5.00e+00 2.00e+00 969    1   3.363  0.2466
+##  Control Year2015 AMBI / Control Year2016 PBGR 2.00e+00 0.00e+00 969    1   1.589  1.0000
+##  Control Year2015 AMBI / Spray Year2016 PBGR   4.00e+00 2.00e+00 969    1   3.268  0.3083
+##  Control Year2015 AMBI / Control Year2017 PBGR 2.00e+00 1.00e+00 969    1   2.517  0.8792
+##  Control Year2015 AMBI / Spray Year2017 PBGR   4.00e+00 2.00e+00 969    1   3.074  0.4579
+##  Control Year2015 AMBI / Control Year2018 PBGR 1.10e+01 8.00e+00 969    1   3.316  0.2762
+##  Control Year2015 AMBI / Spray Year2018 PBGR   2.00e+00 1.00e+00 969    1   2.070  0.9916
+##  Control Year2015 AMBI / Control Year2015 SORA 1.00e+00 0.00e+00 969    1   0.686  1.0000
+##  Control Year2015 AMBI / Spray Year2015 SORA   1.00e+00 0.00e+00 969    1   1.049  1.0000
+##  Control Year2015 AMBI / Control Year2016 SORA 2.00e+00 1.00e+00 969    1   1.910  0.9980
+##  Control Year2015 AMBI / Spray Year2016 SORA   3.00e+00 1.00e+00 969    1   2.949  0.5639
+##  Control Year2015 AMBI / Control Year2017 SORA 2.00e+00 1.00e+00 969    1   1.827  0.9992
+##  Control Year2015 AMBI / Spray Year2017 SORA   1.00e+00 0.00e+00 969    1  -0.742  1.0000
+##  Control Year2015 AMBI / Control Year2018 SORA 2.30e+01 2.30e+01 969    1   3.066  0.4646
+##  Control Year2015 AMBI / Spray Year2018 SORA   1.00e+00 0.00e+00 969    1   0.931  1.0000
+##  Control Year2015 AMBI / Control Year2015 VIRA 4.00e+00 2.00e+00 969    1   3.375  0.2395
+##  Control Year2015 AMBI / Spray Year2015 VIRA   2.00e+00 1.00e+00 969    1   2.376  0.9376
+##  Control Year2015 AMBI / Control Year2016 VIRA 4.00e+00 1.00e+00 969    1   3.225  0.3393
+##  Control Year2015 AMBI / Spray Year2016 VIRA   7.00e+00 4.00e+00 969    1   3.630  0.1194
+##  Control Year2015 AMBI / Control Year2017 VIRA 3.00e+00 1.00e+00 969    1   2.861  0.6381
+##  Control Year2015 AMBI / Spray Year2017 VIRA   2.00e+00 1.00e+00 969    1   2.024  0.9943
+##  Control Year2015 AMBI / Control Year2018 VIRA 2.30e+01 2.30e+01 969    1   3.066  0.4646
+##  Control Year2015 AMBI / Spray Year2018 VIRA   1.00e+00 0.00e+00 969    1   0.751  1.0000
+##  Spray Year2015 AMBI / Control Year2016 AMBI   0.00e+00 0.00e+00 969    1  -4.458  0.0058
+##  Spray Year2015 AMBI / Spray Year2016 AMBI     0.00e+00 0.00e+00 969    1  -2.563  0.8543
+##  Spray Year2015 AMBI / Control Year2017 AMBI   1.00e+00 0.00e+00 969    1  -1.533  1.0000
+##  Spray Year2015 AMBI / Spray Year2017 AMBI     0.00e+00 0.00e+00 969    1  -2.460  0.9059
+##  Spray Year2015 AMBI / Control Year2018 AMBI   3.00e+00 2.00e+00 969    1   1.741  0.9997
+##  Spray Year2015 AMBI / Spray Year2018 AMBI     2.00e+00 1.00e+00 969    1   1.084  1.0000
+##  Spray Year2015 AMBI / Control Year2015 LEBI   3.00e+00 2.00e+00 969    1   2.177  0.9813
+##  Spray Year2015 AMBI / Spray Year2015 LEBI     1.00e+00 0.00e+00 969    1   0.408  1.0000
+##  Spray Year2015 AMBI / Control Year2016 LEBI   3.00e+00 2.00e+00 969    1   2.177  0.9813
+##  Spray Year2015 AMBI / Spray Year2016 LEBI     7.00e+00 5.00e+00 969    1   2.493  0.8906
+##  Spray Year2015 AMBI / Control Year2017 LEBI   4.00e+00 3.00e+00 969    1   2.271  0.9655
+##  Spray Year2015 AMBI / Spray Year2017 LEBI     2.00e+00 1.00e+00 969    1   1.446  1.0000
+##  Spray Year2015 AMBI / Control Year2018 LEBI   5.00e+00 4.00e+00 969    1   2.223  0.9744
+##  Spray Year2015 AMBI / Spray Year2018 LEBI     1.20e+08 4.08e+11 969    1   0.005  1.0000
+##  Spray Year2015 AMBI / Control Year2015 PBGR   1.00e+00 1.00e+00 969    1   0.570  1.0000
+##  Spray Year2015 AMBI / Spray Year2015 PBGR     2.00e+00 1.00e+00 969    1   1.567  1.0000
+##  Spray Year2015 AMBI / Control Year2016 PBGR   1.00e+00 0.00e+00 969    1  -0.711  1.0000
+##  Spray Year2015 AMBI / Spray Year2016 PBGR     2.00e+00 1.00e+00 969    1   1.367  1.0000
+##  Spray Year2015 AMBI / Control Year2017 PBGR   1.00e+00 0.00e+00 969    1   0.380  1.0000
+##  Spray Year2015 AMBI / Spray Year2017 PBGR     2.00e+00 1.00e+00 969    1   1.194  1.0000
+##  Spray Year2015 AMBI / Control Year2018 PBGR   5.00e+00 4.00e+00 969    1   2.223  0.9744
+##  Spray Year2015 AMBI / Spray Year2018 PBGR     1.00e+00 0.00e+00 969    1   0.059  1.0000
+##  Spray Year2015 AMBI / Control Year2015 SORA   1.00e+00 0.00e+00 969    1  -1.586  1.0000
+##  Spray Year2015 AMBI / Spray Year2015 SORA     1.00e+00 0.00e+00 969    1  -1.209  1.0000
+##  Spray Year2015 AMBI / Control Year2016 SORA   1.00e+00 0.00e+00 969    1  -0.378  1.0000
+##  Spray Year2015 AMBI / Spray Year2016 SORA     1.00e+00 1.00e+00 969    1   0.899  1.0000
+##  Spray Year2015 AMBI / Control Year2017 SORA   1.00e+00 0.00e+00 969    1  -0.406  1.0000
+##  Spray Year2015 AMBI / Spray Year2017 SORA     0.00e+00 0.00e+00 969    1  -2.806  0.6838
+##  Spray Year2015 AMBI / Control Year2018 SORA   1.10e+01 1.10e+01 969    1   2.295  0.9600
+##  Spray Year2015 AMBI / Spray Year2018 SORA     1.00e+00 0.00e+00 969    1  -1.189  1.0000
+##  Spray Year2015 AMBI / Control Year2015 VIRA   2.00e+00 1.00e+00 969    1   1.462  1.0000
+##  Spray Year2015 AMBI / Spray Year2015 VIRA     1.00e+00 0.00e+00 969    1   0.200  1.0000
+##  Spray Year2015 AMBI / Control Year2016 VIRA   2.00e+00 1.00e+00 969    1   1.228  1.0000
+##  Spray Year2015 AMBI / Spray Year2016 VIRA     3.00e+00 2.00e+00 969    1   2.100  0.9894
+##  Spray Year2015 AMBI / Control Year2017 VIRA   1.00e+00 1.00e+00 969    1   0.821  1.0000
+##  Spray Year2015 AMBI / Spray Year2017 VIRA     1.00e+00 0.00e+00 969    1  -0.151  1.0000
+##  Spray Year2015 AMBI / Control Year2018 VIRA   1.10e+01 1.10e+01 969    1   2.295  0.9600
+##  Spray Year2015 AMBI / Spray Year2018 VIRA     1.00e+00 0.00e+00 969    1  -1.369  1.0000
+##  Control Year2016 AMBI / Spray Year2016 AMBI   2.00e+00 0.00e+00 969    1   2.351  0.9451
+##  Control Year2016 AMBI / Control Year2017 AMBI 2.00e+00 1.00e+00 969    1   3.320  0.2739
+##  Control Year2016 AMBI / Spray Year2017 AMBI   2.00e+00 0.00e+00 969    1   2.359  0.9430
+##  Control Year2016 AMBI / Control Year2018 AMBI 1.10e+01 6.00e+00 969    1   4.577  0.0035
+##  Control Year2016 AMBI / Spray Year2018 AMBI   7.00e+00 3.00e+00 969    1   4.439  0.0063
+##  Control Year2016 AMBI / Control Year2015 LEBI 1.40e+01 7.00e+00 969    1   5.061  0.0004
+##  Control Year2016 AMBI / Spray Year2015 LEBI   5.00e+00 2.00e+00 969    1   4.668  0.0023
+##  Control Year2016 AMBI / Control Year2016 LEBI 1.40e+01 7.00e+00 969    1   5.061  0.0004
+##  Control Year2016 AMBI / Spray Year2016 LEBI   2.60e+01 1.90e+01 969    1   4.542  0.0040
+##  Control Year2016 AMBI / Control Year2017 LEBI 1.70e+01 1.00e+01 969    1   4.774  0.0014
+##  Control Year2016 AMBI / Spray Year2017 LEBI   8.00e+00 3.00e+00 969    1   4.856  0.0010
+##  Control Year2016 AMBI / Control Year2018 LEBI 2.10e+01 1.50e+01 969    1   4.257  0.0133
+##  Control Year2016 AMBI / Spray Year2018 LEBI   4.73e+08 1.62e+12 969    1   0.006  1.0000
+##  Control Year2016 AMBI / Control Year2015 PBGR 5.00e+00 2.00e+00 969    1   4.873  0.0009
+##  Control Year2016 AMBI / Spray Year2015 PBGR   9.00e+00 4.00e+00 969    1   4.996  0.0005
+##  Control Year2016 AMBI / Control Year2016 PBGR 3.00e+00 1.00e+00 969    1   4.113  0.0231
+##  Control Year2016 AMBI / Spray Year2016 PBGR   8.00e+00 3.00e+00 969    1   5.024  0.0004
+##  Control Year2016 AMBI / Control Year2017 PBGR 5.00e+00 2.00e+00 969    1   4.634  0.0027
+##  Control Year2016 AMBI / Spray Year2017 PBGR   7.00e+00 3.00e+00 969    1   4.818  0.0012
+##  Control Year2016 AMBI / Control Year2018 PBGR 2.10e+01 1.50e+01 969    1   4.257  0.0133
+##  Control Year2016 AMBI / Spray Year2018 PBGR   4.00e+00 1.00e+00 969    1   4.064  0.0278
+##  Control Year2016 AMBI / Control Year2015 SORA 2.00e+00 1.00e+00 969    1   3.390  0.2310
+##  Control Year2016 AMBI / Spray Year2015 SORA   3.00e+00 1.00e+00 969    1   3.615  0.1247
+##  Control Year2016 AMBI / Control Year2016 SORA 3.00e+00 1.00e+00 969    1   4.347  0.0092
+##  Control Year2016 AMBI / Spray Year2016 SORA   6.00e+00 2.00e+00 969    1   4.908  0.0008
+##  Control Year2016 AMBI / Control Year2017 SORA 3.00e+00 1.00e+00 969    1   4.189  0.0173
+##  Control Year2016 AMBI / Spray Year2017 SORA   2.00e+00 0.00e+00 969    1   1.986  0.9959
+##  Control Year2016 AMBI / Control Year2018 SORA 4.30e+01 4.30e+01 969    1   3.724  0.0895
+##  Control Year2016 AMBI / Spray Year2018 SORA   3.00e+00 1.00e+00 969    1   3.265  0.3109
+##  Control Year2016 AMBI / Control Year2015 VIRA 8.00e+00 3.00e+00 969    1   5.137  0.0002
+##  Control Year2016 AMBI / Spray Year2015 VIRA   4.00e+00 1.00e+00 969    1   4.566  0.0036
+##  Control Year2016 AMBI / Control Year2016 VIRA 7.00e+00 3.00e+00 969    1   5.095  0.0003
+##  Control Year2016 AMBI / Spray Year2016 VIRA   1.30e+01 7.00e+00 969    1   4.974  0.0005
+##  Control Year2016 AMBI / Control Year2017 VIRA 6.00e+00 2.00e+00 969    1   4.815  0.0012
+##  Control Year2016 AMBI / Spray Year2017 VIRA   4.00e+00 1.00e+00 969    1   4.261  0.0130
+##  Control Year2016 AMBI / Control Year2018 VIRA 4.30e+01 4.30e+01 969    1   3.724  0.0895
+##  Control Year2016 AMBI / Spray Year2018 VIRA   2.00e+00 1.00e+00 969    1   3.124  0.4172
+##  Spray Year2016 AMBI / Control Year2017 AMBI   1.00e+00 0.00e+00 969    1   1.108  1.0000
+##  Spray Year2016 AMBI / Spray Year2017 AMBI     1.00e+00 0.00e+00 969    1   0.079  1.0000
+##  Spray Year2016 AMBI / Control Year2018 AMBI   6.00e+00 3.00e+00 969    1   3.465  0.1903
+##  Spray Year2016 AMBI / Spray Year2018 AMBI     4.00e+00 2.00e+00 969    1   3.094  0.4415
+##  Spray Year2016 AMBI / Control Year2015 LEBI   8.00e+00 4.00e+00 969    1   3.937  0.0441
+##  Spray Year2016 AMBI / Spray Year2015 LEBI     3.00e+00 1.00e+00 969    1   2.889  0.6146
+##  Spray Year2016 AMBI / Control Year2016 LEBI   8.00e+00 4.00e+00 969    1   3.937  0.0441
+##  Spray Year2016 AMBI / Spray Year2016 LEBI     1.50e+01 1.10e+01 969    1   3.757  0.0806
+##  Spray Year2016 AMBI / Control Year2017 LEBI   1.00e+01 6.00e+00 969    1   3.805  0.0688
+##  Spray Year2016 AMBI / Spray Year2017 LEBI     5.00e+00 2.00e+00 969    1   3.498  0.1740
+##  Spray Year2016 AMBI / Control Year2018 LEBI   1.30e+01 9.00e+00 969    1   3.474  0.1856
+##  Spray Year2016 AMBI / Spray Year2018 LEBI     2.79e+08 9.53e+11 969    1   0.006  1.0000
+##  Spray Year2016 AMBI / Control Year2015 PBGR   3.00e+00 1.00e+00 969    1   3.077  0.4556
+##  Spray Year2016 AMBI / Spray Year2015 PBGR     5.00e+00 2.00e+00 969    1   3.632  0.1185
+##  Spray Year2016 AMBI / Control Year2016 PBGR   2.00e+00 1.00e+00 969    1   1.982  0.9961
+##  Spray Year2016 AMBI / Spray Year2016 PBGR     4.00e+00 2.00e+00 969    1   3.556  0.1480
+##  Spray Year2016 AMBI / Control Year2017 PBGR   3.00e+00 1.00e+00 969    1   2.853  0.6449
+##  Spray Year2016 AMBI / Spray Year2017 PBGR     4.00e+00 2.00e+00 969    1   3.360  0.2487
+##  Spray Year2016 AMBI / Control Year2018 PBGR   1.30e+01 9.00e+00 969    1   3.474  0.1856
+##  Spray Year2016 AMBI / Spray Year2018 PBGR     2.00e+00 1.00e+00 969    1   2.390  0.9329
+##  Spray Year2016 AMBI / Control Year2015 SORA   1.00e+00 0.00e+00 969    1   1.103  1.0000
+##  Spray Year2016 AMBI / Spray Year2015 SORA     2.00e+00 0.00e+00 969    1   1.451  1.0000
+##  Spray Year2016 AMBI / Control Year2016 SORA   2.00e+00 1.00e+00 969    1   2.291  0.9611
+##  Spray Year2016 AMBI / Spray Year2016 SORA     3.00e+00 1.00e+00 969    1   3.266  0.3097
+##  Spray Year2016 AMBI / Control Year2017 SORA   2.00e+00 1.00e+00 969    1   2.198  0.9783
+##  Spray Year2016 AMBI / Spray Year2017 SORA     1.00e+00 0.00e+00 969    1  -0.319  1.0000
+##  Spray Year2016 AMBI / Control Year2018 SORA   2.50e+01 2.60e+01 969    1   3.178  0.3747
+##  Spray Year2016 AMBI / Spray Year2018 SORA     1.00e+00 0.00e+00 969    1   1.300  1.0000
+##  [ reached getOption(&quot;max.print&quot;) -- omitted 638 rows ]
+## 
+## P value adjustment: tukey method for comparing a family of 40 estimates 
+## Tests are performed on the log scale
+</code></pre>
+
+<p>Results for plotting</p>
+
+<pre><code class="r">All_emmeans &lt;- summary(AllEmm$emmeans)
+results.graph[results.graph$Species == &quot;All&quot;,
+              c(&quot;logEstimate&quot;, &quot;logEstLL&quot;, &quot;logEstUL&quot;)] &lt;-
+  All_emmeans[,c(&quot;rate&quot;, &quot;lower.CL&quot;, &quot;upper.CL&quot;)]
+
+All_contrasts &lt;- summary(AllEmm$contrasts)
+#2015
+results.table[results.table$Species == &quot;All&quot;, 
+              c(&quot;t15ratioEst&quot;, &quot;t15ratioSE&quot;, &quot;t15t.ratio&quot;, &quot;t15p.value&quot;)] &lt;- 
+  All_contrasts[All_contrasts$contrast == &quot;Control Year2015 / Spray Year2015&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+#2016
+results.table[results.table$Species == &quot;All&quot;, 
+              c(&quot;t16ratioEst&quot;, &quot;t16ratioSE&quot;, &quot;t16t.ratio&quot;, &quot;t16p.value&quot;)] &lt;- 
+  All_contrasts[All_contrasts$contrast == &quot;Control Year2016 / Spray Year2016&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+#2017
+results.table[results.table$Species == &quot;All&quot;, 
+              c(&quot;t17ratioEst&quot;, &quot;t17ratioSE&quot;, &quot;t17t.ratio&quot;, &quot;t17p.value&quot;)] &lt;- 
+  All_contrasts[All_contrasts$contrast == &quot;Control Year2017 / Spray Year2017&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+#2018
+results.table[results.table$Species == &quot;All&quot;, 
+              c(&quot;t18ratioEst&quot;, &quot;t18ratioSE&quot;, &quot;t18t.ratio&quot;, &quot;t18p.value&quot;)] &lt;- 
+  All_contrasts[All_contrasts$contrast == &quot;Control Year2018 / Spray Year2018&quot;,
+                 c(&quot;ratio&quot;, &quot;SE&quot;, &quot;t.ratio&quot;, &quot;p.value&quot;)]
+results.table$df[results.table$Species == &quot;All&quot;] &lt;- All_contrasts$df[1]
+</code></pre>
+
+<h3>Save files for printing</h3>
+
+<pre><code class="r">save(results.graph, results.table, diff.results.graph, file = &quot;data/processed/results_NV.Rdata&quot;)
+</code></pre>
+
+<h3>Footer</h3>
+
+<p>ezspin(file = &ldquo;althea_programs_novisual/02_data_analysis_NV.R&rdquo;, out_dir = &ldquo;output&rdquo;, fig_dir = &ldquo;figures&rdquo;,keep_md = F)</p>
+
+</body>
+
+</html>
