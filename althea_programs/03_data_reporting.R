@@ -70,7 +70,7 @@ results.table %>%
             position = position_dodge(width = 0.15),
             size = 3)+
   facet_wrap(~Species, ncol = 6)+
-  ylab("Expected Mean Counts")+
+  ylab("Expected mean counts")+
   scale_color_manual(values = c("#969696", "#525252"))+
   theme_bw()+
   theme(legend.position = "top",
@@ -97,7 +97,7 @@ results.table %>%
   facet_wrap(~Species, ncol = 5)+
   geom_hline(yintercept = 0)+
   ylim(c(-2.7, 5.2))+
-  ylab("Herbicide-Control")+
+  ylab("Treatment-Control")+
   theme_bw()+
   theme(legend.position = "top",
         legend.text = element_text(size = 12),
