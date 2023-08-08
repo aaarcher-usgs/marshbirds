@@ -535,21 +535,21 @@ diff.results.graph &lt;- data.frame(
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 </code></pre>
 
-<pre><code class="r">(AMBIEmm &lt;- emmeans(AMBI_glmerBin, pairwise~Treatment*Year, level = 0.9, type = &quot;response&quot;))
+<pre><code class="r">(AMBIEmm &lt;- emmeans(AMBI_glmerBin, pairwise~Treatment*Year, level = 0.95, type = &quot;response&quot;))
 </code></pre>
 
 <pre><code>## $emmeans
 ##  Treatment Year  rate    SE  df lower.CL upper.CL
-##  Herbicide 2015 0.457 0.140 193    0.276    0.757
-##  Control   2015 0.967 0.218 193    0.665    1.404
-##  Herbicide 2016 1.056 0.233 193    0.734    1.520
-##  Control   2016 1.833 0.342 193    1.347    2.495
-##  Herbicide 2017 1.001 0.231 193    0.684    1.465
-##  Control   2017 0.769 0.193 193    0.507    1.165
-##  Herbicide 2018 0.582 0.181 193    0.347    0.974
-##  Control   2018 0.342 0.130 193    0.182    0.642
+##  Herbicide 2015 0.457 0.140 193    0.250    0.835
+##  Control   2015 0.967 0.218 193    0.619    1.510
+##  Herbicide 2016 1.056 0.233 193    0.684    1.631
+##  Control   2016 1.833 0.342 193    1.269    2.648
+##  Herbicide 2017 1.001 0.231 193    0.636    1.577
+##  Control   2017 0.769 0.193 193    0.468    1.263
+##  Herbicide 2018 0.582 0.181 193    0.314    1.076
+##  Control   2018 0.342 0.130 193    0.161    0.725
 ## 
-## Confidence level used: 0.9 
+## Confidence level used: 0.95 
 ## Intervals are back-transformed from the log scale 
 ## 
 ## $contrasts
@@ -588,44 +588,44 @@ diff.results.graph &lt;- data.frame(
 </code></pre>
 
 <pre><code class="r">(AMBIdiff &lt;- eff_size(object = AMBIEmm, sigma = sigma(AMBI_glmerBin), 
-                      edf = 193, level = 0.9, type = &quot;response&quot;))
+                      edf = 193, level = 0.95, type = &quot;response&quot;))
 </code></pre>
 
 <pre><code>## Since &#39;object&#39; is a list, we are using the contrasts already present.
 </code></pre>
 
 <pre><code>##  contrast                                  estimate    SE  df lower.CL upper.CL
-##  (Herbicide Year2015 - Control Year2015)    -0.7492 0.336 193  -1.3053  -0.1931
-##  (Herbicide Year2015 - Herbicide Year2016)  -0.8380 0.333 193  -1.3887  -0.2872
-##  (Herbicide Year2015 - Control Year2016)    -1.3892 0.317 193  -1.9131  -0.8654
-##  (Herbicide Year2015 - Herbicide Year2017)  -0.7847 0.338 193  -1.3440  -0.2254
-##  (Herbicide Year2015 - Control Year2017)    -0.5203 0.352 193  -1.1018   0.0612
-##  (Herbicide Year2015 - Herbicide Year2018)  -0.2412 0.395 193  -0.8935   0.4111
-##  (Herbicide Year2015 - Control Year2018)     0.2905 0.452 193  -0.4558   1.0368
-##  (Control Year2015 - Herbicide Year2016)    -0.0888 0.259 193  -0.5169   0.3393
-##  (Control Year2015 - Control Year2016)      -0.6400 0.232 193  -1.0231  -0.2569
-##  (Control Year2015 - Herbicide Year2017)    -0.0355 0.266 193  -0.4749   0.4040
-##  (Control Year2015 - Control Year2017)       0.2289 0.283 193  -0.2395   0.6973
-##  (Control Year2015 - Herbicide Year2018)     0.5080 0.337 193  -0.0489   1.0649
-##  (Control Year2015 - Control Year2018)       1.0397 0.404 193   0.3713   1.7081
-##  (Herbicide Year2016 - Control Year2016)    -0.5512 0.227 193  -0.9265  -0.1760
-##  (Herbicide Year2016 - Herbicide Year2017)   0.0533 0.261 193  -0.3784   0.4850
-##  (Herbicide Year2016 - Control Year2017)     0.3177 0.280 193  -0.1458   0.7812
-##  (Herbicide Year2016 - Herbicide Year2018)   0.5968 0.335 193   0.0433   1.1502
-##  (Herbicide Year2016 - Control Year2018)     1.1285 0.403 193   0.4621   1.7949
-##  (Control Year2016 - Herbicide Year2017)     0.6046 0.235 193   0.2158   0.9934
-##  (Control Year2016 - Control Year2017)       0.8689 0.257 193   0.4449   1.2930
-##  (Control Year2016 - Herbicide Year2018)     1.1480 0.316 193   0.6254   1.6706
-##  (Control Year2016 - Control Year2018)       1.6797 0.390 193   1.0359   2.3236
-##  (Herbicide Year2017 - Control Year2017)     0.2644 0.286 193  -0.2081   0.7368
-##  (Herbicide Year2017 - Herbicide Year2018)   0.5434 0.339 193  -0.0168   1.1037
-##  (Herbicide Year2017 - Control Year2018)     1.0751 0.406 193   0.4034   1.7469
-##  (Control Year2017 - Herbicide Year2018)     0.2791 0.352 193  -0.3019   0.8601
-##  (Control Year2017 - Control Year2018)       0.8108 0.416 193   0.1234   1.4982
-##  (Herbicide Year2018 - Control Year2018)     0.5317 0.450 193  -0.2125   1.2759
+##  (Herbicide Year2015 - Control Year2015)    -0.7492 0.336 193  -1.4128  -0.0856
+##  (Herbicide Year2015 - Herbicide Year2016)  -0.8380 0.333 193  -1.4952  -0.1808
+##  (Herbicide Year2015 - Control Year2016)    -1.3892 0.317 193  -2.0144  -0.7641
+##  (Herbicide Year2015 - Herbicide Year2017)  -0.7847 0.338 193  -1.4521  -0.1172
+##  (Herbicide Year2015 - Control Year2017)    -0.5203 0.352 193  -1.2142   0.1736
+##  (Herbicide Year2015 - Herbicide Year2018)  -0.2412 0.395 193  -1.0196   0.5372
+##  (Herbicide Year2015 - Control Year2018)     0.2905 0.452 193  -0.6001   1.1811
+##  (Control Year2015 - Herbicide Year2016)    -0.0888 0.259 193  -0.5996   0.4220
+##  (Control Year2015 - Control Year2016)      -0.6400 0.232 193  -1.0972  -0.1829
+##  (Control Year2015 - Herbicide Year2017)    -0.0355 0.266 193  -0.5599   0.4889
+##  (Control Year2015 - Control Year2017)       0.2289 0.283 193  -0.3301   0.7878
+##  (Control Year2015 - Herbicide Year2018)     0.5080 0.337 193  -0.1566   1.1726
+##  (Control Year2015 - Control Year2018)       1.0397 0.404 193   0.2421   1.8373
+##  (Herbicide Year2016 - Control Year2016)    -0.5512 0.227 193  -0.9990  -0.1034
+##  (Herbicide Year2016 - Herbicide Year2017)   0.0533 0.261 193  -0.4618   0.5685
+##  (Herbicide Year2016 - Control Year2017)     0.3177 0.280 193  -0.2354   0.8708
+##  (Herbicide Year2016 - Herbicide Year2018)   0.5968 0.335 193  -0.0637   1.2572
+##  (Herbicide Year2016 - Control Year2018)     1.1285 0.403 193   0.3332   1.9237
+##  (Control Year2016 - Herbicide Year2017)     0.6046 0.235 193   0.1406   1.0685
+##  (Control Year2016 - Control Year2017)       0.8689 0.257 193   0.3629   1.3750
+##  (Control Year2016 - Herbicide Year2018)     1.1480 0.316 193   0.5244   1.7717
+##  (Control Year2016 - Control Year2018)       1.6797 0.390 193   0.9114   2.4481
+##  (Herbicide Year2017 - Control Year2017)     0.2644 0.286 193  -0.2994   0.8281
+##  (Herbicide Year2017 - Herbicide Year2018)   0.5434 0.339 193  -0.1251   1.2120
+##  (Herbicide Year2017 - Control Year2018)     1.0751 0.406 193   0.2735   1.8768
+##  (Control Year2017 - Herbicide Year2018)     0.2791 0.352 193  -0.4143   0.9725
+##  (Control Year2017 - Control Year2018)       0.8108 0.416 193  -0.0095   1.6311
+##  (Herbicide Year2018 - Control Year2018)     0.5317 0.450 193  -0.3563   1.4197
 ## 
 ## sigma used for effect sizes: 1 
-## Confidence level used: 0.9
+## Confidence level used: 0.95
 </code></pre>
 
 <pre><code class="r">#emmip(AMBI_glmerBin,Treatment ~ Year, type = &quot;response&quot;)
@@ -737,21 +737,21 @@ diff.results.graph[diff.results.graph$Species == &quot;AMBI&quot; &amp; diff.res
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 </code></pre>
 
-<pre><code class="r">(LEBIEmm &lt;- emmeans(LEBI_glmerBin, pairwise ~ Treatment*Year, level = 0.9, type = &quot;response&quot;))
+<pre><code class="r">(LEBIEmm &lt;- emmeans(LEBI_glmerBin, pairwise ~ Treatment*Year, level = 0.95, type = &quot;response&quot;))
 </code></pre>
 
 <pre><code>## $emmeans
 ##  Treatment Year   rate     SE  df lower.CL upper.CL
-##  Herbicide 2015 0.3392 0.1354 193  0.17536    0.656
-##  Control   2015 0.1145 0.0651 193  0.04477    0.293
-##  Herbicide 2016 0.0605 0.0455 193  0.01746    0.210
-##  Control   2016 0.1145 0.0651 193  0.04477    0.293
-##  Herbicide 2017 0.2016 0.0971 193  0.09098    0.447
-##  Control   2017 0.0948 0.0604 193  0.03309    0.272
-##  Herbicide 2018 0.0389 0.0406 193  0.00694    0.219
-##  Control   2018 0.0736 0.0565 193  0.02069    0.262
+##  Herbicide 2015 0.3392 0.1354 193  0.15436    0.745
+##  Control   2015 0.1145 0.0651 193  0.03734    0.351
+##  Herbicide 2016 0.0605 0.0455 193  0.01373    0.267
+##  Control   2016 0.1145 0.0651 193  0.03734    0.351
+##  Herbicide 2017 0.2016 0.0971 193  0.07800    0.521
+##  Control   2017 0.0948 0.0604 193  0.02700    0.333
+##  Herbicide 2018 0.0389 0.0406 193  0.00497    0.305
+##  Control   2018 0.0736 0.0565 193  0.01619    0.335
 ## 
-## Confidence level used: 0.9 
+## Confidence level used: 0.95 
 ## Intervals are back-transformed from the log scale 
 ## 
 ## $contrasts
@@ -790,44 +790,44 @@ diff.results.graph[diff.results.graph$Species == &quot;AMBI&quot; &amp; diff.res
 </code></pre>
 
 <pre><code class="r">(LEBIdiff &lt;- eff_size(object = LEBIEmm, sigma = sigma(LEBI_glmerBin), 
-                      edf = 193, level = 0.9, type = &quot;reponse&quot;))
+                      edf = 193, level = 0.95, type = &quot;reponse&quot;))
 </code></pre>
 
 <pre><code>## Since &#39;object&#39; is a list, we are using the contrasts already present.
 </code></pre>
 
 <pre><code>##  contrast                                   estimate    SE  df lower.CL upper.CL
-##  (Herbicide Year2015 - Control Year2015)    1.09e+00 0.588 193    0.114    2.057
-##  (Herbicide Year2015 - Herbicide Year2016)  1.72e+00 0.774 193    0.445    3.002
-##  (Herbicide Year2015 - Control Year2016)    1.09e+00 0.588 193    0.114    2.057
-##  (Herbicide Year2015 - Herbicide Year2017)  5.20e-01 0.512 193   -0.325    1.366
-##  (Herbicide Year2015 - Control Year2017)    1.27e+00 0.658 193    0.187    2.362
-##  (Herbicide Year2015 - Herbicide Year2018)  2.16e+00 1.053 193    0.423    3.905
-##  (Herbicide Year2015 - Control Year2018)    1.53e+00 0.777 193    0.244    2.813
-##  (Control Year2015 - Herbicide Year2016)    6.38e-01 0.868 193   -0.796    2.072
-##  (Control Year2015 - Control Year2016)     -2.90e-06 0.707 193   -1.169    1.169
-##  (Control Year2015 - Herbicide Year2017)   -5.66e-01 0.650 193   -1.640    0.509
-##  (Control Year2015 - Control Year2017)      1.89e-01 0.765 193   -1.076    1.454
-##  (Control Year2015 - Herbicide Year2018)    1.08e+00 1.122 193   -0.776    2.933
-##  (Control Year2015 - Control Year2018)      4.42e-01 0.869 193   -0.994    1.879
-##  (Herbicide Year2016 - Control Year2016)   -6.38e-01 0.868 193   -2.072    0.796
-##  (Herbicide Year2016 - Herbicide Year2017) -1.20e+00 0.821 193   -2.560    0.153
-##  (Herbicide Year2016 - Control Year2017)   -4.49e-01 0.915 193   -1.962    1.064
-##  (Herbicide Year2016 - Herbicide Year2018)  4.41e-01 1.228 193   -1.589    2.471
-##  (Herbicide Year2016 - Control Year2018)   -1.95e-01 1.004 193   -1.855    1.464
-##  (Control Year2016 - Herbicide Year2017)   -5.66e-01 0.650 193   -1.640    0.509
-##  (Control Year2016 - Control Year2017)      1.89e-01 0.765 193   -1.076    1.454
-##  (Control Year2016 - Herbicide Year2018)    1.08e+00 1.122 193   -0.776    2.933
-##  (Control Year2016 - Control Year2018)      4.42e-01 0.869 193   -0.994    1.879
-##  (Herbicide Year2017 - Control Year2017)    7.54e-01 0.710 193   -0.419    1.928
-##  (Herbicide Year2017 - Herbicide Year2018)  1.64e+00 1.087 193   -0.152    3.440
-##  (Herbicide Year2017 - Control Year2018)    1.01e+00 0.823 193   -0.352    2.368
-##  (Control Year2017 - Herbicide Year2018)    8.90e-01 1.157 193   -1.023    2.803
-##  (Control Year2017 - Control Year2018)      2.53e-01 0.915 193   -1.259    1.765
-##  (Herbicide Year2018 - Control Year2018)   -6.36e-01 1.225 193   -2.662    1.389
+##  (Herbicide Year2015 - Control Year2015)    1.09e+00 0.588 193 -0.07376    2.245
+##  (Herbicide Year2015 - Herbicide Year2016)  1.72e+00 0.774 193  0.19734    3.250
+##  (Herbicide Year2015 - Control Year2016)    1.09e+00 0.588 193 -0.07376    2.245
+##  (Herbicide Year2015 - Herbicide Year2017)  5.20e-01 0.512 193 -0.48882    1.529
+##  (Herbicide Year2015 - Control Year2017)    1.27e+00 0.658 193 -0.02281    2.572
+##  (Herbicide Year2015 - Herbicide Year2018)  2.16e+00 1.053 193  0.08689    4.242
+##  (Herbicide Year2015 - Control Year2018)    1.53e+00 0.777 193 -0.00465    3.061
+##  (Control Year2015 - Herbicide Year2016)    6.38e-01 0.868 193 -1.07367    2.349
+##  (Control Year2015 - Control Year2016)     -2.90e-06 0.707 193 -1.39465    1.395
+##  (Control Year2015 - Herbicide Year2017)   -5.66e-01 0.650 193 -1.84825    0.717
+##  (Control Year2015 - Control Year2017)      1.89e-01 0.765 193 -1.32091    1.699
+##  (Control Year2015 - Herbicide Year2018)    1.08e+00 1.122 193 -1.13418    3.291
+##  (Control Year2015 - Control Year2018)      4.42e-01 0.869 193 -1.27179    2.156
+##  (Herbicide Year2016 - Control Year2016)   -6.38e-01 0.868 193 -2.34914    1.074
+##  (Herbicide Year2016 - Herbicide Year2017) -1.20e+00 0.821 193 -2.82179    0.415
+##  (Herbicide Year2016 - Control Year2017)   -4.49e-01 0.915 193 -2.25442    1.357
+##  (Herbicide Year2016 - Herbicide Year2018)  4.41e-01 1.228 193 -1.98117    2.863
+##  (Herbicide Year2016 - Control Year2018)   -1.95e-01 1.004 193 -2.17579    1.785
+##  (Control Year2016 - Herbicide Year2017)   -5.66e-01 0.650 193 -1.84824    0.717
+##  (Control Year2016 - Control Year2017)      1.89e-01 0.765 193 -1.32090    1.699
+##  (Control Year2016 - Herbicide Year2018)    1.08e+00 1.122 193 -1.13418    3.292
+##  (Control Year2016 - Control Year2018)      4.42e-01 0.869 193 -1.27179    2.156
+##  (Herbicide Year2017 - Control Year2017)    7.54e-01 0.710 193 -0.64543    2.154
+##  (Herbicide Year2017 - Herbicide Year2018)  1.64e+00 1.087 193 -0.49871    3.787
+##  (Herbicide Year2017 - Control Year2018)    1.01e+00 0.823 193 -0.61471    2.631
+##  (Control Year2017 - Herbicide Year2018)    8.90e-01 1.157 193 -1.39307    3.173
+##  (Control Year2017 - Control Year2018)      2.53e-01 0.915 193 -1.55084    2.058
+##  (Herbicide Year2018 - Control Year2018)   -6.36e-01 1.225 193 -3.05314    1.780
 ## 
 ## sigma used for effect sizes: 1 
-## Confidence level used: 0.9
+## Confidence level used: 0.95
 </code></pre>
 
 <pre><code class="r">#emmip(LEBI_glmerBin,Treatment ~ Year, type = &quot;response&quot;)
@@ -939,21 +939,21 @@ diff.results.graph[diff.results.graph$Species == &quot;LEBI&quot; &amp; diff.res
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 </code></pre>
 
-<pre><code class="r">(PBGREmm &lt;- emmeans(PBGR_glmerBin, pairwise ~ Treatment*Year, level = 0.9, type = &quot;response&quot;))
+<pre><code class="r">(PBGREmm &lt;- emmeans(PBGR_glmerBin, pairwise ~ Treatment*Year, level = 0.95, type = &quot;response&quot;))
 </code></pre>
 
 <pre><code>## $emmeans
 ##  Treatment Year   rate     SE  df lower.CL upper.CL
-##  Herbicide 2015 0.1733 0.0847 193   0.0773    0.389
-##  Control   2015 0.2903 0.1183 193   0.1480    0.569
-##  Herbicide 2016 0.1985 0.0919 193   0.0924    0.427
-##  Control   2016 0.4750 0.1717 193   0.2614    0.863
-##  Herbicide 2017 0.2054 0.0959 193   0.0949    0.444
-##  Control   2017 0.2996 0.1236 193   0.1515    0.592
-##  Herbicide 2018 0.3458 0.1491 193   0.1695    0.705
-##  Control   2018 0.0966 0.0626 193   0.0331    0.282
+##  Herbicide 2015 0.1733 0.0847 193   0.0661    0.455
+##  Control   2015 0.2903 0.1183 193   0.1300    0.648
+##  Herbicide 2016 0.1985 0.0919 193   0.0797    0.495
+##  Control   2016 0.4750 0.1717 193   0.2329    0.969
+##  Herbicide 2017 0.2054 0.0959 193   0.0818    0.516
+##  Control   2017 0.2996 0.1236 193   0.1328    0.676
+##  Herbicide 2018 0.3458 0.1491 193   0.1477    0.810
+##  Control   2018 0.0966 0.0626 193   0.0269    0.347
 ## 
-## Confidence level used: 0.9 
+## Confidence level used: 0.95 
 ## Intervals are back-transformed from the log scale 
 ## 
 ## $contrasts
@@ -992,44 +992,44 @@ diff.results.graph[diff.results.graph$Species == &quot;LEBI&quot; &amp; diff.res
 </code></pre>
 
 <pre><code class="r">(PBGRdiff &lt;- eff_size(object = PBGREmm, sigma = sigma(PBGR_glmerBin), 
-                      edf = 193, level = 0.9, type = &quot;reponse&quot;))
+                      edf = 193, level = 0.95, type = &quot;reponse&quot;))
 </code></pre>
 
 <pre><code>## Since &#39;object&#39; is a list, we are using the contrasts already present.
 </code></pre>
 
 <pre><code>##  contrast                                  estimate    SE  df lower.CL upper.CL
-##  (Herbicide Year2015 - Control Year2015)    -0.5156 0.510 193  -1.3578    0.326
-##  (Herbicide Year2015 - Herbicide Year2016)  -0.1358 0.556 193  -1.0555    0.784
-##  (Herbicide Year2015 - Control Year2016)    -1.0081 0.476 193  -1.7942   -0.222
-##  (Herbicide Year2015 - Herbicide Year2017)  -0.1696 0.557 193  -1.0900    0.751
-##  (Herbicide Year2015 - Control Year2017)    -0.5471 0.510 193  -1.3905    0.296
-##  (Herbicide Year2015 - Herbicide Year2018)  -0.6905 0.521 193  -1.5519    0.171
-##  (Herbicide Year2015 - Control Year2018)     0.5845 0.711 193  -0.5900    1.759
-##  (Control Year2015 - Herbicide Year2016)     0.3799 0.485 193  -0.4222    1.182
-##  (Control Year2015 - Control Year2016)      -0.4925 0.384 193  -1.1264    0.141
-##  (Control Year2015 - Herbicide Year2017)     0.3461 0.485 193  -0.4563    1.148
-##  (Control Year2015 - Control Year2017)      -0.0314 0.427 193  -0.7370    0.674
-##  (Control Year2015 - Herbicide Year2018)    -0.1748 0.440 193  -0.9024    0.553
-##  (Control Year2015 - Control Year2018)       1.1001 0.655 193   0.0168    2.183
-##  (Herbicide Year2016 - Control Year2016)    -0.8724 0.449 193  -1.6147   -0.130
-##  (Herbicide Year2016 - Herbicide Year2017)  -0.0338 0.535 193  -0.9180    0.850
-##  (Herbicide Year2016 - Control Year2017)    -0.4113 0.486 193  -1.2148    0.392
-##  (Herbicide Year2016 - Herbicide Year2018)  -0.5547 0.498 193  -1.3777    0.268
-##  (Herbicide Year2016 - Control Year2018)     0.7202 0.694 193  -0.4275    1.868
-##  (Control Year2016 - Herbicide Year2017)     0.8385 0.449 193   0.0961    1.581
-##  (Control Year2016 - Control Year2017)       0.4610 0.384 193  -0.1736    1.096
-##  (Control Year2016 - Herbicide Year2018)     0.3176 0.398 193  -0.3406    0.976
-##  (Control Year2016 - Control Year2018)       1.5926 0.631 193   0.5503    2.635
-##  (Herbicide Year2017 - Control Year2017)    -0.3775 0.485 193  -1.1797    0.425
-##  (Herbicide Year2017 - Herbicide Year2018)  -0.5209 0.497 193  -1.3420    0.300
-##  (Herbicide Year2017 - Control Year2018)     0.7540 0.694 193  -0.3926    1.901
-##  (Control Year2017 - Herbicide Year2018)    -0.1434 0.439 193  -0.8697    0.583
-##  (Control Year2017 - Control Year2018)       1.1315 0.655 193   0.0489    2.214
-##  (Herbicide Year2018 - Control Year2018)     1.2749 0.662 193   0.1813    2.369
+##  (Herbicide Year2015 - Control Year2015)    -0.5156 0.510 193  -1.5206   0.4893
+##  (Herbicide Year2015 - Herbicide Year2016)  -0.1358 0.556 193  -1.2333   0.9618
+##  (Herbicide Year2015 - Control Year2016)    -1.0081 0.476 193  -1.9462  -0.0701
+##  (Herbicide Year2015 - Herbicide Year2017)  -0.1696 0.557 193  -1.2679   0.9288
+##  (Herbicide Year2015 - Control Year2017)    -0.5471 0.510 193  -1.5535   0.4594
+##  (Herbicide Year2015 - Herbicide Year2018)  -0.6905 0.521 193  -1.7184   0.3374
+##  (Herbicide Year2015 - Control Year2018)     0.5845 0.711 193  -0.8171   1.9860
+##  (Control Year2015 - Herbicide Year2016)     0.3799 0.485 193  -0.5772   1.3370
+##  (Control Year2015 - Control Year2016)      -0.4925 0.384 193  -1.2489   0.2640
+##  (Control Year2015 - Herbicide Year2017)     0.3461 0.485 193  -0.6114   1.3035
+##  (Control Year2015 - Control Year2017)      -0.0314 0.427 193  -0.8734   0.8106
+##  (Control Year2015 - Herbicide Year2018)    -0.1748 0.440 193  -1.0431   0.6934
+##  (Control Year2015 - Control Year2018)       1.1001 0.655 193  -0.1927   2.3928
+##  (Herbicide Year2016 - Control Year2016)    -0.8724 0.449 193  -1.7582   0.0135
+##  (Herbicide Year2016 - Herbicide Year2017)  -0.0338 0.535 193  -1.0890   1.0213
+##  (Herbicide Year2016 - Control Year2017)    -0.4113 0.486 193  -1.3701   0.5475
+##  (Herbicide Year2016 - Herbicide Year2018)  -0.5547 0.498 193  -1.5368   0.4273
+##  (Herbicide Year2016 - Control Year2018)     0.7202 0.694 193  -0.6493   2.0897
+##  (Control Year2016 - Herbicide Year2017)     0.8385 0.449 193  -0.0475   1.7245
+##  (Control Year2016 - Control Year2017)       0.4610 0.384 193  -0.2963   1.2184
+##  (Control Year2016 - Herbicide Year2018)     0.3176 0.398 193  -0.4679   1.1032
+##  (Control Year2016 - Control Year2018)       1.5926 0.631 193   0.3488   2.8364
+##  (Herbicide Year2017 - Control Year2017)    -0.3775 0.485 193  -1.3347   0.5798
+##  (Herbicide Year2017 - Herbicide Year2018)  -0.5209 0.497 193  -1.5008   0.4590
+##  (Herbicide Year2017 - Control Year2018)     0.7540 0.694 193  -0.6142   2.1223
+##  (Control Year2017 - Herbicide Year2018)    -0.1434 0.439 193  -1.0101   0.7233
+##  (Control Year2017 - Control Year2018)       1.1315 0.655 193  -0.1604   2.4234
+##  (Herbicide Year2018 - Control Year2018)     1.2749 0.662 193  -0.0301   2.5800
 ## 
 ## sigma used for effect sizes: 1 
-## Confidence level used: 0.9
+## Confidence level used: 0.95
 </code></pre>
 
 <pre><code class="r">#emmip(PBGR_glmerBin,Treatment ~ Year, type = &quot;response&quot;)
@@ -1141,21 +1141,21 @@ diff.results.graph[diff.results.graph$Species == &quot;PBGR&quot; &amp; diff.res
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 </code></pre>
 
-<pre><code class="r">(SORAEmm &lt;- emmeans(SORA_glmerBin, pairwise ~ Treatment*Year, level = 0.9, type = &quot;response&quot;))
+<pre><code class="r">(SORAEmm &lt;- emmeans(SORA_glmerBin, pairwise ~ Treatment*Year, level = 0.95, type = &quot;response&quot;))
 </code></pre>
 
 <pre><code>## $emmeans
 ##  Treatment Year   rate     SE  df lower.CL upper.CL
-##  Herbicide 2015 0.6603 0.2083 193   0.3920    1.112
-##  Control   2015 0.7263 0.2221 193   0.4381    1.204
-##  Herbicide 2016 0.2784 0.1123 193   0.1430    0.542
-##  Control   2016 0.4842 0.1637 193   0.2769    0.847
-##  Herbicide 2017 1.1543 0.3338 193   0.7157    1.862
-##  Control   2017 0.5439 0.1872 193   0.3079    0.961
-##  Herbicide 2018 1.0180 0.3200 193   0.6055    1.712
-##  Control   2018 0.0846 0.0631 193   0.0247    0.290
+##  Herbicide 2015 0.6603 0.2083 193   0.3544    1.230
+##  Control   2015 0.7263 0.2221 193   0.3973    1.328
+##  Herbicide 2016 0.2784 0.1123 193   0.1257    0.617
+##  Control   2016 0.4842 0.1637 193   0.2485    0.943
+##  Herbicide 2017 1.1543 0.3338 193   0.6526    2.042
+##  Control   2017 0.5439 0.1872 193   0.2758    1.072
+##  Herbicide 2018 1.0180 0.3200 193   0.5476    1.892
+##  Control   2018 0.0846 0.0631 193   0.0195    0.368
 ## 
-## Confidence level used: 0.9 
+## Confidence level used: 0.95 
 ## Intervals are back-transformed from the log scale 
 ## 
 ## $contrasts
@@ -1194,44 +1194,44 @@ diff.results.graph[diff.results.graph$Species == &quot;PBGR&quot; &amp; diff.res
 </code></pre>
 
 <pre><code class="r">(SORAdiff &lt;- eff_size(object = SORAEmm, sigma = sigma(SORA_glmerBin), 
-                      edf = 198, level = 0.90, type = &quot;response&quot;))
+                      edf = 198, level = 0.95, type = &quot;response&quot;))
 </code></pre>
 
 <pre><code>## Since &#39;object&#39; is a list, we are using the contrasts already present.
 </code></pre>
 
 <pre><code>##  contrast                                  estimate    SE  df lower.CL upper.CL
-##  (Herbicide Year2015 - Control Year2015)    -0.0952 0.300 193   -0.590  0.39998
-##  (Herbicide Year2015 - Herbicide Year2016)   0.8635 0.401 193    0.201  1.52598
-##  (Herbicide Year2015 - Control Year2016)     0.3103 0.333 193   -0.240  0.86047
-##  (Herbicide Year2015 - Herbicide Year2017)  -0.5585 0.289 193   -1.037 -0.08049
-##  (Herbicide Year2015 - Control Year2017)     0.1940 0.343 193   -0.373  0.76109
-##  (Herbicide Year2015 - Herbicide Year2018)  -0.4329 0.309 193   -0.944  0.07801
-##  (Herbicide Year2015 - Control Year2018)     2.0544 0.750 193    0.815  3.29371
-##  (Control Year2015 - Herbicide Year2016)     0.9587 0.394 193    0.307  1.61052
-##  (Control Year2015 - Control Year2016)       0.4055 0.323 193   -0.129  0.93996
-##  (Control Year2015 - Herbicide Year2017)    -0.4633 0.279 193   -0.924 -0.00246
-##  (Control Year2015 - Control Year2017)       0.2892 0.333 193   -0.262  0.84030
-##  (Control Year2015 - Herbicide Year2018)    -0.3377 0.298 193   -0.831  0.15535
-##  (Control Year2015 - Control Year2018)       2.1496 0.746 193    0.916  3.38262
-##  (Herbicide Year2016 - Control Year2016)    -0.5533 0.418 193   -1.244  0.13778
-##  (Herbicide Year2016 - Herbicide Year2017)  -1.4220 0.389 193   -2.065 -0.77922
-##  (Herbicide Year2016 - Control Year2017)    -0.6695 0.427 193   -1.375  0.03571
-##  (Herbicide Year2016 - Herbicide Year2018)  -1.2964 0.404 193   -1.963 -0.62928
-##  (Herbicide Year2016 - Control Year2018)     1.1908 0.787 193   -0.109  2.49098
-##  (Control Year2016 - Herbicide Year2017)    -0.8688 0.316 193   -1.391 -0.34627
-##  (Control Year2016 - Control Year2017)      -0.1163 0.363 193   -0.716  0.48385
-##  (Control Year2016 - Herbicide Year2018)    -0.7431 0.333 193   -1.294 -0.19268
-##  (Control Year2016 - Control Year2018)       1.7441 0.757 193    0.492  2.99568
-##  (Herbicide Year2017 - Control Year2017)     0.7525 0.318 193    0.227  1.27767
-##  (Herbicide Year2017 - Herbicide Year2018)   0.1257 0.279 193   -0.335  0.58627
-##  (Herbicide Year2017 - Control Year2018)     2.6129 0.743 193    1.386  3.84023
-##  (Control Year2017 - Herbicide Year2018)    -0.6268 0.335 193   -1.181 -0.07273
-##  (Control Year2017 - Control Year2018)       1.8604 0.759 193    0.606  3.11514
-##  (Herbicide Year2018 - Control Year2018)     2.4872 0.748 193    1.251  3.72317
+##  (Herbicide Year2015 - Control Year2015)    -0.0952 0.300 193   -0.686   0.4957
+##  (Herbicide Year2015 - Herbicide Year2016)   0.8635 0.401 193    0.073   1.6541
+##  (Herbicide Year2015 - Control Year2016)     0.3103 0.333 193   -0.346   0.9668
+##  (Herbicide Year2015 - Herbicide Year2017)  -0.5585 0.289 193   -1.129   0.0119
+##  (Herbicide Year2015 - Control Year2017)     0.1940 0.343 193   -0.483   0.8707
+##  (Herbicide Year2015 - Herbicide Year2018)  -0.4329 0.309 193   -1.042   0.1768
+##  (Herbicide Year2015 - Control Year2018)     2.0544 0.750 193    0.575   3.5333
+##  (Control Year2015 - Herbicide Year2016)     0.9587 0.394 193    0.181   1.7365
+##  (Control Year2015 - Control Year2016)       0.4055 0.323 193   -0.232   1.0433
+##  (Control Year2015 - Herbicide Year2017)    -0.4633 0.279 193   -1.013   0.0866
+##  (Control Year2015 - Control Year2017)       0.2892 0.333 193   -0.369   0.9469
+##  (Control Year2015 - Herbicide Year2018)    -0.3377 0.298 193   -0.926   0.2507
+##  (Control Year2015 - Control Year2018)       2.1496 0.746 193    0.678   3.6210
+##  (Herbicide Year2016 - Control Year2016)    -0.5533 0.418 193   -1.378   0.2714
+##  (Herbicide Year2016 - Herbicide Year2017)  -1.4220 0.389 193   -2.189  -0.6549
+##  (Herbicide Year2016 - Control Year2017)    -0.6695 0.427 193   -1.511   0.1721
+##  (Herbicide Year2016 - Herbicide Year2018)  -1.2964 0.404 193   -2.092  -0.5003
+##  (Herbicide Year2016 - Control Year2018)     1.1908 0.787 193   -0.361   2.7423
+##  (Control Year2016 - Herbicide Year2017)    -0.8688 0.316 193   -1.492  -0.2452
+##  (Control Year2016 - Control Year2017)      -0.1163 0.363 193   -0.832   0.5999
+##  (Control Year2016 - Herbicide Year2018)    -0.7431 0.333 193   -1.400  -0.0863
+##  (Control Year2016 - Control Year2018)       1.7441 0.757 193    0.251   3.2377
+##  (Herbicide Year2017 - Control Year2017)     0.7525 0.318 193    0.126   1.3792
+##  (Herbicide Year2017 - Herbicide Year2018)   0.1257 0.279 193   -0.424   0.6753
+##  (Herbicide Year2017 - Control Year2018)     2.6129 0.743 193    1.148   4.0775
+##  (Control Year2017 - Herbicide Year2018)    -0.6268 0.335 193   -1.288   0.0344
+##  (Control Year2017 - Control Year2018)       1.8604 0.759 193    0.363   3.3577
+##  (Herbicide Year2018 - Control Year2018)     2.4872 0.748 193    1.012   3.9621
 ## 
 ## sigma used for effect sizes: 1 
-## Confidence level used: 0.9
+## Confidence level used: 0.95
 </code></pre>
 
 <pre><code class="r">#emmip(SORA_glmerBin,Treatment ~ Year, type = &quot;response&quot;)
@@ -1343,21 +1343,21 @@ diff.results.graph[diff.results.graph$Species == &quot;SORA&quot; &amp; diff.res
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 </code></pre>
 
-<pre><code class="r">(VIRAEmm &lt;- emmeans(VIRA_glmerBin, pairwise ~ Treatment*Year, level = 0.9, type = &quot;response&quot;))
+<pre><code class="r">(VIRAEmm &lt;- emmeans(VIRA_glmerBin, pairwise ~ Treatment*Year, level = 0.95, type = &quot;response&quot;))
 </code></pre>
 
 <pre><code>## $emmeans
 ##  Treatment Year   rate     SE  df lower.CL upper.CL
-##  Herbicide 2015 0.4313 0.1303 193  0.26178    0.710
-##  Control   2015 0.2401 0.0936 193  0.12607    0.457
-##  Herbicide 2016 0.1393 0.0707 193  0.06023    0.322
-##  Control   2016 0.2744 0.1004 193  0.14981    0.502
-##  Herbicide 2017 0.4888 0.1422 193  0.30223    0.791
-##  Control   2017 0.3329 0.1155 193  0.18754    0.591
-##  Herbicide 2018 1.1816 0.2816 193  0.79688    1.752
-##  Control   2018 0.0466 0.0470 193  0.00882    0.247
+##  Herbicide 2015 0.4313 0.1303 193  0.23770    0.782
+##  Control   2015 0.2401 0.0936 193  0.11131    0.518
+##  Herbicide 2016 0.1393 0.0707 193  0.05122    0.379
+##  Control   2016 0.2744 0.1004 193  0.13327    0.565
+##  Herbicide 2017 0.4888 0.1422 193  0.27540    0.868
+##  Control   2017 0.3329 0.1155 193  0.16785    0.660
+##  Herbicide 2018 1.1816 0.2816 193  0.73844    1.891
+##  Control   2018 0.0466 0.0470 193  0.00639    0.340
 ## 
-## Confidence level used: 0.9 
+## Confidence level used: 0.95 
 ## Intervals are back-transformed from the log scale 
 ## 
 ## $contrasts
@@ -1396,44 +1396,44 @@ diff.results.graph[diff.results.graph$Species == &quot;SORA&quot; &amp; diff.res
 </code></pre>
 
 <pre><code class="r">(VIRAdiff &lt;- eff_size(object = VIRAEmm, sigma = sigma(VIRA_glmerBin), 
-                      edf = 193, level = 0.9, type = &quot;reponse&quot;))
+                      edf = 193, level = 0.95, type = &quot;reponse&quot;))
 </code></pre>
 
 <pre><code>## Since &#39;object&#39; is a list, we are using the contrasts already present.
 </code></pre>
 
 <pre><code>##  contrast                                  estimate    SE  df lower.CL upper.CL
-##  (Herbicide Year2015 - Control Year2015)      0.586 0.477 193  -0.2028    1.374
-##  (Herbicide Year2015 - Herbicide Year2016)    1.130 0.580 193   0.1710    2.089
-##  (Herbicide Year2015 - Control Year2016)      0.452 0.458 193  -0.3041    1.209
-##  (Herbicide Year2015 - Herbicide Year2017)   -0.125 0.401 193  -0.7879    0.537
-##  (Herbicide Year2015 - Control Year2017)      0.259 0.442 193  -0.4717    0.990
-##  (Herbicide Year2015 - Herbicide Year2018)   -1.008 0.362 193  -1.6059   -0.410
-##  (Herbicide Year2015 - Control Year2018)      2.224 1.049 193   0.4909    3.957
-##  (Control Year2015 - Herbicide Year2016)      0.544 0.628 193  -0.4936    1.582
-##  (Control Year2015 - Control Year2016)       -0.134 0.518 193  -0.9890    0.722
-##  (Control Year2015 - Herbicide Year2017)     -0.711 0.471 193  -1.4903    0.068
-##  (Control Year2015 - Control Year2017)       -0.327 0.505 193  -1.1607    0.507
-##  (Control Year2015 - Herbicide Year2018)     -1.594 0.440 193  -2.3204   -0.867
-##  (Control Year2015 - Control Year2018)        1.638 1.073 193  -0.1356    3.412
-##  (Herbicide Year2016 - Control Year2016)     -0.678 0.614 193  -1.6924    0.337
-##  (Herbicide Year2016 - Herbicide Year2017)   -1.255 0.576 193  -2.2067   -0.304
-##  (Herbicide Year2016 - Control Year2017)     -0.871 0.603 193  -1.8683    0.126
-##  (Herbicide Year2016 - Herbicide Year2018)   -2.138 0.555 193  -3.0545   -1.221
-##  (Herbicide Year2016 - Control Year2018)      1.094 1.121 193  -0.7593    2.947
-##  (Control Year2016 - Herbicide Year2017)     -0.578 0.452 193  -1.3240    0.169
-##  (Control Year2016 - Control Year2017)       -0.193 0.486 193  -0.9970    0.610
-##  (Control Year2016 - Herbicide Year2018)     -1.460 0.418 193  -2.1504   -0.770
-##  (Control Year2016 - Control Year2018)        1.772 1.065 193   0.0108    3.533
-##  (Herbicide Year2017 - Control Year2017)      0.384 0.435 193  -0.3347    1.103
-##  (Herbicide Year2017 - Herbicide Year2018)   -0.883 0.353 193  -1.4662   -0.299
-##  (Herbicide Year2017 - Control Year2018)      2.349 1.047 193   0.6194    4.079
-##  (Control Year2017 - Herbicide Year2018)     -1.267 0.399 193  -1.9259   -0.608
-##  (Control Year2017 - Control Year2018)        1.965 1.060 193   0.2135    3.717
-##  (Herbicide Year2018 - Control Year2018)      3.232 1.034 193   1.5233    4.941
+##  (Herbicide Year2015 - Control Year2015)      0.586 0.477 193  -0.3552    1.527
+##  (Herbicide Year2015 - Herbicide Year2016)    1.130 0.580 193  -0.0144    2.275
+##  (Herbicide Year2015 - Control Year2016)      0.452 0.458 193  -0.4503    1.355
+##  (Herbicide Year2015 - Herbicide Year2017)   -0.125 0.401 193  -0.9161    0.665
+##  (Herbicide Year2015 - Control Year2017)      0.259 0.442 193  -0.6130    1.131
+##  (Herbicide Year2015 - Herbicide Year2018)   -1.008 0.362 193  -1.7215   -0.294
+##  (Herbicide Year2015 - Control Year2018)      2.224 1.049 193   0.1558    4.292
+##  (Control Year2015 - Herbicide Year2016)      0.544 0.628 193  -0.6943    1.783
+##  (Control Year2015 - Control Year2016)       -0.134 0.518 193  -1.1544    0.887
+##  (Control Year2015 - Herbicide Year2017)     -0.711 0.471 193  -1.6409    0.219
+##  (Control Year2015 - Control Year2017)       -0.327 0.505 193  -1.3219    0.668
+##  (Control Year2015 - Herbicide Year2018)     -1.594 0.440 193  -2.4609   -0.727
+##  (Control Year2015 - Control Year2018)        1.638 1.073 193  -0.4786    3.755
+##  (Herbicide Year2016 - Control Year2016)     -0.678 0.614 193  -1.8886    0.533
+##  (Herbicide Year2016 - Herbicide Year2017)   -1.255 0.576 193  -2.3906   -0.120
+##  (Herbicide Year2016 - Control Year2017)     -0.871 0.603 193  -2.0610    0.319
+##  (Herbicide Year2016 - Herbicide Year2018)   -2.138 0.555 193  -3.2317   -1.044
+##  (Herbicide Year2016 - Control Year2018)      1.094 1.121 193  -1.1176    3.306
+##  (Control Year2016 - Herbicide Year2017)     -0.578 0.452 193  -1.4683    0.313
+##  (Control Year2016 - Control Year2017)       -0.193 0.486 193  -1.1524    0.766
+##  (Control Year2016 - Herbicide Year2018)     -1.460 0.418 193  -2.2838   -0.637
+##  (Control Year2016 - Control Year2018)        1.772 1.065 193  -0.3297    3.873
+##  (Herbicide Year2017 - Control Year2017)      0.384 0.435 193  -0.4737    1.242
+##  (Herbicide Year2017 - Herbicide Year2018)   -0.883 0.353 193  -1.5791   -0.186
+##  (Herbicide Year2017 - Control Year2018)      2.349 1.047 193   0.2849    4.414
+##  (Control Year2017 - Herbicide Year2018)     -1.267 0.399 193  -2.0533   -0.481
+##  (Control Year2017 - Control Year2018)        1.965 1.060 193  -0.1251    4.055
+##  (Herbicide Year2018 - Control Year2018)      3.232 1.034 193   1.1929    5.271
 ## 
 ## sigma used for effect sizes: 1 
-## Confidence level used: 0.9
+## Confidence level used: 0.95
 </code></pre>
 
 <pre><code class="r">#emmip(VIRA_glmerBin,Treatment ~ Year, type = &quot;response&quot;)
@@ -1545,21 +1545,21 @@ diff.results.graph[diff.results.graph$Species == &quot;VIRA&quot; &amp; diff.res
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 </code></pre>
 
-<pre><code class="r">(AllEmm &lt;- emmeans(All_glmerBin, pairwise ~ Treatment*Year, level = 0.9, type = &quot;response&quot;))
+<pre><code class="r">(AllEmm &lt;- emmeans(All_glmerBin, pairwise ~ Treatment*Year, level = 0.95, type = &quot;response&quot;))
 </code></pre>
 
 <pre><code>## $emmeans
 ##  Treatment Year  rate     SE   df lower.CL upper.CL
-##  Control   2015 0.500 0.0820 1001   0.3816    0.655
-##  Spray     2015 0.447 0.0765 1001   0.3372    0.593
-##  Control   2016 0.673 0.1031 1001   0.5231    0.866
-##  Spray     2016 0.368 0.0660 1001   0.2738    0.494
-##  Control   2017 0.432 0.0756 1001   0.3239    0.576
-##  Spray     2017 0.640 0.1021 1001   0.4918    0.832
-##  Control   2018 0.136 0.0379 1001   0.0862    0.215
-##  Spray     2018 0.637 0.1086 1001   0.4814    0.844
+##  Control   2015 0.500 0.0820 1001   0.3623    0.690
+##  Spray     2015 0.447 0.0765 1001   0.3195    0.626
+##  Control   2016 0.673 0.1031 1001   0.4983    0.909
+##  Spray     2016 0.368 0.0660 1001   0.2587    0.523
+##  Control   2017 0.432 0.0756 1001   0.3065    0.609
+##  Spray     2017 0.640 0.1021 1001   0.4676    0.875
+##  Control   2018 0.136 0.0379 1001   0.0789    0.235
+##  Spray     2018 0.637 0.1086 1001   0.4562    0.890
 ## 
-## Confidence level used: 0.9 
+## Confidence level used: 0.95 
 ## Intervals are back-transformed from the log scale 
 ## 
 ## $contrasts
@@ -1668,53 +1668,53 @@ diff.results.graph[diff.results.graph$Species == &quot;VIRA&quot; &amp; diff.res
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 </code></pre>
 
-<pre><code class="r">(AllEmm2 &lt;- emmeans(All_glmerBin2, pairwise ~ Treatment*Year*Species, level = 0.9, type = &quot;response&quot;))
+<pre><code class="r">(AllEmm2 &lt;- emmeans(All_glmerBin2, pairwise ~ Treatment*Year*Species, level = 0.95, type = &quot;response&quot;))
 </code></pre>
 
 <pre><code>## $emmeans
 ##  Treatment Year Species   rate     SE  df lower.CL upper.CL
-##  Control   2015 AMBI    0.9663 0.2118 969  0.67358    1.386
-##  Spray     2015 AMBI    0.4612 0.1386 969  0.28116    0.757
-##  Control   2016 AMBI    1.8327 0.3266 969  1.36676    2.458
-##  Spray     2016 AMBI    1.0760 0.2298 969  0.75707    1.529
-##  Control   2017 AMBI    0.7920 0.1931 969  0.53022    1.183
-##  Spray     2017 AMBI    1.0536 0.2343 969  0.73058    1.519
-##  Control   2018 AMBI    0.3406 0.1274 969  0.18398    0.630
-##  Spray     2018 AMBI    0.5834 0.1768 969  0.35420    0.961
-##  Control   2015 LEBI    0.1333 0.0684 969  0.05724    0.310
-##  Spray     2015 LEBI    0.3903 0.1261 969  0.22928    0.664
-##  Control   2016 LEBI    0.1333 0.0684 969  0.05724    0.310
-##  Spray     2016 LEBI    0.0694 0.0497 969  0.02134    0.226
-##  Control   2017 LEBI    0.1080 0.0636 969  0.04093    0.285
-##  Spray     2017 LEBI    0.2258 0.0959 969  0.11219    0.454
-##  Control   2018 LEBI    0.0851 0.0611 969  0.02613    0.277
-##  Spray     2018 LEBI    0.0449 0.0452 969  0.00854    0.236
-##  Control   2015 PBGR    0.3665 0.1185 969  0.21528    0.624
-##  Spray     2015 PBGR    0.2129 0.0903 969  0.10584    0.428
-##  Control   2016 PBGR    0.5998 0.1577 969  0.38906    0.925
-##  Spray     2016 PBGR    0.2430 0.0960 969  0.12676    0.466
-##  Control   2017 PBGR    0.3960 0.1282 969  0.23236    0.675
-##  Spray     2017 PBGR    0.2634 0.1042 969  0.13730    0.505
-##  Control   2018 PBGR    0.1277 0.0754 969  0.04834    0.337
-##  Spray     2018 PBGR    0.4488 0.1521 969  0.25682    0.784
-##  Control   2015 SORA    0.7997 0.1880 969  0.54313    1.178
-##  Spray     2015 SORA    0.7450 0.1841 969  0.49601    1.119
-##  Control   2016 SORA    0.5332 0.1470 969  0.33857    0.840
-##  Spray     2016 SORA    0.3124 0.1102 969  0.17477    0.558
-##  Control   2017 SORA    0.5400 0.1533 969  0.33836    0.862
-##  Spray     2017 SORA    1.1665 0.2502 969  0.81947    1.660
-##  Control   2018 SORA    0.0851 0.0611 969  0.02613    0.277
-##  Spray     2018 SORA    1.0322 0.2495 969  0.69333    1.537
-##  Control   2015 VIRA    0.2333 0.0923 969  0.12163    0.447
-##  Spray     2015 VIRA    0.4257 0.1324 969  0.25509    0.711
-##  Control   2016 VIRA    0.2666 0.0992 969  0.14443    0.492
-##  Spray     2016 VIRA    0.1388 0.0713 969  0.05965    0.323
-##  Control   2017 VIRA    0.3240 0.1146 969  0.18100    0.580
-##  Spray     2017 VIRA    0.4892 0.1473 969  0.29797    0.803
-##  Control   2018 VIRA    0.0426 0.0429 969  0.00811    0.224
-##  Spray     2018 VIRA    1.0771 0.2562 969  0.72800    1.594
+##  Control   2015 AMBI    0.9663 0.2118 969  0.62850    1.486
+##  Spray     2015 AMBI    0.4612 0.1386 969  0.25568    0.832
+##  Control   2016 AMBI    1.8327 0.3266 969  1.29193    2.600
+##  Spray     2016 AMBI    1.0760 0.2298 969  0.70767    1.636
+##  Control   2017 AMBI    0.7920 0.1931 969  0.49092    1.278
+##  Spray     2017 AMBI    1.0536 0.2343 969  0.68101    1.630
+##  Control   2018 AMBI    0.3406 0.1274 969  0.16347    0.710
+##  Spray     2018 AMBI    0.5834 0.1768 969  0.32186    1.057
+##  Control   2015 LEBI    0.1333 0.0684 969  0.04867    0.365
+##  Spray     2015 LEBI    0.3903 0.1261 969  0.20703    0.736
+##  Control   2016 LEBI    0.1333 0.0684 969  0.04867    0.365
+##  Spray     2016 LEBI    0.0694 0.0497 969  0.01702    0.283
+##  Control   2017 LEBI    0.1080 0.0636 969  0.03398    0.343
+##  Spray     2017 LEBI    0.2258 0.0959 969  0.09810    0.520
+##  Control   2018 LEBI    0.0851 0.0611 969  0.02083    0.348
+##  Spray     2018 LEBI    0.0449 0.0452 969  0.00621    0.324
+##  Control   2015 PBGR    0.3665 0.1185 969  0.19438    0.691
+##  Spray     2015 PBGR    0.2129 0.0903 969  0.09256    0.490
+##  Control   2016 PBGR    0.5998 0.1577 969  0.35805    1.005
+##  Spray     2016 PBGR    0.2430 0.0960 969  0.11188    0.528
+##  Control   2017 PBGR    0.3960 0.1282 969  0.20976    0.748
+##  Spray     2017 PBGR    0.2634 0.1042 969  0.12116    0.573
+##  Control   2018 PBGR    0.1277 0.0754 969  0.04012    0.407
+##  Spray     2018 PBGR    0.4488 0.1521 969  0.23073    0.873
+##  Control   2015 SORA    0.7997 0.1880 969  0.50425    1.268
+##  Spray     2015 SORA    0.7450 0.1841 969  0.45875    1.210
+##  Control   2016 SORA    0.5332 0.1470 969  0.31031    0.916
+##  Spray     2016 SORA    0.3124 0.1102 969  0.15633    0.624
+##  Control   2017 SORA    0.5400 0.1533 969  0.30933    0.943
+##  Spray     2017 SORA    1.1665 0.2502 969  0.76577    1.777
+##  Control   2018 SORA    0.0851 0.0611 969  0.02083    0.348
+##  Spray     2018 SORA    1.0322 0.2495 969  0.64235    1.659
+##  Control   2015 VIRA    0.2333 0.0923 969  0.10734    0.507
+##  Spray     2015 VIRA    0.4257 0.1324 969  0.23121    0.784
+##  Control   2016 VIRA    0.2666 0.0992 969  0.12840    0.553
+##  Spray     2016 VIRA    0.1388 0.0713 969  0.05072    0.380
+##  Control   2017 VIRA    0.3240 0.1146 969  0.16187    0.649
+##  Spray     2017 VIRA    0.4892 0.1473 969  0.27093    0.883
+##  Control   2018 VIRA    0.0426 0.0429 969  0.00590    0.307
+##  Spray     2018 VIRA    1.0771 0.2562 969  0.67527    1.718
 ## 
-## Confidence level used: 0.9 
+## Confidence level used: 0.95 
 ## Intervals are back-transformed from the log scale 
 ## 
 ## $contrasts
