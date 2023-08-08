@@ -186,9 +186,9 @@ AMBI_glmerBin <- glmmTMB(AMBI ~ Treatment + Year + Treatment*Year + (1|SiteName)
                              data = NWPOINTR2,
                              family = "poisson")
 (AMBI <- summary(AMBI_glmerBin))
-(AMBIEmm <- emmeans(AMBI_glmerBin, pairwise~Treatment*Year, level = 0.9, type = "response"))
+(AMBIEmm <- emmeans(AMBI_glmerBin, pairwise~Treatment*Year, level = 0.95, type = "response"))
 (AMBIdiff <- eff_size(object = AMBIEmm, sigma = sigma(AMBI_glmerBin), 
-                      edf = 193, level = 0.9, type = "response"))
+                      edf = 193, level = 0.95, type = "response"))
 #emmip(AMBI_glmerBin,Treatment ~ Year, type = "response")
 
 #' Results for plotting
@@ -255,9 +255,9 @@ LEBI_glmerBin <- glmmTMB(LEBI ~ Treatment + Year + Treatment*Year + (1|SiteName)
                          data = NWPOINTR2,
                          family = "poisson")
 (LEBI <- summary(LEBI_glmerBin))
-(LEBIEmm <- emmeans(LEBI_glmerBin, pairwise ~ Treatment*Year, level = 0.9, type = "response"))
+(LEBIEmm <- emmeans(LEBI_glmerBin, pairwise ~ Treatment*Year, level = 0.95, type = "response"))
 (LEBIdiff <- eff_size(object = LEBIEmm, sigma = sigma(LEBI_glmerBin), 
-                      edf = 193, level = 0.9, type = "reponse"))
+                      edf = 193, level = 0.95, type = "reponse"))
 #emmip(LEBI_glmerBin,Treatment ~ Year, type = "response")
 
 #' Results for plotting
@@ -325,9 +325,9 @@ PBGR_glmerBin <- glmmTMB(PBGR ~ Treatment + Year + Treatment*Year + (1|SiteName)
                          data = NWPOINTR2,
                          family = "poisson")
 (PBGR <- summary(PBGR_glmerBin))
-(PBGREmm <- emmeans(PBGR_glmerBin, pairwise ~ Treatment*Year, level = 0.9, type = "response"))
+(PBGREmm <- emmeans(PBGR_glmerBin, pairwise ~ Treatment*Year, level = 0.95, type = "response"))
 (PBGRdiff <- eff_size(object = PBGREmm, sigma = sigma(PBGR_glmerBin), 
-                      edf = 193, level = 0.9, type = "reponse"))
+                      edf = 193, level = 0.95, type = "reponse"))
 #emmip(PBGR_glmerBin,Treatment ~ Year, type = "response")
 
 #' Results for plotting
@@ -396,9 +396,9 @@ SORA_glmerBin <- glmmTMB(SORA ~ Treatment + Year + Treatment*Year + (1|SiteName)
                          data = NWPOINTR2,
                          family = "poisson")
 (SORA <- summary(SORA_glmerBin))
-(SORAEmm <- emmeans(SORA_glmerBin, pairwise ~ Treatment*Year, level = 0.9, type = "response"))
+(SORAEmm <- emmeans(SORA_glmerBin, pairwise ~ Treatment*Year, level = 0.95, type = "response"))
 (SORAdiff <- eff_size(object = SORAEmm, sigma = sigma(SORA_glmerBin), 
-                      edf = 198, level = 0.90, type = "response"))
+                      edf = 198, level = 0.95, type = "response"))
 #emmip(SORA_glmerBin,Treatment ~ Year, type = "response")
 
 #' Results for plotting
@@ -468,9 +468,9 @@ VIRA_glmerBin <- glmmTMB(VIRA ~ Treatment + Year + Treatment*Year + (1|SiteName)
                          data = NWPOINTR2,
                          family = "poisson")
 (VIRA <- summary(VIRA_glmerBin))
-(VIRAEmm <- emmeans(VIRA_glmerBin, pairwise ~ Treatment*Year, level = 0.9, type = "response"))
+(VIRAEmm <- emmeans(VIRA_glmerBin, pairwise ~ Treatment*Year, level = 0.95, type = "response"))
 (VIRAdiff <- eff_size(object = VIRAEmm, sigma = sigma(VIRA_glmerBin), 
-                      edf = 193, level = 0.9, type = "reponse"))
+                      edf = 193, level = 0.95, type = "reponse"))
 #emmip(VIRA_glmerBin,Treatment ~ Year, type = "response")
 
 #' Results for plotting
@@ -538,7 +538,7 @@ All_glmerBin <- glmmTMB(Count ~ Treatment + Year + Treatment*Year + (1|SiteName)
                          data = NWPOINTR2.long,
                          family = "poisson")
 (All <- summary(All_glmerBin))
-(AllEmm <- emmeans(All_glmerBin, pairwise ~ Treatment*Year, level = 0.9, type = "response"))
+(AllEmm <- emmeans(All_glmerBin, pairwise ~ Treatment*Year, level = 0.95, type = "response"))
 #emmip(All_glmerBin,Treatment ~ Year, type = "response")
 
 
@@ -548,7 +548,7 @@ All_glmerBin2 <- glmmTMB(Count ~ Treatment*Year*Species + (1|SiteName),
                         data = NWPOINTR2.long,
                         family = "poisson", na.action = "na.omit")
 (All2 <- summary(All_glmerBin2))
-(AllEmm2 <- emmeans(All_glmerBin2, pairwise ~ Treatment*Year*Species, level = 0.9, type = "response"))
+(AllEmm2 <- emmeans(All_glmerBin2, pairwise ~ Treatment*Year*Species, level = 0.95, type = "response"))
 
 #' Results for plotting
 #' 
