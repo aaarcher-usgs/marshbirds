@@ -4,4 +4,4 @@ To use this repository, clone the documents onto your local device. Open the pro
 
 **Recommended citation for the data:**
 
-Althea Archer, Nina Hill, Tom Cooper, Doug Johnson and David Andersen. 2023. Data and analysis code for: Secretive Marshbird Response to Herbicide Control of Cattail in Northwestern Minnesota. 
+Althea Archer, Nina Hill, Tom Cooper, Doug Johnson and David Andersen. 2023. Data and analysis code for: Secretive Marshbird Response to Herbicide Control of Cattail in Northwestern Minnesota. https://github.com/aaarcher-usgs/marshbirds/releases/tag/v1.0
